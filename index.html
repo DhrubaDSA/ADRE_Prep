@@ -3,3540 +3,772 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="artifact-type" content="dashboard">
-  <meta name="design-style" content="briefing">
-  <title>ADRE GK আৰু GS ৮-কাকত বিশ্লেষণ প্ৰতিবেদন (২০২২ আৰু ২০২৪) — ADRE_Prep</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@600;700&family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
-  <script src="https://unpkg.com/lucide@1.43.0/dist/umd/lucide.min.js"></script>
+  <title>ADRE PREP — Assam Direct Recruitment Paper Analysis &amp; Online Test Series</title>
+  <meta name="description" content="ADRE PREP is a free Assam Direct Recruitment Examination (ADRE Grade III &amp; IV) preparation portal featuring 8-paper GK/GS empirical analysis (2022 &amp; 2024) and 436+ bilingual Assamese &amp; English online mock test questions.">
+  <meta name="keywords" content="ADRE, ADRE PREP, Assam Direct Recruitment, ADRE Paper Analysis, ADRE Online Test Series, ADRE PYQ 2022 2024, ADRE Grade 3, ADRE Grade 4, Assam GK, অসম প্ৰত্যক্ষ নিযুক্তি পৰীক্ষা, অসমীয়া মক টেষ্ট">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="logo.png">
+  <meta name="author" content="ADRE PREP">
+  <meta name="theme-color" content="#1e3a8a">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ADRE PREP">
+  <meta property="og:title" content="ADRE PREP — ADRE Paper Analysis &amp; Online Test Series">
+  <meta property="og:description" content="Free ADRE Grade III &amp; IV preparation: 8-paper GK/GS Pareto 80/20 analysis, trend shifts, and bilingual Assamese &amp; English online PYQ test series.">
+  <meta property="og:locale" content="as_IN">
+  <meta property="og:locale:alternate" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ADRE PREP — ADRE Paper Analysis &amp; Online Test Series">
+  <meta name="twitter:description" content="Free ADRE Grade III &amp; IV preparation: 8-paper GK/GS Pareto analysis and bilingual online PYQ test series.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "ADRE PREP",
+        "url": "https://sites.google.com/view/adreprepa/home",
+        "description": "Free Assam Direct Recruitment Examination (ADRE Grade III & IV) preparation platform offering 8-paper GK/GS empirical analysis and bilingual Assamese & English online test series.",
+        "sameAs": [
+          "https://www.instagram.com/adre_prep/",
+          "https://whatsapp.com/channel/0029Vb9cyCxJ3juy4KtX0n0U",
+          "https://t.me/s/ADREPr"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "name": "ADRE PREP",
+        "url": "https://sites.google.com/view/adreprepa/home",
+        "alternateName": "Assam Direct Recruitment Examination Preparation Platform",
+        "description": "Integrated ADRE Paper Analysis and Bilingual Online Test Series for Grade III and Grade IV aspirants in Assam.",
+        "inLanguage": ["en", "as"]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Assamese:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    .adre-logo-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .adre-logo-img {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+  }
+}
     :root {
       color-scheme: light;
-
-      /* Modern EdTech Paper & Surface Palette */
-      --background: #F8FAFC;
-      --surface-card: #FFFFFF;
-      --surface-muted: #F1F5F9;
-      --surface-elevated: #E2E8F0;
-
-      /* Ink & Typography Colors */
-      --on-surface: #0F172A;
-      --on-surface-variant: #475569;
-      --ink-subtle: #64748B;
-
-      /* Borders & Rules */
-      --outline: #0F172A;
-      --outline-variant: #E2E8F0;
-      --border-strong: #CBD5E1;
-
-      /* Brand & Semantic Accents */
-      --primary: #1E3A8A;
-      --primary-hover: #1D4ED8;
-      --on-primary: #FFFFFF;
-      --primary-soft: #EFF6FF;
-      --primary-border: #BFDBFE;
-
-      --accent-gold: #D97706;
-      --accent-gold-bg: #FEF3C7;
-      --accent-gold-text: #92400E;
-
-      --positive: #059669;
-      --positive-bg: #ECFDF5;
-      --positive-border: #A7F3D0;
-
-      --warning: #B45309;
-      --warning-bg: #FFFBEB;
-
-      --error: #DC2626;
-      --error-bg: #FEF2F2;
-
-      /* Chart & Data Series */
-      --data-1: #1E40AF;
-      --data-2: #D97706;
-      --data-3: #059669;
-      --data-4: #DC2626;
-      --data-5: #6D28D9;
-      --data-context: #94A3B8;
-
-      --focus: #2563EB;
-
-      /* Typography */
-      --font-headline: 'Noto Serif Bengali', 'Noto Sans Bengali', serif;
-      --font-body: 'Noto Sans Bengali', 'Plus Jakarta Sans', sans-serif;
-      --font-label: 'Noto Sans Bengali', 'Plus Jakarta Sans', sans-serif;
-      --font-mono: 'JetBrains Mono', 'Noto Sans Bengali', monospace;
-
-      --display-size: clamp(1.5rem, 1.25rem + 1.1vw, 2.15rem);
-      --headline-size: clamp(1.18rem, 1.05rem + 0.5vw, 1.45rem);
-      --subhead-size: clamp(1rem, 0.94rem + 0.25vw, 1.15rem);
-      --body-size: clamp(0.9375rem, 0.9rem + 0.14vw, 1rem);
-      --label-size: 0.78rem;
-
-      /* Elevation & Radius */
-      --rounded-sm: 0.375rem;
-      --rounded: 0.5rem;
-      --rounded-lg: 0.75rem;
-      --rounded-xl: 1rem;
-      --rounded-full: 9999px;
-
-      --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
-      --shadow-sm: 0 2px 8px -2px rgba(15, 23, 42, 0.06), 0 1px 3px -1px rgba(15, 23, 42, 0.04);
-      --shadow-md: 0 10px 24px -6px rgba(15, 23, 42, 0.1), 0 4px 10px -4px rgba(15, 23, 42, 0.05);
-      --shadow-lg: 0 20px 38px -10px rgba(15, 23, 42, 0.18);
-
-      --space-xs: 0.25rem;
-      --space-sm: 0.5rem;
-      --space-md: 1rem;
-      --space-lg: 1.5rem;
-      --space-xl: 2.25rem;
-      --space-2xl: 3.5rem;
-
-      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-      --dur-micro: 140ms;
-      --dur-short: 240ms;
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --surface-muted: #f1f5f9;
+      --ink: #0f172a;
+      --ink-muted: #475569;
+      --ink-subtle: #64748b;
+      --border: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --primary: #1e3a8a;
+      --primary-hover: #1d4ed8;
+      --primary-accent: #2563eb;
+      --primary-soft: #eff6ff;
+      --primary-border: #bfdbfe;
+      --emerald: #059669;
+      --emerald-soft: #ecfdf5;
+      --font-sans: "Noto Sans Assamese", "Noto Sans Bengali", "Inter", system-ui, -apple-system, sans-serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
-
     html, body {
       margin: 0;
       padding: 0;
       width: 100%;
       max-width: 100%;
-      min-height: 100%;
       overflow-x: hidden;
-      overflow-y: auto;
-      background-color: var(--background);
-      color: var(--on-surface);
-      font-family: var(--font-body);
-      font-size: var(--body-size);
-      line-height: 1.65;
+      background-color: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       -webkit-tap-highlight-color: transparent;
       word-break: break-word;
     }
+    a { color: inherit; text-decoration: none; }
+    button, input { font-family: inherit; }
+    :focus-visible { outline: 2px solid var(--primary-accent); outline-offset: 2px; }
 
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 76px;
-    }
-
-    button, input, select, textarea { font-family: inherit; }
-
-    :focus-visible {
-      outline: 2.5px solid var(--focus);
-      outline-offset: 2px;
-    }
-
-    /* =========================================================================
-       STICKY NAVIGATION & LIVE SYLLABUS READINESS HEADER BAR
-       ========================================================================= */
-    .sticky-nav-shell {
+    /* ==================== 1-ROW RESPONSIVE NAVBAR ==================== */
+    .adre-navbar {
       position: sticky;
       top: 0;
-      z-index: 50;
-      background: rgba(255, 255, 255, 0.94);
+      z-index: 100;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--outline-variant);
-      box-shadow: var(--shadow-xs);
+      border-top: 3px solid #1e3a8a;
+      border-bottom: 1px solid #e2e8f0;
+      box-shadow: 0 4px 14px -4px rgba(15, 23, 42, 0.07);
     }
-
-    .sticky-nav-inner {
-      max-width: 1240px;
+    .adre-navbar-inner {
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 0.45rem var(--space-md);
+      padding: 0.55rem 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: var(--space-sm);
+      gap: 0.75rem;
     }
-
-    .brand-mini {
-      display: flex;
+    .adre-logo {
+      display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
       text-decoration: none;
-      color: var(--on-surface);
+      color: #0f172a;
       flex-shrink: 0;
     }
-
-    .brand-mark {
-      width: 34px;
-      height: 34px;
-      border-radius: var(--rounded);
-      background: linear-gradient(135deg, #1E3A8A, #2563EB);
-      color: #FFFFFF;
+    .adre-logo-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      color: #ffffff;
       font-weight: 800;
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      letter-spacing: -0.02em;
-      box-shadow: 0 2px 6px rgba(30, 58, 138, 0.25);
+      box-shadow: 0 3px 9px rgba(37, 99, 235, 0.25);
     }
+    .adre-logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+    .adre-logo-name { font-weight: 800; font-size: 0.98rem; color: #0f172a; white-space: nowrap; }
+    .adre-logo-sub { font-size: 0.67rem; font-weight: 600; color: #64748b; white-space: nowrap; }
 
-    .brand-mini-text {
-      display: flex;
-      flex-direction: column;
-      line-height: 1.15;
-    }
-
-    .brand-mini-title {
-      font-weight: 800;
-      font-size: 0.88rem;
-      color: var(--on-surface);
-    }
-
-    .brand-mini-sub {
-      font-size: 0.68rem;
-      color: var(--ink-subtle);
-      font-weight: 500;
-    }
-
-    .sticky-jump-strip {
-      display: flex;
-      align-items: center;
-      gap: 0.35rem;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      padding: 2px 0;
-      flex: 1 1 auto;
-    }
-
-    .sticky-jump-strip::-webkit-scrollbar { display: none; }
-
-    .nav-pill {
+    .adre-nav-links {
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
-      min-height: 38px;
-      padding: 0 0.75rem;
-      background: var(--surface-muted);
-      border: 1px solid transparent;
-      border-radius: var(--rounded-full);
-      color: var(--on-surface-variant);
-      text-decoration: none;
-      font-size: 0.8rem;
-      font-weight: 600;
-      white-space: nowrap;
-      flex-shrink: 0;
-      transition: all var(--dur-micro) var(--ease-out);
+      gap: 0.25rem;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 9999px;
+      padding: 0.25rem;
     }
-
-    .nav-pill:hover {
-      background: var(--surface-elevated);
-      color: var(--on-surface);
-    }
-
-    .nav-pill.is-active {
-      background: var(--primary);
-      color: var(--on-primary);
-      box-shadow: 0 2px 6px rgba(30, 58, 138, 0.22);
-    }
-
-    .nav-quick-actions {
-      display: flex;
-      align-items: center;
-      gap: 0.45rem;
-      flex-shrink: 0;
-    }
-
-    .nav-readiness-pill {
+    .adre-nav-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.3rem 0.65rem;
-      border-radius: var(--rounded-full);
-      background: var(--positive-bg);
-      border: 1px solid var(--positive-border);
-      color: var(--positive);
-      font-family: var(--font-mono);
-      font-size: 0.76rem;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    /* =========================================================================
-       MAIN PAGE LAYOUT
-       ========================================================================= */
-    .page-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: var(--space-xl);
-      padding: var(--space-lg) var(--space-md) 5.5rem;
-      max-width: 1240px;
-      margin: 0 auto;
-    }
-
-    .page-grid * { min-width: 0; }
-
-    /* Hero Banner Card */
-    .hero-card {
-      background: var(--surface-card);
-      border: 1px solid var(--outline-variant);
-      border-radius: var(--rounded-xl);
-      padding: var(--space-lg);
-      box-shadow: var(--shadow-sm);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #1E3A8A 0%, #2563EB 55%, #D97706 100%);
-    }
-
-    .dossier-bar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: var(--space-sm);
-      border-bottom: 1px solid var(--outline-variant);
-      padding-bottom: 0.65rem;
-      margin-bottom: var(--space-md);
-    }
-
-    .dossier-bar-left {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: var(--space-sm);
-    }
-
-    .dossier-pill {
-      background: var(--accent-gold-bg);
-      color: var(--accent-gold-text);
-      border: 1px solid #FDE68A;
-      font-weight: 700;
-      font-size: 0.75rem;
-      padding: 0.2rem 0.65rem;
-      border-radius: var(--rounded-full);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
-    .dossier-meta {
-      font-size: var(--label-size);
-      color: var(--ink-subtle);
-      font-weight: 500;
-    }
-
-    .hero-top-flex {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: var(--space-md);
-    }
-
-    .title {
-      font-family: var(--font-headline);
-      font-weight: 700;
-      font-size: var(--display-size);
-      line-height: 1.28;
-      color: var(--on-surface);
-      margin: 0;
-    }
-
-    .standfirst {
-      font-size: var(--subhead-size);
-      font-weight: 500;
-      color: var(--on-surface-variant);
-      margin: var(--space-sm) 0 0;
-      max-width: 76ch;
-      line-height: 1.65;
-    }
-
-    .section-heading {
-      font-family: var(--font-headline);
-      font-weight: 700;
-      font-size: var(--headline-size);
-      line-height: 1.3;
-      margin: 0 0 var(--space-xs);
-      color: var(--on-surface);
-    }
-
-    .section-deck {
-      margin: 0 0 var(--space-md);
-      color: var(--on-surface-variant);
-      max-width: 78ch;
-      line-height: 1.65;
-    }
-
-    /* Filter Control Deck */
-    .control-deck {
-      background: var(--surface-card);
-      border: 1px solid var(--outline-variant);
-      border-radius: var(--rounded-xl);
-      padding: var(--space-md) var(--space-lg);
-      box-shadow: var(--shadow-xs);
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
-      gap: var(--space-md);
-      align-items: end;
-    }
-
-    .control-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-
-    .control-label {
-      font-size: var(--label-size);
-      font-weight: 700;
-      color: var(--on-surface-variant);
-    }
-
-    .segmented-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-
-    .seg-btn {
-      min-height: 42px;
-      padding: 0.35rem 0.85rem;
-      border: 1px solid var(--border-strong);
-      background: var(--surface-card);
-      color: var(--on-surface);
-      border-radius: var(--rounded);
-      font-weight: 600;
+      justify-content: center;
+      gap: 0.38rem;
+      min-height: 36px;
+      padding: 0.38rem 0.95rem;
+      border-radius: 9999px;
       font-size: 0.84rem;
-      cursor: pointer;
-      line-height: 1.3;
-      transition: all var(--dur-micro) var(--ease-out);
+      font-weight: 600;
+      color: #475569;
+      white-space: nowrap;
+      transition: all 0.16s ease;
+    }
+    .adre-nav-link svg { width: 15px; height: 15px; flex-shrink: 0; }
+    .adre-nav-link:hover { background: #e2e8f0; color: #0f172a; }
+    .adre-nav-link.is-active {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(30, 58, 138, 0.25);
+    }
+    .label-short { display: none; }
+
+    /* ==================== MAIN LAYOUT ==================== */
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
 
-    .seg-btn:hover {
-      background: var(--surface-muted);
-      border-color: var(--primary);
+    /* ==================== HERO ==================== */
+    .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%);
+      border: 1px solid var(--primary-border);
+      border-radius: 18px;
+      padding: 1.75rem 1.5rem;
     }
-
-    .seg-btn[aria-pressed="true"] {
-      background: var(--primary);
-      color: var(--on-primary);
-      border-color: var(--primary);
-      box-shadow: 0 2px 6px rgba(30, 58, 138, 0.2);
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.24rem 0.7rem;
+      border-radius: 9999px;
+      background: #ffffff;
+      border: 1px solid var(--primary-border);
+      color: var(--primary);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.75rem;
     }
-
-    .seg-btn.is-highlight[aria-pressed="true"] {
-      background: var(--accent-gold);
-      border-color: var(--accent-gold);
-      color: #FFFFFF;
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(1.5rem, 1.2rem + 1.3vw, 2.15rem);
+      font-weight: 800;
+      line-height: 1.25;
     }
-
-    .field-select, .field-input {
-      min-height: 42px;
-      padding: 0.45rem 0.85rem;
-      background: var(--surface-card);
-      border: 1px solid var(--border-strong);
-      border-radius: var(--rounded);
-      color: var(--on-surface);
-      font-size: 0.92rem;
-      width: 100%;
-      transition: border-color var(--dur-micro) var(--ease-out);
+    .hero h1 span { color: var(--primary-hover); }
+    .hero-desc {
+      margin: 0.65rem 0 0;
+      max-width: 66ch;
+      font-size: 0.96rem;
+      color: var(--ink-muted);
     }
-
-    .field-select:focus, .field-input:focus {
-      border-color: var(--primary);
+    .hero-actions {
+      margin-top: 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
     }
-
-    /* Buttons */
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 0.45rem;
-      min-height: 42px;
-      padding: 0.4rem 0.95rem;
-      border-radius: var(--rounded);
-      font-weight: 600;
-      font-size: 0.85rem;
-      line-height: 1.3;
+      min-height: 44px;
+      padding: 0.55rem 1.15rem;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
       cursor: pointer;
       border: 1px solid transparent;
-      transition: all var(--dur-micro) var(--ease-out);
+      transition: background-color 0.15s ease, transform 0.15s ease;
     }
+    .btn:active { transform: scale(0.98); }
+    .btn-primary { background: var(--primary); color: #ffffff; }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .btn-outline { background: #ffffff; color: var(--primary); border-color: var(--primary-border); }
+    .btn-outline:hover { background: var(--primary-soft); }
 
-    .btn-primary {
-      background: var(--primary);
-      color: var(--on-primary);
-      box-shadow: 0 2px 6px rgba(30, 58, 138, 0.2);
+    /* ==================== ABOUT WEBSITE SECTION ==================== */
+    .about-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.35rem 1.5rem;
     }
-
-    .btn-primary:hover {
-      background: var(--primary-hover);
-      transform: translateY(-1px);
-    }
-
-    .btn-accent {
-      background: var(--accent-gold);
-      color: #FFFFFF;
-      box-shadow: 0 2px 6px rgba(217, 119, 6, 0.22);
-    }
-
-    .btn-accent:hover {
-      background: #B45309;
-      transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-      background: var(--surface-card);
-      color: var(--on-surface);
-      border-color: var(--border-strong);
-    }
-
-    .btn-secondary:hover {
-      background: var(--surface-muted);
-      border-color: var(--on-surface-variant);
-    }
-
-    /* KPI Strip: 2 columns on mobile, 4 columns on desktop */
-    .kpi-grid {
+    .about-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: var(--space-md);
+      gap: 0.85rem;
+      margin-top: 1rem;
     }
-
-    .figure-card {
-      background: var(--surface-card);
-      border: 1px solid var(--outline-variant);
-      border-radius: var(--rounded-xl);
-      padding: var(--space-md) var(--space-lg);
-      box-shadow: var(--shadow-xs);
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-      transition: transform var(--dur-micro) var(--ease-out), box-shadow var(--dur-micro) var(--ease-out);
+    .about-stat {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
     }
+    .about-stat strong { display: block; font-size: 1.18rem; font-weight: 800; color: var(--primary); }
+    .about-stat span { font-size: 0.78rem; color: var(--ink-subtle); font-weight: 600; }
 
-    .figure-card:hover {
-      box-shadow: var(--shadow-sm);
-    }
-
-    .figure-label {
-      font-size: var(--label-size);
-      font-weight: 700;
-      color: var(--ink-subtle);
-    }
-
-    .figure-value {
-      font-family: var(--font-headline);
-      font-weight: 700;
-      font-size: clamp(1.45rem, 1.25rem + 0.8vw, 2rem);
-      line-height: 1.25;
-      font-variant-numeric: lining-nums tabular-nums;
-      color: var(--on-surface);
-    }
-
-    .figure-sub {
-      font-size: 0.82rem;
-      color: var(--primary);
-      font-weight: 600;
-      line-height: 1.45;
-    }
-
-    /* Split & Equal Grids */
-    .split-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-      gap: var(--space-lg);
-      align-items: start;
-    }
-
-    .equal-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
-      gap: var(--space-lg);
-    }
-
-    /* Chart Card with Explicit Responsive Canvas Height */
-    .chart-card {
-      background: var(--surface-card);
-      border: 1px solid var(--outline-variant);
-      border-radius: var(--rounded-xl);
-      padding: var(--space-lg);
-      box-shadow: var(--shadow-xs);
-    }
-
-    .chart-header {
+    /* ==================== SECTION HEADERS & MODULES ==================== */
+    .section-head {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
       align-items: baseline;
-      gap: var(--space-sm);
-      margin-bottom: var(--space-md);
-    }
-
-    .chart-title {
-      font-family: var(--font-headline);
-      font-weight: 700;
-      font-size: var(--subhead-size);
-      margin: 0;
-      color: var(--on-surface);
-      line-height: 1.35;
-    }
-
-    .chart-subtitle {
-      font-size: var(--label-size);
-      color: var(--ink-subtle);
-      margin: 0.2rem 0 0;
-      line-height: 1.45;
-    }
-
-    .chart-wrap {
-      position: relative;
-      height: 340px;
-      width: 100%;
-    }
-
-    .chart-wrap-tall {
-      position: relative;
-      height: 390px;
-      width: 100%;
-    }
-
-    .chart-source {
-      font-size: var(--label-size);
-      color: var(--ink-subtle);
-      margin-top: var(--space-sm);
-      border-top: 1px solid var(--outline-variant);
-      padding-top: 0.45rem;
-      line-height: 1.45;
-    }
-
-    /* Aside / Methodology Callout */
-    .aside-box {
-      background: var(--surface-muted);
-      border-left: 3.5px solid var(--primary);
-      padding: 0.85rem var(--space-md);
-      border-radius: 0 var(--rounded) var(--rounded) 0;
-    }
-
-    .aside-title {
-      font-size: var(--label-size);
-      font-weight: 700;
-      color: var(--on-surface);
-      margin: 0 0 0.3rem;
-    }
-
-    .aside-box p {
-      margin: 0;
-      font-size: 0.88rem;
-      color: var(--on-surface-variant);
-      line-height: 1.65;
-    }
-
-    /* View Mode Toggle Bar for Mobile Tables */
-    .view-switch-bar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
       justify-content: space-between;
-      gap: 0.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .table-hint {
-      font-size: 0.78rem;
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    /* Tables with Sticky First Column */
-    .table-scroll {
-      width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      background: var(--surface-card);
-      border: 1px solid var(--outline-variant);
-      border-radius: var(--rounded-xl);
-      box-shadow: var(--shadow-xs);
-      position: relative;
-    }
-
-    table.data-table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      min-width: 720px;
-      font-size: 0.88rem;
-    }
-
-    table.data-table th {
-      font-size: var(--label-size);
-      font-weight: 700;
-      text-align: left;
-      padding: 0.8rem 0.85rem;
-      border-bottom: 2px solid var(--outline-variant);
-      background: var(--surface-muted);
-      color: var(--on-surface);
-      white-space: nowrap;
-    }
-
-    table.data-table th.num, table.data-table td.num {
-      text-align: right;
-      font-family: var(--font-mono);
-      font-variant-numeric: tabular-nums;
-    }
-
-    table.data-table td {
-      padding: 0.75rem 0.85rem;
-      border-bottom: 1px solid var(--outline-variant);
-      vertical-align: middle;
-      background: var(--surface-card);
-    }
-
-    table.data-table th:first-child,
-    table.data-table td:first-child {
-      position: sticky;
-      left: 0;
-      z-index: 2;
-      border-right: 1px solid var(--outline-variant);
-      box-shadow: 3px 0 8px -3px rgba(15, 23, 42, 0.08);
-      max-width: 215px;
-    }
-
-    table.data-table th:first-child {
-      z-index: 3;
-      background: var(--surface-muted);
-    }
-
-    table.data-table tbody tr {
-      cursor: pointer;
-      transition: background-color var(--dur-micro) var(--ease-out);
-    }
-
-    table.data-table tbody tr:hover td,
-    table.data-table tbody tr.is-selected td {
-      background: var(--primary-soft);
-    }
-
-    table.data-table tfoot td {
-      font-weight: 700;
-      background: var(--surface-muted);
-      border-top: 2px solid var(--border-strong);
-      border-bottom: none;
-    }
-
-    /* Mobile Card Stack Alternative for Papers */
-    .mobile-papers-cards {
-      display: none;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .mobile-paper-card {
-      background: var(--surface-card);
-      border: 1px solid var(--outline-variant);
-      border-radius: var(--rounded-lg);
-      padding: 0.9rem;
-      box-shadow: var(--shadow-xs);
-      cursor: pointer;
-      transition: border-color var(--dur-micro) var(--ease-out);
-    }
-
-    .mobile-paper-card.is-selected {
-      border-color: var(--primary);
-      border-width: 1.5px;
-      background: var(--primary-soft);
-    }
-
-    .mobile-paper-stats {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0.45rem;
-      margin-top: 0.65rem;
-      padding-top: 0.65rem;
-      border-top: 1px solid var(--outline-variant);
-      font-size: 0.78rem;
-    }
-
-    /* Badges & Tags */
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      padding: 0.2rem 0.55rem;
-      border-radius: var(--rounded-full);
-      font-size: 0.74rem;
-      font-weight: 700;
-      white-space: nowrap;
-    }
-
-    .tag-high { background: #FEF3C7; color: #92400E; }
-    .tag-med { background: #DBEAFE; color: #1E40AF; }
-    .tag-low { background: var(--surface-muted); color: var(--on-surface-variant); }
-    .tag-surge { background: var(--positive-bg); color: var(--positive); }
-    .tag-drop { background: var(--error-bg); color: var(--error); }
-    .tag-steady { background: var(--surface-muted); color: var(--on-surface-variant); }
-    .tag-gold { background: var(--accent-gold-bg); color: var(--accent-gold-text); }
-
-    .index-num {
-      font-family: var(--font-mono);
-      font-weight: 600;
-      font-size: 0.75rem;
-      color: var(--primary);
-      background: var(--primary-soft);
-      padding: 0.18rem 0.5rem;
-      border-radius: var(--rounded-sm);
-      white-space: nowrap;
-    }
-
-    /* Paper Inspector Card */
-    .paper-inspector {
-      background: var(--surface-card);
-      border: 1px solid var(--outline-variant);
-      border-radius: var(--rounded-xl);
-      padding: var(--space-lg);
-      box-shadow: var(--shadow-xs);
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-md);
-    }
-
-    .paper-bar-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
-    }
-
-    .mini-bar-row {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 0.25rem 0.75rem;
-      align-items: center;
-    }
-
-    .mini-bar-track {
-      grid-column: 1 / -1;
-      height: 8px;
-      background: var(--surface-muted);
-      border-radius: var(--rounded-full);
-      overflow: hidden;
-    }
-
-    .mini-bar-fill {
-      height: 100%;
-      background: var(--primary);
-      border-radius: var(--rounded-full);
-    }
-
-    /* Priority & 3-State Mastery Cards */
-    .priority-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-      gap: var(--space-md);
-    }
-
-    .priority-card {
-      background: var(--surface-card);
-      border: 1px solid var(--outline-variant);
-      border-radius: var(--rounded-xl);
-      padding: var(--space-md) var(--space-lg);
-      box-shadow: var(--shadow-xs);
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-sm);
-      transition: all var(--dur-micro) var(--ease-out);
-    }
-
-    .priority-card:hover {
-      box-shadow: var(--shadow-sm);
-    }
-
-    .priority-card.status-mastered {
-      border-color: var(--positive);
-      border-width: 1.5px;
-      background: linear-gradient(to bottom, #FFFFFF, #F7FDFB);
-    }
-
-    .priority-card.status-revision {
-      border-color: var(--accent-gold);
-      border-width: 1.5px;
-      background: linear-gradient(to bottom, #FFFFFF, #FFFDF7);
-    }
-
-    .priority-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: var(--space-sm);
-    }
-
-    .priority-title {
-      font-family: var(--font-headline);
-      font-weight: 700;
-      font-size: 1.08rem;
-      margin: 0;
-      line-height: 1.38;
-    }
-
-    .priority-metrics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-      font-size: var(--label-size);
-      color: var(--on-surface-variant);
-    }
-
-    .status-cycle-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
       gap: 0.4rem;
-      min-height: 40px;
-      padding: 0.35rem 0.75rem;
-      border: 1px solid var(--border-strong);
-      border-radius: var(--rounded);
-      background: var(--surface-muted);
-      color: var(--on-surface);
-      font-size: 0.82rem;
-      font-weight: 700;
-      cursor: pointer;
+      margin-bottom: 0.85rem;
     }
+    .section-title { margin: 0; font-size: 1.18rem; font-weight: 800; color: var(--ink); }
+    .section-sub { margin: 0; font-size: 0.85rem; color: var(--ink-subtle); }
 
-    .status-cycle-btn.is-revision {
-      background: var(--accent-gold-bg);
-      color: var(--accent-gold-text);
-      border-color: #F59E0B;
-    }
-
-    .status-cycle-btn.is-mastered {
-      background: var(--positive-bg);
-      color: var(--positive);
-      border-color: var(--positive);
-    }
-
-    /* Readiness Progress Strip */
-    .readiness-bar-card {
-      background: var(--surface-card);
-      border: 1px solid var(--outline-variant);
-      border-radius: var(--rounded-xl);
-      padding: var(--space-md) var(--space-lg);
-      box-shadow: var(--shadow-xs);
+    .module-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: var(--space-md);
-      align-items: center;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.1rem;
     }
-
-    .readiness-track {
-      width: 100%;
-      height: 12px;
-      background: var(--surface-muted);
-      border-radius: var(--rounded-full);
-      overflow: hidden;
-      margin-top: 0.4rem;
-      display: flex;
-    }
-
-    .readiness-fill {
-      height: 100%;
-      background: var(--positive);
-      transition: width var(--dur-short) var(--ease-out);
-    }
-
-    .readiness-fill-rev {
-      height: 100%;
-      background: var(--accent-gold);
-      transition: width var(--dur-short) var(--ease-out);
-    }
-
-    /* Active Recall Study Mode Toolbar & Flashcard */
-    .study-toolbar {
-      background: var(--surface-card);
-      border: 1px solid var(--outline-variant);
-      border-left: 4px solid var(--primary);
-      border-radius: var(--rounded-xl);
-      padding: var(--space-md) var(--space-lg);
-      box-shadow: var(--shadow-xs);
-      margin-bottom: var(--space-md);
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: var(--space-sm);
-    }
-
-    .flashcard-box {
-      background: var(--surface-card);
-      border: 2px solid var(--primary);
-      border-radius: var(--rounded-xl);
-      padding: var(--space-md) var(--space-lg);
-      box-shadow: var(--shadow-md);
-      margin-bottom: var(--space-md);
+    .module-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.35rem;
       display: flex;
       flex-direction: column;
-      gap: var(--space-sm);
-    }
-
-    .flashcard-box[hidden] { display: none; }
-
-    .flashcard-header {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
       justify-content: space-between;
-      gap: var(--space-sm);
+      gap: 1rem;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
     }
-
-    .flashcard-q {
-      font-family: var(--font-headline);
-      font-size: 1.125rem;
+    .module-card:hover {
+      border-color: var(--primary-border);
+      box-shadow: 0 6px 20px rgba(30, 58, 138, 0.06);
+    }
+    .module-tag {
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      font-size: 0.72rem;
       font-weight: 700;
-      color: var(--on-surface);
-      margin: 0.25rem 0;
-      line-height: 1.5;
-    }
-
-    .flashcard-a {
-      background: var(--positive-bg);
-      color: var(--positive);
-      border: 1px solid var(--positive-border);
-      border-radius: var(--rounded);
-      padding: 0.7rem 0.9rem;
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-
-    /* Syllabus & PYQ Explorer */
-    .syllabus-controls {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
-      gap: var(--space-md);
-      align-items: end;
-      margin-bottom: var(--space-md);
-    }
-
-    .syllabus-list {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-md);
-    }
-
-    .syllabus-card {
-      background: var(--surface-card);
-      border: 1px solid var(--outline-variant);
-      border-radius: var(--rounded-xl);
-      box-shadow: var(--shadow-xs);
-      overflow: hidden;
-    }
-
-    .syllabus-header {
-      width: 100%;
-      text-align: left;
-      background: var(--surface-card);
-      border: none;
-      padding: var(--space-md) var(--space-lg);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: var(--space-sm);
-      cursor: pointer;
-      min-height: 58px;
-      transition: background-color var(--dur-micro) var(--ease-out);
-    }
-
-    .syllabus-header:hover {
-      background: var(--surface-muted);
-    }
-
-    .syllabus-title-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 0.45rem;
-    }
-
-    .syllabus-body {
-      border-top: 1px solid var(--outline-variant);
-      padding: var(--space-md) var(--space-lg);
-      display: grid;
-      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
-      gap: var(--space-lg);
-    }
-
-    .syllabus-body[hidden] { display: none; }
-
-    /* Interactive Micro-Subtopic Checklists */
-    .subtopic-checklist {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .subtopic-check-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.65rem;
-      padding: 0.6rem 0.75rem;
-      border-radius: var(--rounded);
-      background: var(--surface-muted);
-      border: 1px solid transparent;
-      cursor: pointer;
-      min-height: 44px;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      transition: all var(--dur-micro) var(--ease-out);
-    }
-
-    .subtopic-check-item:hover {
-      border-color: var(--border-strong);
-    }
-
-    .subtopic-check-item.is-done {
-      background: var(--positive-bg);
-      border-color: var(--positive-border);
-    }
-
-    .subtopic-check-item input[type="checkbox"] {
-      width: 19px;
-      height: 19px;
-      margin-top: 3px;
-      accent-color: var(--positive);
-      flex-shrink: 0;
-      cursor: pointer;
-    }
-
-    .subtopic-check-item.is-done .subtopic-text {
-      color: var(--on-surface);
-      text-decoration: line-through;
-      text-decoration-color: rgba(5, 150, 105, 0.55);
-    }
-
-    .pyq-sample-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.65rem;
-    }
-
-    .pyq-item {
-      background: var(--surface-muted);
-      border: 1px solid var(--outline-variant);
-      border-radius: var(--rounded);
-      padding: 0.75rem 0.9rem;
-      font-size: 0.9rem;
-      line-height: 1.6;
-    }
-
-    .pyq-paper-ref {
-      font-size: var(--label-size);
+      background: var(--primary-soft);
       color: var(--primary);
-      font-weight: 700;
-      display: block;
-      margin-bottom: 0.25rem;
     }
+    .module-card h3 { margin: 0.55rem 0 0.3rem; font-size: 1.15rem; font-weight: 800; }
+    .module-card p { margin: 0; font-size: 0.89rem; color: var(--ink-muted); }
 
-    .pyq-ans {
-      margin-top: 0.5rem;
-      padding-top: 0.45rem;
-      border-top: 1px dashed var(--border-strong);
-      font-weight: 700;
-      color: var(--positive);
-      font-size: 0.88rem;
+    /* ==================== SEARCH ==================== */
+    .search-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.25rem;
     }
+    .search-row { display: flex; gap: 0.5rem; }
+    .search-input {
+      flex: 1;
+      min-height: 44px;
+      padding: 0.5rem 0.95rem;
+      border-radius: 10px;
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
+      color: var(--ink);
+      font-size: 0.93rem;
+    }
+    .search-input:focus {
+      border-color: var(--primary-accent);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.65rem; }
+    .chip-btn {
+      border: 1px solid var(--border-strong);
+      background: #ffffff;
+      color: var(--ink-muted);
+      border-radius: 9999px;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.76rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .chip-btn:hover { border-color: var(--primary); color: var(--primary); background: var(--primary-soft); }
+    .search-results {
+      margin-top: 0.85rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+      gap: 0.65rem;
+    }
+    .search-results:empty { display: none; margin-top: 0; }
+    .search-result-item {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.75rem 0.9rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .search-result-item:hover { border-color: var(--primary-border); }
+    .search-result-type { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; color: var(--primary); }
+    .search-result-title { font-size: 0.9rem; font-weight: 700; color: var(--ink); }
+    .search-result-meta { font-size: 0.78rem; color: var(--ink-subtle); }
 
-    /* Strategic Takeaways Grid */
-    .takeaways-grid {
+    /* ==================== TOPIC HIGHLIGHTS ==================== */
+    .topics-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: var(--space-md);
+      gap: 0.85rem;
     }
-
-    .takeaway-card {
-      background: var(--surface-card);
-      border: 1px solid var(--outline-variant);
-      border-radius: var(--rounded-xl);
-      padding: var(--space-lg);
-      box-shadow: var(--shadow-xs);
+    .topic-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.4rem;
     }
+    .topic-top { display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; }
+    .topic-share { font-size: 0.74rem; font-weight: 800; color: var(--primary); background: var(--primary-soft); padding: 0.18rem 0.5rem; border-radius: 9999px; }
+    .topic-surge { font-size: 0.72rem; font-weight: 700; color: var(--emerald); background: var(--emerald-soft); padding: 0.18rem 0.5rem; border-radius: 9999px; }
+    .topic-card h3 { margin: 0; font-size: 0.95rem; font-weight: 700; }
+    .topic-card p { margin: 0; font-size: 0.82rem; color: var(--ink-muted); }
 
-    .empty-state {
-      background: var(--surface-card);
-      border: 1px solid var(--outline-variant);
-      border-radius: var(--rounded-xl);
-      padding: var(--space-xl);
-      text-align: center;
+    /* ==================== SOCIAL COMMUNITY ==================== */
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.85rem;
     }
-
-    /* =========================================================================
-       FLOATING QUICK-ACCESS WIDGET (SOCIALS + SCROLL TO TOP)
-       ========================================================================= */
-    .adre-float-wrap {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 9999;
+    .social-card {
       display: flex;
-      flex-direction: column;
-      gap: 9px;
-      touch-action: manipulation;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.9rem 1rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      transition: border-color 0.15s ease, transform 0.15s ease;
     }
-
-    .adre-float-btn {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      border: none;
-      padding: 0;
+    .social-card:hover { border-color: var(--primary-border); transform: translateY(-1px); }
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       color: #ffffff;
-      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .social-icon svg { width: 20px; height: 20px; fill: currentColor; }
+    .social-ig { background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); }
+    .social-wa { background: #16a34a; }
+    .social-tg { background: #0284c7; }
+    .social-meta h3 { margin: 0; font-size: 0.94rem; font-weight: 700; color: var(--ink); }
+    .social-meta p { margin: 0.05rem 0 0; font-size: 0.78rem; color: var(--ink-subtle); }
+
+    /* ==================== PRIVACY STRIP & FOOTER ==================== */
+    .policy-strip {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.15rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      font-size: 0.84rem;
+      color: var(--ink-muted);
+    }
+    .adre-site-footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 1.25rem 1rem;
+      margin-top: auto;
+    }
+    .adre-footer-inner {
+      max-width: 1120px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.85rem;
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+    }
+    .adre-footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: 0.9rem; }
+    .adre-footer-links a,
+    .adre-footer-links button {
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--primary);
       cursor: pointer;
-      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.22);
-      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
-      -webkit-tap-highlight-color: transparent;
     }
+    .adre-footer-links a:hover,
+    .adre-footer-links button:hover { text-decoration: underline; }
 
-    .adre-float-btn:hover {
-      transform: translateY(-2px) scale(1.04);
-      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.28);
+    /* ==================== RESPONSIVE BREAKPOINTS ==================== */
+    @media (max-width: 860px) {
+      .module-grid, .topics-grid, .social-grid { grid-template-columns: minmax(0, 1fr); }
+      .about-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
-
-    .adre-float-btn:active {
-      transform: scale(0.95);
-    }
-
-    .adre-float-btn svg {
-      width: 22px;
-      height: 22px;
-      fill: currentColor;
-    }
-
-    .adre-float-up {
-      background: #0F172A;
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(8px);
-    }
-
-    .adre-float-up.is-visible {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateY(0);
-    }
-
-    .adre-float-ig {
-      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
-    }
-
-    .adre-float-wa {
-      background: #25d366;
-    }
-
-    .adre-float-tg {
-      background: #24a1de;
-    }
-
-    .adre-float-close {
-      background: #334155;
-    }
-
-    .adre-social-item.is-hidden {
-      display: none;
-    }
-
-    /* =========================================================================
-       RESPONSIVE BREAKPOINTS (TABLET & MOBILE)
-       ========================================================================= */
-    @media (max-width: 1024px) {
-      .kpi-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .takeaways-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 900px) {
-      .split-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .syllabus-body {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .brand-mini-sub {
-        display: none;
-      }
-    }
-
     @media (max-width: 640px) {
-      .page-grid {
-        padding: var(--space-md) 0.75rem 5rem;
-        gap: var(--space-lg);
+      .adre-navbar-inner { padding: 0.45rem 0.6rem; gap: 0.5rem; }
+      .adre-logo-text { display: none; }
+      .adre-logo-mark { width: 34px; height: 34px; font-size: 0.82rem; border-radius: 9px; }
+      .adre-nav-links {
+        flex: 1 1 auto;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.2rem;
+        padding: 0.2rem;
       }
-      .hero-card, .chart-card, .paper-inspector, .figure-card, .syllabus-header, .syllabus-body, .takeaway-card {
-        padding: var(--space-md);
-      }
-      .kpi-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.6rem;
-      }
-      .figure-card {
-        padding: 0.85rem;
-      }
-      .figure-value {
-        font-size: 1.35rem;
-      }
-      .takeaways-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .syllabus-controls {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .readiness-bar-card {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .chart-wrap {
-        height: 295px;
-      }
-      .chart-wrap-tall {
-        height: 340px;
-      }
-      .brand-mini-text {
-        display: none;
-      }
-      .nav-readiness-pill {
-        padding: 0.25rem 0.5rem;
-        font-size: 0.72rem;
-      }
-      table.data-table th:first-child,
-      table.data-table td:first-child {
-        max-width: 155px;
-      }
-      .adre-float-wrap {
-        right: 12px;
-        bottom: calc(12px + env(safe-area-inset-bottom, 0px));
-        gap: 7px;
-      }
-      .adre-float-btn {
-        width: 44px;
-        height: 44px;
-      }
-      .adre-float-btn svg {
-        width: 20px;
-        height: 20px;
-      }
-    }
+      .adre-nav-link { width: 100%; padding: 0.35rem; min-height: 36px; font-size: 0.78rem; gap: 0.25rem; }
+      .adre-nav-link svg { width: 13px; height: 13px; }
+      .label-full { display: none; }
+      .label-short { display: inline; }
 
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-      }
+      .hero { padding: 1.25rem 1.05rem; }
+      .search-row { flex-direction: column; }
     }
   </style>
 </head>
 <body>
-  <div class="app-scroll-shell">
 
-    <!-- STICKY MOBILE & DESKTOP QUICK-JUMP BAR -->
-    <nav class="sticky-nav-shell" aria-label="দ্ৰুত শাখা নেভিগেশ্বন">
-      <div class="sticky-nav-inner">
-        <a href="#top-anchor" class="brand-mini" aria-label="ADRE_Prep মূল পৃষ্ঠালৈ যাওক">
-          <span class="brand-mark">AP</span>
-          <span class="brand-mini-text">
-            <span class="brand-mini-title">ADRE_Prep</span>
-            <span class="brand-mini-sub">সপোনৰ চাকৰিৰ দিশে এখোজ</span>
+
+<!-- 1-ROW RESPONSIVE NAVIGATION BAR -->
+  <nav class="adre-navbar" id="top" aria-label="Main Navigation">
+    <div class="adre-navbar-inner">
+      <a href="index.html" class="adre-logo" aria-label="ADRE PREP Home">
+       <img src="logo.png" alt="ADRE PREP Logo" class="adre-logo-img">
+        <span class="adre-logo-text">
+          <span class="adre-logo-name">ADRE PREP</span>
+          <span class="adre-logo-sub">Assam Exam Portal</span>
+        </span>
+      </a>
+
+      <div class="adre-nav-links">
+        <a href="index.html" class="adre-nav-link is-active">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l9-9 9 9M4 10v10a1 1 0 001 1h5v-6h4v6h5a1 1 0 001-1V10"/></svg>
+          <span>Home</span>
+        </a>
+        <a href="analyt.html" class="adre-nav-link">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          <span class="label-full">Paper Analysis</span>
+          <span class="label-short">Analysis</span>
+        </a>
+        <a href="Test.html" class="adre-nav-link">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span class="label-full">Test Series</span>
+          <span class="label-short">Test</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- HERO -->
+    <section class="hero" aria-label="ADRE PREP Introduction">
+      <span class="hero-badge">ASSAM DIRECT RECRUITMENT • GRADE III &amp; IV</span>
+      <h1>Prepare Smarter with <span>ADRE PREP</span></h1>
+      <p class="hero-desc">
+        Your complete, free preparation platform for Assam Direct Recruitment (ADRE) — combining 8-paper empirical GK/GS analysis (2022 &amp; 2024) with a bilingual (English &amp; অসমীয়া) Online Test Series.
+      </p>
+      <div class="hero-actions">
+        <a href="analyt.html" class="btn btn-primary" data-adre-route="analysis">Explore Paper Analysis →</a>
+        <a href="Test.html" class="btn btn-outline" data-adre-route="testSeries">Start Practice Test Series →</a>
+      </div>
+    </section>
+
+    <!-- ABOUT WEBSITE -->
+    <section class="about-card" aria-labelledby="about-heading">
+      <div class="section-head" style="margin-bottom: 0.35rem;">
+        <h2 class="section-title" id="about-heading">About ADRE PREP</h2>
+        <span class="section-sub">Built for Assam Grade III &amp; Grade IV Aspirants</span>
+      </div>
+      <p style="margin: 0; font-size: 0.9rem; color: var(--ink-muted);">
+        ADRE PREP brings together official 2022 and 2024 Previous Year Question Papers across Class 8, Class 10, Class 12, and Graduate levels—helping you focus on the 80/20 high-yield topics first and practice in a real exam-style bilingual interface.
+      </p>
+      <div class="about-grid">
+        <div class="about-stat"><strong>8 Papers</strong><span>2022 &amp; 2024 Official PYQs</span></div>
+        <div class="about-stat"><strong>472 Qs</strong><span>Empirically Analyzed</span></div>
+        <div class="about-stat"><strong>436 Qs</strong><span>Bilingual CBT Mock Tests</span></div>
+        <div class="about-stat"><strong>100% Free</strong><span>Mobile &amp; Assamese Ready</span></div>
+      </div>
+    </section>
+
+    <!-- TWO MAIN PLATFORM CARDS -->
+    <section aria-labelledby="modules-heading">
+      <div class="section-head">
+        <h2 class="section-title" id="modules-heading">Start Learning</h2>
+        <p class="section-sub">Choose data-driven paper analysis or timed mock practice</p>
+      </div>
+      <div class="module-grid">
+        <article class="module-card">
+          <div>
+            <span class="module-tag">8 Official Papers • 472 Qs</span>
+            <h3>ADRE Paper Analysis (অসমীয়া বিশ্লেষণ)</h3>
+            <p>Pareto 80/20 topic weightage, 2022 vs 2024 trends, interactive syllabus checklist, and PYQ flashcards.</p>
+          </div>
+          <a href="analyt.html" class="btn btn-primary" data-adre-route="analysis">Explore Analysis →</a>
+        </article>
+
+        <article class="module-card">
+          <div>
+            <span class="module-tag">8 Papers • 436 Bilingual Qs</span>
+            <h3>ADRE Online Test Series</h3>
+            <p>One-question-at-a-time CBT practice in English &amp; অসমীয়া with question palette, scorecard, and answer review.</p>
+          </div>
+          <a href="Test.html" class="btn btn-outline" data-adre-route="testSeries">Start Practice →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- SEARCH SECTION -->
+    <section class="search-card" aria-labelledby="search-heading">
+      <div class="section-head" style="margin-bottom: 0.6rem;">
+        <h2 class="section-title" id="search-heading">Search Topics &amp; Question Papers</h2>
+      </div>
+      <div class="search-row">
+        <input type="search" id="homeSearchInput" class="search-input" placeholder="Search e.g. Assam History, Geography, Sports, 2024 Graduate..." aria-label="Search ADRE topics and papers">
+        <button type="button" class="btn btn-primary" onclick="runHomeSearch()">Search</button>
+      </div>
+      <div class="chip-row" aria-label="Quick search filters">
+        <button type="button" class="chip-btn" onclick="quickSearch('Assam')">Assam GK</button>
+        <button type="button" class="chip-btn" onclick="quickSearch('Geography')">Geography</button>
+        <button type="button" class="chip-btn" onclick="quickSearch('Sports')">Sports</button>
+        <button type="button" class="chip-btn" onclick="quickSearch('2024')">2024 Papers</button>
+        <button type="button" class="chip-btn" onclick="quickSearch('2022')">2022 Papers</button>
+      </div>
+      <div id="homeSearchResults" class="search-results" aria-live="polite"></div>
+    </section>
+
+    <!-- IMPORTANT TOPIC HIGHLIGHTS -->
+    <section aria-labelledby="topics-heading">
+      <div class="section-head">
+        <h2 class="section-title" id="topics-heading">Important Topic Highlights (Pareto 80/20)</h2>
+        <a href="#topics-heading" style="font-size: 0.84rem; font-weight: 700; color: var(--primary);" data-adre-route="analysis">View Full Analysis →</a>
+      </div>
+      <div class="topics-grid">
+        <article class="topic-card">
+          <div class="topic-top"><span class="topic-share">17.4% (#1)</span><span class="topic-surge">+5.6 pp</span></div>
+          <h3>Geography (India &amp; World)</h3>
+          <p>Canals, straits, Indian rivers, mountain ranges, and world capitals.</p>
+        </article>
+        <article class="topic-card">
+          <div class="topic-top"><span class="topic-share">16.8% (#2)</span><span class="topic-surge">+2.8 pp</span></div>
+          <h3>Assam History &amp; Literature</h3>
+          <p>Ahom &amp; Koch rulers, pen names, folk culture, and Satras.</p>
+        </article>
+        <article class="topic-card">
+          <div class="topic-top"><span class="topic-share">11.4% (#3)</span></div>
+          <h3>Assam Geography &amp; Polity</h3>
+          <p>Borders, Brahmaputra tributaries, national parks, and Assam schemes.</p>
+        </article>
+        <article class="topic-card">
+          <div class="topic-top"><span class="topic-share">10.5% (#4)</span></div>
+          <h3>Indian &amp; World History</h3>
+          <p>Indus Valley, Mauryas, Mughals, and 1857–1947 Freedom Struggle.</p>
+        </article>
+        <article class="topic-card">
+          <div class="topic-top"><span class="topic-share">8.8% (#5)</span><span class="topic-surge">+6.5 pp Surge</span></div>
+          <h3>Sports &amp; Tournaments</h3>
+          <p>Olympics, IPL, Assam medalists, and major sports trophies.</p>
+        </article>
+        <article class="topic-card">
+          <div class="topic-top"><span class="topic-share">8.0% (#6)</span></div>
+          <h3>Indian Polity</h3>
+          <p>Preamble, Fundamental Rights, 6th &amp; 8th Schedules, and Parliament.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SOCIAL MEDIA LINKS -->
+    <section aria-labelledby="social-heading">
+      <div class="section-head">
+        <h2 class="section-title" id="social-heading">Connect with ADRE PREP</h2>
+        <p class="section-sub">Follow us for daily GK updates, PDFs, and exam alerts</p>
+      </div>
+      <div class="social-grid">
+        <a href="https://www.instagram.com/adre_prep/" target="_blank" rel="noopener noreferrer" class="social-card">
+          <span class="social-icon social-ig" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3Z"/></svg>
+          </span>
+          <span class="social-meta">
+            <h3>Instagram</h3>
+            <p>@adre_prep</p>
           </span>
         </a>
 
-        <div class="sticky-jump-strip" id="sticky-jump-strip">
-          <a class="nav-pill is-active" href="#sec-papers" data-section="sec-papers">০১ কাকতসমূহ</a>
-          <a class="nav-pill" href="#sec-pareto" data-section="sec-pareto">০২ পেৰেট’</a>
-          <a class="nav-pill" href="#sec-trends" data-section="sec-trends">০৩ প্ৰৱণতা</a>
-          <a class="nav-pill" href="#sec-priority" data-section="sec-priority">০৪ অগ্ৰাধিকাৰ</a>
-          <a class="nav-pill" href="#sec-syllabus" data-section="sec-syllabus">০৫ পাঠ্যক্ৰম আৰু PYQ</a>
-          <a class="nav-pill" href="#sec-takeaways" data-section="sec-takeaways">০৬ পৰামৰ্শ</a>
-        </div>
+        <a href="https://whatsapp.com/channel/0029Vb9cyCxJ3juy4KtX0n0U" target="_blank" rel="noopener noreferrer" class="social-card">
+          <span class="social-icon social-wa" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.5 1.34 5.02L2 22l5.14-1.35A9.96 9.96 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm5.82 14.2c-.24.68-1.4 1.3-1.95 1.38-.5.08-1.14.11-1.84-.11-.42-.13-.97-.31-1.67-.61-2.94-1.27-4.86-4.23-5.01-4.43-.15-.2-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.24.59.83 2.04.9 2.19.08.15.13.32.03.52-.1.2-.15.32-.3.5-.15.18-.31.4-.45.54-.15.15-.3.31-.13.61.17.3.77 1.27 1.65 2.05 1.13 1.01 2.09 1.32 2.39 1.47.3.15.48.12.66-.07.18-.2.76-.89.96-1.19.2-.3.4-.25.68-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.34.08.12.08.7-.16 1.38Z"/></svg>
+          </span>
+          <span class="social-meta">
+            <h3>WhatsApp Channel</h3>
+            <p>Instant Quiz &amp; Alerts</p>
+          </span>
+        </a>
 
-        <div class="nav-quick-actions">
-          <span class="nav-readiness-pill" id="nav-readiness-badge" title="সামগ্ৰিক পাঠ্যক্ৰম প্ৰস্তুতি">প্ৰস্তুতি: 0.0%</span>
-        </div>
+        <a href="https://t.me/s/ADREPr" target="_blank" rel="noopener noreferrer" class="social-card">
+          <span class="social-icon social-tg" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l16.01-6.16c.75-.27 1.4.18 1.16 1.32l-2.72 12.81c-.19.91-.74 1.13-1.5.71l-4.14-3.05-2 1.92c-.22.22-.41.41-.83.41Z"/></svg>
+          </span>
+          <span class="social-meta">
+            <h3>Telegram</h3>
+            <p>@ADREPr</p>
+          </span>
+        </a>
       </div>
-    </nav>
+    </section>
 
-    <main class="page-grid" id="top-anchor">
+  </main>
 
-      <!-- HEADER DOSSIER -->
-      <header class="hero-card">
-        <div class="dossier-bar">
-          <div class="dossier-bar-left">
-            <span class="dossier-pill">ADRE_Prep · ৮-কাকতৰ বিশ্লেষণ ডছিয়াৰ</span>
-            <span class="dossier-meta">৮ খন প্ৰশ্নকাকত · 2022 আৰু 2024 চক্ৰ · 472 টা প্ৰমাণিত প্ৰশ্ন</span>
-          </div>
-          <span class="dossier-meta">ম’বাইল আৰু ডেস্কটপ অধ্যয়ন সংস্কৰণ</span>
-        </div>
-        <div class="hero-top-flex">
-          <div>
-            <h1 class="title">ADRE GK আৰু GS ৮-কাকতৰ অভিজ্ঞতামূলক বিশ্লেষণ</h1>
-            <p class="standfirst">অষ্টম শ্ৰেণী, দশম শ্ৰেণী, দ্বাদশ শ্ৰেণী আৰু স্নাতক পৰ্যায়ৰ কাকত অনুসৰি বিভাজন, পেৰেট’ 80/20 ফলপ্ৰসূতা বক্ৰ, 2022–2024 বিষয়ৰ পৰিৱৰ্তন নিৰ্ণয়, ৩-স্তৰীয় অধ্যয়ন আয়ত্ত ট্ৰেকাৰ, সূক্ষ্ম-পাঠ্যক্ৰম চেকলিষ্ট আৰু সক্ৰিয় স্মৰণ PYQ ফ্লেশ্বকাৰ্ড।</p>
-          </div>
-          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-            <button type="button" class="btn btn-accent" onclick="jumpToFlashcard()">
-              <i data-lucide="sparkles" aria-hidden="true" width="16" height="16"></i>
-              PYQ ফ্লেশ্বকাৰ্ড অনুশীলন
-            </button>
-          </div>
-        </div>
-      </header>
-
-      <!-- GLOBAL FILTER DECK -->
-      <section aria-label="তথ্য ফিল্টাৰসমূহ">
-        <div class="control-deck">
-          <div class="control-group">
-            <span class="control-label">পৰীক্ষা চক্ৰৰ পৰিসৰ</span>
-            <div class="segmented-row" role="group" aria-label="পৰীক্ষা চক্ৰ অনুসৰি ফিল্টাৰ কৰক">
-              <button type="button" class="seg-btn" id="btn-year-all" aria-pressed="true" onclick="setCycleFilter('all')">সকলো চক্ৰ (8)</button>
-              <button type="button" class="seg-btn" id="btn-year-2022" aria-pressed="false" onclick="setCycleFilter('2022')">2022 (4)</button>
-              <button type="button" class="seg-btn" id="btn-year-2024" aria-pressed="false" onclick="setCycleFilter('2024')">2024 (4)</button>
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="tier-filter">পৰীক্ষাৰ স্তৰ / গ্ৰেড</label>
-            <select id="tier-filter" class="field-select" onchange="setTierFilter(this.value)">
-              <option value="all">সকলো স্তৰ (অষ্টম, দশম, দ্বাদশ শ্ৰেণী আৰু স্নাতক)</option>
-              <option value="Cl_8">অষ্টম শ্ৰেণী (গ্ৰেড IV)</option>
-              <option value="Cl_10">দশম শ্ৰেণী (গ্ৰেড IV)</option>
-              <option value="Cl_12">দ্বাদশ শ্ৰেণী (গ্ৰেড III)</option>
-              <option value="Grad">স্নাতক (গ্ৰেড III)</option>
-            </select>
-          </div>
-          <div class="control-group">
-            <span class="control-label">অধ্যয়নৰ তথ্য আৰু ৰপ্তানি</span>
-            <div class="segmented-row">
-              <button type="button" class="btn btn-secondary" onclick="exportSyllabusCsv()">
-                <i data-lucide="download" aria-hidden="true" width="16" height="16"></i>
-                CSV ৰপ্তানি কৰক
-              </button>
-              <button type="button" class="btn btn-secondary" id="reset-progress-btn" onclick="resetMasteryProgress(this)">
-                <i data-lucide="rotate-ccw" aria-hidden="true" width="16" height="16"></i>
-                অগ্ৰগতি পুনৰ ছেট কৰক
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- TOP-LINE KPI STRIP -->
-      <section aria-label="মুখ্য পৰিসংখ্যা">
-        <div class="kpi-grid">
-          <div class="figure-card">
-            <span class="figure-label">পৰিসৰৰ ভিতৰত প্ৰমাণিত প্ৰশ্ন</span>
-            <span class="figure-value" id="kpi-total-qs">472</span>
-            <span class="figure-sub" id="kpi-total-sub">8 খন কাকতত 465 টা তালিকাভুক্ত (+7 টা বাদ পৰা স্থান)</span>
-          </div>
-          <div class="figure-card">
-            <span class="figure-label">সন্মিলিত অসম GK অংশ</span>
-            <span class="figure-value" id="kpi-assam-share">28.2%</span>
-            <span class="figure-sub" id="kpi-assam-sub">131 টা প্ৰশ্ন (অসম ইতিহাস/সংস্কৃতি + অসম ভূগোল/প্ৰশাসন)</span>
-          </div>
-          <div class="figure-card">
-            <span class="figure-label">পেৰেট’ 80/20 গুৰুত্বপূৰ্ণ মূল অংশ</span>
-            <span class="figure-value" id="kpi-pareto-topics">7 / 12</span>
-            <span class="figure-sub" id="kpi-pareto-sub">শীৰ্ষ 7 টা বিষয়ে মুঠ নম্বৰৰ 80.9% প্ৰদান কৰে</span>
-          </div>
-          <div class="figure-card">
-            <span class="figure-label">দ্ৰুতগতিত বৃদ্ধি পোৱা স্তম্ভ (2024)</span>
-            <span class="figure-value" id="kpi-top-surge">ক্ৰীড়া +6.5 pp</span>
-            <span class="figure-sub" id="kpi-surge-sub">2022 চনত 5.2% (11 Qs) → 2024 চনত 11.8% (30 Qs)</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 01: PAPER-WISE BREAKDOWN -->
-      <section id="sec-papers" aria-labelledby="heading-papers">
-        <div class="dossier-bar">
-          <div class="dossier-bar-left">
-            <span class="index-num">01</span>
-            <span class="dossier-meta">কাকত অনুসৰি গাঁথনি · 2022 বনাম 2024</span>
-          </div>
-          <span class="dossier-meta">কাকতৰ বিৱৰণ চাবলৈ যিকোনো শাৰী বা কাৰ্ডত টিপক</span>
-        </div>
-        <h2 class="section-heading" id="heading-papers">৮-কাকতৰ GK/GS বিতৰণ মেট্ৰিক্স</h2>
-        <p class="section-deck">প্ৰতিটো ADRE পৰীক্ষাৰ স্তৰে GK/GS-ক বেলেগ বেলেগ গুৰুত্ব দিয়ে। অষ্টম আৰু দশম শ্ৰেণীৰ কাকতসমূহে অসমৰ ঐতিহ্য আৰু স্থিৰ ভূগোলৰ ওপৰত অধিক গুৰুত্ব আৰোপ কৰাৰ বিপৰীতে 2024 চনৰ স্নাতক কাকতখনে ক্ৰীড়া (14 Qs) আৰু সাহিত্য আৰু সংস্কৃতি (11 Qs) তীব্ৰভাৱে সম্প্ৰসাৰিত কৰিছে।</p>
-
-        <div class="split-grid">
-          <div class="chart-card">
-            <div class="chart-header">
-              <div>
-                <h3 class="chart-title">সকলো ৮ খন কাকতত প্ৰশ্নৰ গঠন</h3>
-                <p class="chart-subtitle">প্ৰতিখন কাকতত 6 টা বৃহৎ ক্ষেত্ৰত গোট খোৱা তালিকাভুক্ত প্ৰশ্নসমূহ</p>
-              </div>
-            </div>
-            <div class="chart-wrap">
-              <canvas id="paperStackedChart" aria-label="ADRE কাকতসমূহৰ স্তূপীকৃত বাৰ চাৰ্ট"></canvas>
-            </div>
-            <div class="chart-source">উৎস: আপলোড কৰা 2022 (অষ্টম, দশম, দ্বাদশ শ্ৰেণী, স্নাতক) আৰু 2024 (অষ্টম, দশম, দ্বাদশ শ্ৰেণী, স্নাতক) PYQ নথিপত্ৰৰ প্ৰত্যক্ষ পৰীক্ষা।</div>
-          </div>
-
-          <aside class="paper-inspector" id="paper-inspector-panel" aria-live="polite">
-            <div>
-              <span class="tag tag-gold" id="insp-badge">নিৰ্বাচিত কাকত</span>
-              <h3 class="section-heading" style="margin-top: var(--space-xs);" id="insp-title">ADRE 2024 স্নাতক</h3>
-              <p class="chart-subtitle" id="insp-meta">72 টা চৰকাৰী প্ৰশ্ন · উদ্ধৃতাংশ আৰু উত্তৰ তালিকাত 66 টা তালিকাভুক্ত</p>
-            </div>
-            <div class="paper-bar-list" id="insp-bars"></div>
-            <div class="aside-box">
-              <h4 class="aside-title">কাকতৰ বিশেষ টোকা</h4>
-              <p id="insp-note">2024 চনত আটাইতকৈ তীব্ৰ গাঁথনিগত পৰিৱৰ্তন দেখুৱাইছে: ক্ৰীড়া 14 টা প্ৰশ্নলৈ (তালিকাভুক্ত প্ৰশ্নৰ 21.2%) বৃদ্ধি পাইছে আৰু লগতে 12 টা অসম ইতিহাস/সাহিত্যৰ প্ৰশ্ন অন্তৰ্ভুক্ত হৈছে।</p>
-            </div>
-          </aside>
-        </div>
-
-        <div style="margin-top: var(--space-lg);">
-          <div class="view-switch-bar">
-            <span class="table-hint">← সকলো স্তম্ভ চাবলৈ বাওঁফালে-সোঁফালে ছোৱাইপ কৰক (কাকতৰ স্তম্ভটো স্থিৰ হৈ থাকিব) →</span>
-            <div class="segmented-row" role="group" aria-label="কাকত তালিকা দৰ্শন সলনি কৰক">
-              <button type="button" class="seg-btn" id="view-papers-table-btn" aria-pressed="true" onclick="setPapersViewMode('table')" style="min-height: 36px; font-size: 0.78rem; padding: 0 0.7rem;">তালিকা দৰ্শন</button>
-              <button type="button" class="seg-btn" id="view-papers-cards-btn" aria-pressed="false" onclick="setPapersViewMode('cards')" style="min-height: 36px; font-size: 0.78rem; padding: 0 0.7rem;">ম’বাইল কাৰ্ড দৰ্শন</button>
-            </div>
-          </div>
-
-          <div class="table-scroll" id="papers-table-wrap">
-            <table class="data-table" id="papers-table">
-              <thead>
-                <tr>
-                  <th>কাকত</th>
-                  <th>বৰ্ষ</th>
-                  <th>স্তৰ</th>
-                  <th class="num">চৰকাৰী Qs</th>
-                  <th class="num">তালিকাভুক্ত</th>
-                  <th class="num">অসম GK</th>
-                  <th class="num">ভূগোল (ভাৰত/বিশ্ব)</th>
-                  <th class="num">ইতিহাস</th>
-                  <th class="num">ৰাজনীতি</th>
-                  <th class="num">ক্ৰীড়া</th>
-                  <th class="num">বিজ্ঞান</th>
-                </tr>
-              </thead>
-              <tbody id="papers-tbody"></tbody>
-              <tfoot id="papers-tfoot"></tfoot>
-            </table>
-          </div>
-
-          <div class="mobile-papers-cards" id="papers-cards-wrap"></div>
-        </div>
-
-        <div class="aside-box" style="margin-top: var(--space-md);">
-          <h4 class="aside-title">পৰীক্ষণ পদ্ধতিৰ টোকা (472 টা চৰকাৰী বনাম 465 টা তালিকাভুক্ত প্ৰশ্ন)</h4>
-          <p>2022 চনৰ চাৰিওখন কাকতত সম্পূৰ্ণৰূপে ছপা হোৱা 210 টা প্ৰশ্ন আছে (60 + 60 + 40 + 50)। 2024 চনৰ চাৰিওখন কাকতত মুঠ 262 টা চৰকাৰী GK/GS স্থান আছে (65 + 65 + 60 + 72): উৎস উদ্ধৃতাংশসমূহত 255 টা স্পষ্টভাৱে ছপা/উত্তৰ দিয়া হৈছে, আনহাতে 2024 দশম শ্ৰেণীত 1 টা স্থান (Q62 আৰু Q64-ৰ মাজত Q63 বাদ পৰিছে) আৰু 2024 স্নাতকত 6 টা স্থান (উদ্ধৃতাংশ + উত্তৰ তালিকাত প্ৰমাণিত 66 টাৰ বিপৰীতে উল্লিখিত মুঠ 72 টা) ছপা হোৱা নাই। সকলো বিষয়ৰ শতাংশ আৰু পেৰেট’ বক্ৰই সঠিক হৰ হিচাপে 465 টা প্ৰমাণিত তালিকাভুক্ত প্ৰশ্ন ব্যৱহাৰ কৰে।</p>
-        </div>
-      </section>
-
-      <!-- SECTION 02: PARETO 80/20 ANALYSIS -->
-      <section id="sec-pareto" aria-labelledby="heading-pareto">
-        <div class="dossier-bar">
-          <div class="dossier-bar-left">
-            <span class="index-num">02</span>
-            <span class="dossier-meta">পেৰেট’ 80/20 ঘনত্ব · অত্যাৱশ্যকীয় কমসংখ্যক বনাম উপযোগী বহুসংখ্যক</span>
-          </div>
-          <span class="dossier-meta">সঞ্চিত অংশ বক্ৰ</span>
-        </div>
-        <h2 class="section-heading" id="heading-pareto">পেৰেট’ 80/20 বিষয়ৰ ফলপ্ৰসূতা বিশ্লেষণ</h2>
-        <p class="section-deck">কেৱল পাঁচটা মূল বিষয়েই সকলো ADRE GK/GS প্ৰশ্নৰ 64.9% সৃষ্টি কৰে, আৰু শীৰ্ষ সাতটা বিষয়ে 80.9% স্পৰ্শ কৰে — যিয়ে ক্লাছিক 80/20 দক্ষতা ৰেখা অতিক্ৰম কৰে। অসম-কেন্দ্ৰিক GK-ৰ লগতে বিশ্ব/ভাৰতীয় ভূগোল আৰু ইতিহাস আয়ত্ত কৰিলে কাকতখনৰ প্ৰায় তিনি-চতুৰ্থাংশ সুৰক্ষিত হয়।</p>
-
-        <div class="split-grid">
-          <div class="chart-card">
-            <div class="chart-header">
-              <div>
-                <h3 class="chart-title">বিষয় অনুসৰি প্ৰশ্নৰ সংখ্যা আৰু সঞ্চিত অংশ (%)</h3>
-                <p class="chart-subtitle">বাৰ = প্ৰমাণিত প্ৰশ্ন; ৰেখা = 80% পেৰেট’ সীমাৰ দিশে সঞ্চিত %</p>
-              </div>
-            </div>
-            <div class="chart-wrap-tall">
-              <canvas id="paretoChart" aria-label="পেৰেট’ 80/20 কম্বো চাৰ্ট"></canvas>
-            </div>
-            <div class="chart-source">সঠিক উপ-বিষয় আৰু নমুনা PYQ চাবলৈ তলৰ অগ্ৰাধিকাৰ মেট্ৰিক্স বা পাঠ্যক্ৰমত যিকোনো বিষয়ত টিপক।</div>
-          </div>
-
-          <div class="figure-card" style="gap: var(--space-md);">
-            <div>
-              <span class="tag tag-high">পেৰেট’ ঘনত্বৰ বিভাজন</span>
-              <h3 class="chart-title" style="margin-top: var(--space-xs);">80% নম্বৰ ক’ত থাকে</h3>
-            </div>
-            <div class="mini-bar-row">
-              <span><strong>শীৰ্ষ 3 টা বিষয়</strong> (ভূগোল ভাৰত/বিশ্ব, অসম ইতিহাস/সাহিত্য, অসম ভূগোল/প্ৰশাসন)</span>
-              <span class="index-num">45.6%</span>
-              <div class="mini-bar-track"><div class="mini-bar-fill" style="width: 45.6%;"></div></div>
-            </div>
-            <div class="mini-bar-row">
-              <span><strong>শীৰ্ষ 5 টা বিষয়</strong> (+ ভাৰতীয়/বিশ্ব ইতিহাস, ক্ৰীড়া)</span>
-              <span class="index-num">64.9%</span>
-              <div class="mini-bar-track"><div class="mini-bar-fill" style="width: 64.9%;"></div></div>
-            </div>
-            <div class="mini-bar-row">
-              <span><strong>শীৰ্ষ 7 টা বিষয়</strong> (+ ভাৰতীয় ৰাজনীতি, কলা/সংস্কৃতি/সাহিত্য)</span>
-              <span class="index-num">80.9%</span>
-              <div class="mini-bar-track"><div class="mini-bar-fill" style="width: 80.9%; background: var(--positive);"></div></div>
-            </div>
-            <div class="mini-bar-row">
-              <span><strong>বাকী 5 টা বিষয়</strong> (বিজ্ঞান, অৰ্থনীতি, আঁচনি, সাম্প্ৰতিক পৰিক্ৰমা, উত্তৰ-পূব GK)</span>
-              <span class="index-num">19.1%</span>
-              <div class="mini-bar-track"><div class="mini-bar-fill" style="width: 19.1%; background: var(--accent-gold);"></div></div>
-            </div>
-            <div class="aside-box">
-              <h4 class="aside-title">কৌশলগত সাৰাংশ</h4>
-              <p>সকলো 12 টা বিষয়ত সমান অধ্যয়নৰ সময় আবণ্টন নকৰিব। GK প্ৰস্তুতিৰ ~75% সময় শীৰ্ষ 7 টা বিষয়ত (বিশেষকৈ অসম GK + ভূগোল + ইতিহাস + ক্ৰীড়া + ৰাজনীতি) উৎসৰ্গা কৰক, য’ৰ পৰা 465 টা প্ৰমাণিত প্ৰশ্নৰ ভিতৰত 376 টা প্ৰশ্ন আহে।</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 03: 2022 VS 2024 TRENDS -->
-      <section id="sec-trends" aria-labelledby="heading-trends">
-        <div class="dossier-bar">
-          <div class="dossier-bar-left">
-            <span class="index-num">03</span>
-            <span class="dossier-meta">চক্ৰ-মধ্যৱৰ্তী পৰিৱৰ্তন · 2022 (210 Qs) বনাম 2024 (255 তালিকাভুক্ত Qs)</span>
-          </div>
-          <div class="segmented-row" role="group" aria-label="প্ৰৱণতাৰ দিশ ফিল্টাৰ কৰক">
-            <button type="button" class="seg-btn" id="trend-btn-all" aria-pressed="true" onclick="setTrendFilter('all')">সকলো (12)</button>
-            <button type="button" class="seg-btn" id="trend-btn-surge" aria-pressed="false" onclick="setTrendFilter('surge')">বৃদ্ধি পোৱা</button>
-            <button type="button" class="seg-btn" id="trend-btn-steady" aria-pressed="false" onclick="setTrendFilter('steady')">স্থিৰ</button>
-            <button type="button" class="seg-btn" id="trend-btn-drop" aria-pressed="false" onclick="setTrendFilter('drop')">হ্ৰাস পোৱা</button>
-          </div>
-        </div>
-        <h2 class="section-heading" id="heading-trends">2022 বনাম 2024 বিষয়ৰ অংশৰ পৰিৱৰ্তন</h2>
-        <p class="section-deck">স্বাভাৱিকীকৃত বিষয়ৰ অংশ (%) তুলনা কৰিলে এক স্পষ্ট গাঁথনিগত বিৱৰ্তন দেখা যায়: ADRE 2024-এ তথ্যভিত্তিক অসম প্ৰশাসনিক/বিজ্ঞানৰ সাধাৰণ তথ্যৰ পৰা আঁতৰি বহল বিশ্ব ভূগোল, ক্ৰীড়া ব্যক্তিত্ব/প্ৰতিযোগিতা আৰু সাংস্কৃতিক/সাহিত্যিক ঐতিহ্যৰ দিশে গতি কৰিছে।</p>
-
-        <div class="equal-grid">
-          <div class="chart-card">
-            <div class="chart-header">
-              <div>
-                <h3 class="chart-title">বিষয়ৰ অংশৰ তুলনা: 2022 বনাম 2024 (%)</h3>
-                <p class="chart-subtitle">প্ৰতিটো চক্ৰত তালিকাভুক্ত GK/GS প্ৰশ্নৰ স্বাভাৱিকীকৃত শতাংশ</p>
-              </div>
-            </div>
-            <div class="chart-wrap-tall">
-              <canvas id="trendChart" aria-label="2022 বনাম 2024 গোট খোৱা বাৰ চাৰ্ট"></canvas>
-            </div>
-            <div class="chart-source">নীলা = 2022 চক্ৰ (n=210); সোণালী = 2024 চক্ৰ (n=255)।</div>
-          </div>
-
-          <div>
-            <span class="table-hint" style="display: block; margin-bottom: 0.45rem;">← তালিকাখন বাওঁফালে-সোঁফালে ছোৱাইপ কৰক (বিষয়ৰ স্তম্ভটো স্থিৰ হৈ থাকিব) →</span>
-            <div class="table-scroll">
-              <table class="data-table">
-                <thead>
-                  <tr>
-                    <th>বিষয়</th>
-                    <th class="num">2022 Qs</th>
-                    <th class="num">2024 Qs</th>
-                    <th class="num">অংশ Δ</th>
-                    <th>সংকেত</th>
-                  </tr>
-                </thead>
-                <tbody id="trends-tbody"></tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION 04: PRIORITY RANKING & 3-STATE READINESS TRACKER -->
-      <section id="sec-priority" aria-labelledby="heading-priority">
-        <div class="dossier-bar">
-          <div class="dossier-bar-left">
-            <span class="index-num">04</span>
-            <span class="dossier-meta">কাৰ্যকৰী অধ্যয়ন আবণ্টন · ৩-স্তৰীয় আয়ত্ত ট্ৰেকাৰ</span>
-          </div>
-          <div class="segmented-row" role="group" aria-label="অগ্ৰাধিকাৰ স্তৰ ফিল্টাৰ কৰক">
-            <button type="button" class="seg-btn" id="prio-btn-all" aria-pressed="true" onclick="setPriorityFilter('all')">সকলো (12)</button>
-            <button type="button" class="seg-btn is-highlight" id="prio-btn-high_unmastered" aria-pressed="false" onclick="setPriorityFilter('high_unmastered')">উচ্চ-ফলপ্ৰসূ অসম্পূৰ্ণ</button>
-            <button type="button" class="seg-btn" id="prio-btn-High" aria-pressed="false" onclick="setPriorityFilter('High')">উচ্চ (5)</button>
-            <button type="button" class="seg-btn" id="prio-btn-Medium" aria-pressed="false" onclick="setPriorityFilter('Medium')">মধ্যম (3)</button>
-            <button type="button" class="seg-btn" id="prio-btn-Low" aria-pressed="false" onclick="setPriorityFilter('Low')">নিম্ন (4)</button>
-          </div>
-        </div>
-        <h2 class="section-heading" id="heading-priority">অগ্ৰাধিকাৰ ক্ৰম আৰু ভৰযুক্ত পৰীক্ষাৰ প্ৰস্তুতি</h2>
-        <p class="section-deck">যিকোনো বিষয়ক <strong>আৰম্ভ হোৱা নাই → পুনৰীক্ষণৰ প্ৰয়োজন → আয়ত্ত কৰা হৈছে</strong> স্তৰৰ মাজেৰে সলনি কৰক, বা শাখা 05-ত ব্যক্তিগত সূক্ষ্ম-উপবিষয়সমূহত টিক চিহ্ন দিয়ক। পৰীক্ষাৰ দিনাৰ আগতে সময় কম থাকিলে <strong>উচ্চ-ফলপ্ৰসূ অসম্পূৰ্ণ</strong> ফিল্টাৰটো ব্যৱহাৰ কৰক।</p>
-
-        <div class="readiness-bar-card" style="margin-bottom: var(--space-lg);">
-          <div>
-            <span class="figure-label">ভৰযুক্ত পাঠ্যক্ৰমৰ প্ৰস্তুতি (আয়ত্ত কৰা + উপ-বিষয়ৰ অগ্ৰগতি)</span>
-            <div class="readiness-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="readiness-progressbar">
-              <div class="readiness-fill" id="readiness-fill" style="width: 0%;"></div>
-              <div class="readiness-fill-rev" id="readiness-fill-rev" style="width: 0%;"></div>
-            </div>
-            <div style="display: flex; flex-wrap: wrap; gap: 0.85rem; margin-top: 0.45rem; font-size: 0.78rem; color: var(--on-surface-variant);">
-              <span><strong style="color: var(--positive);">■</strong> আয়ত্ত কৰা হৈছে</span>
-              <span><strong style="color: var(--accent-gold);">■</strong> পুনৰীক্ষণৰ প্ৰয়োজন</span>
-              <span id="subtopic-overall-stat">0 / 45 টা সূক্ষ্ম-উপবিষয় সম্পূৰ্ণ হৈছে</span>
-            </div>
-          </div>
-          <div style="text-align: right;">
-            <span class="figure-value" id="readiness-pct">0.0%</span>
-            <div class="figure-sub" id="readiness-detail">0 / 12 আয়ত্ত · 0 পুনৰীক্ষণত</div>
-          </div>
-        </div>
-
-        <div class="priority-grid" id="priority-cards-container"></div>
-      </section>
-
-      <!-- SECTION 05: COMPLETE TOPIC-WISE SYLLABUS, MICRO-CHECKLISTS & ACTIVE RECALL PYQs -->
-      <section id="sec-syllabus" aria-labelledby="heading-syllabus">
-        <div class="dossier-bar">
-          <div class="dossier-bar-left">
-            <span class="index-num">05</span>
-            <span class="dossier-meta">সম্পূৰ্ণ সূক্ষ্ম-পাঠ্যক্ৰম · চেকলিষ্ট আৰু সক্ৰিয় স্মৰণ PYQ</span>
-          </div>
-          <span class="dossier-meta" id="syllabus-match-count">12 টা বিষয়ৰ ভিতৰত 12 টা দেখুওৱা হৈছে</span>
-        </div>
-        <h2 class="section-heading" id="heading-syllabus">সম্পূৰ্ণ ADRE GK/GS পাঠ্যক্ৰম আৰু PYQ প্ৰমাণ</h2>
-        <p class="section-deck">অধ্যয়ন কৰাৰ লগে লগে সূক্ষ্ম-বিষয়সমূহত টিক চিহ্ন দিয়ক, যাদৃচ্ছিক PYQ ফ্লেশ্বকাৰ্ড জেনেৰেটৰৰ দ্বাৰা নিজকে পৰীক্ষা কৰক, বা 36 টা প্ৰমাণিত নমুনা প্ৰশ্নৰ সকলো উত্তৰ লুকুৱাবলৈ কুইজ মোড সক্ৰিয় কৰক।</p>
-
-        <!-- ACTIVE RECALL STUDY MODE TOOLBAR -->
-        <div class="study-toolbar" role="region" aria-label="সক্ৰিয় স্মৰণ অধ্যয়ন সঁজুলিসমূহ">
-          <div style="display: flex; flex-direction: column; gap: 0.15rem;">
-            <span class="control-label" style="color: var(--primary);">সক্ৰিয় স্মৰণ অধ্যয়ন মোড</span>
-            <span style="font-size: 0.87rem; color: var(--on-surface-variant);">8 খন কাকতৰ 36 টা প্ৰমাণিত PYQ-ৰ সৈতে আত্ম-পৰীক্ষা কৰক</span>
-          </div>
-          <div class="segmented-row">
-            <button type="button" class="btn btn-accent" onclick="openRandomFlashcard()">
-              <i data-lucide="shuffle" aria-hidden="true" width="16" height="16"></i>
-              যাদৃচ্ছিক PYQ ফ্লেশ্বকাৰ্ড
-            </button>
-            <button type="button" class="btn btn-secondary" id="quiz-mode-toggle-btn" onclick="toggleAllPyqAnswers()">
-              <i data-lucide="eye-off" aria-hidden="true" width="16" height="16"></i>
-              সকলো উত্তৰ লুকুৱাওক (কুইজ মোড)
-            </button>
-          </div>
-        </div>
-
-        <!-- INLINE RANDOM PYQ FLASHCARD DRAWER -->
-        <div class="flashcard-box" id="flashcard-drawer" hidden aria-live="polite">
-          <div class="flashcard-header">
-            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.45rem;">
-              <span class="tag tag-gold">PYQ ফ্লেশ্বকাৰ্ড</span>
-              <span class="index-num" id="fc-paper-ref">2024 দ্বাদশ শ্ৰেণী · Q48</span>
-              <span class="dossier-meta" id="fc-topic-name">ভূগোল (ভাৰত আৰু বিশ্ব)</span>
-            </div>
-            <button type="button" class="btn btn-secondary" style="min-height: 36px; padding: 0 0.65rem;" onclick="closeFlashcard()">বন্ধ কৰক ✕</button>
-          </div>
-          <p class="flashcard-q" id="fc-question">প্ৰশ্ন লোড হৈ আছে…</p>
-          <div class="flashcard-a" id="fc-answer" hidden>উত্তৰ: …</div>
-          <div class="segmented-row" style="margin-top: 0.25rem;">
-            <button type="button" class="btn btn-primary" id="fc-reveal-btn" onclick="revealFlashcardAnswer()">উত্তৰ দেখুৱাওক</button>
-            <button type="button" class="btn btn-secondary" onclick="openRandomFlashcard()">পৰৱৰ্তী যাদৃচ্ছিক PYQ →</button>
-          </div>
-        </div>
-
-        <div class="syllabus-controls">
-          <div class="control-group">
-            <label class="control-label" for="syllabus-search">পাঠ্যক্ৰমৰ উপ-বিষয় বা নমুনা PYQ সন্ধান কৰক</label>
-            <input type="search" id="syllabus-search" class="field-input" placeholder="সন্ধান কৰক যেনে: আহোম, সংবিধান, ছুয়েজ, হকী, ভিটামিন…" oninput="setSyllabusSearch(this.value)">
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="syllabus-prio-select">অধ্যয়ন আৰু অগ্ৰাধিকাৰ ফিল্টাৰ</label>
-            <select id="syllabus-prio-select" class="field-select" onchange="setSyllabusPrioSelect(this.value)">
-              <option value="all">সকলো বিষয় (12)</option>
-              <option value="high_unmastered">কেৱল উচ্চ-ফলপ্ৰসূ অসম্পূৰ্ণ</option>
-              <option value="needs_revision">কেৱল পুনৰীক্ষণৰ প্ৰয়োজন</option>
-              <option value="High">কেৱল উচ্চ অগ্ৰাধিকাৰ</option>
-              <option value="Medium">কেৱল মধ্যম অগ্ৰাধিকাৰ</option>
-              <option value="Low">কেৱল নিম্ন অগ্ৰাধিকাৰ</option>
-            </select>
-          </div>
-          <div class="control-group">
-            <span class="control-label">একৰ্ডিয়ন নিয়ন্ত্ৰণ</span>
-            <div class="segmented-row">
-              <button type="button" class="btn btn-secondary" onclick="toggleAllSyllabus(true)">সকলো বহলাওক</button>
-              <button type="button" class="btn btn-secondary" onclick="toggleAllSyllabus(false)">সকলো সংকুচিত কৰক</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="syllabus-list" id="syllabus-container"></div>
-      </section>
-
-      <!-- SECTION 06: STRATEGIC EXAM TAKEAWAYS -->
-      <section id="sec-takeaways" aria-labelledby="heading-takeaways">
-        <div class="dossier-bar">
-          <div class="dossier-bar-left">
-            <span class="index-num">06</span>
-            <span class="dossier-meta">পৰীক্ষাৰ কৌশলগত নিৰ্দেশনা · ৮-কাকতৰ সাৰাংশ</span>
-          </div>
-          <span class="dossier-meta">চূড়ান্ত প্ৰস্তুতি পৰিকল্পনা</span>
-        </div>
-        <h2 class="section-heading" id="heading-takeaways">ADRE পৰীক্ষাৰ্থীৰ বাবে ৩ টা মূল কৌশলগত পৰামৰ্শ</h2>
-        <p class="section-deck">২০২২ আৰু ২০২৪ চনৰ আটাইকেইখন কাকতৰ তুলনামূলক তথ্যৰ ভিত্তিত সৰ্বাধিক নম্বৰ আহৰণৰ বাবে এই তিনিটা নিয়ম অনুসৰণ কৰক।</p>
-
-        <div class="takeaways-grid">
-          <article class="takeaway-card">
-            <span class="tag tag-high" style="align-self: flex-start;">১. অসম + ভূগোল মূল স্তম্ভ</span>
-            <h3 class="chart-title">৪৫.৬% নম্বৰ কেৱল ৩ টা বিষয়ৰ পৰা</h3>
-            <p style="margin: 0; font-size: 0.9rem; color: var(--on-surface-variant);">অসম ইতিহাস/সাহিত্য (16.8%), অসম ভূগোল/প্ৰশাসন (11.4%) আৰু ভাৰত-বিশ্ব ভূগোল (17.4%) মিলি মুঠ প্ৰশ্নৰ প্ৰায় আধা অংশ আগুৰি আছে। এই তিনিটা বিষয়ত কোনো সুৰুঙা নেৰাখিব।</p>
-          </article>
-          <article class="takeaway-card">
-            <span class="tag tag-surge" style="align-self: flex-start;">২. ২০২৪ চনৰ নতুন ধাৰা</span>
-            <h3 class="chart-title">ক্ৰীড়া আৰু কলা-সংস্কৃতিত বিশেষ গুৰুত্ব</h3>
-            <p style="margin: 0; font-size: 0.9rem; color: var(--on-surface-variant);">২০২৪ চনত ক্ৰীড়া (+6.5 pp) আৰু কলা-সংস্কৃতি/সাহিত্য (+5.0 pp) তীব্ৰভাৱে বৃদ্ধি পাইছে, বিশেষকৈ স্নাতক পৰ্যায়ৰ কাকতত। অলিম্পিক, IPL, অসমৰ খেলুৱৈ আৰু লোকনৃত্যৰ তালিকা নিতৌ পুনৰীক্ষণ কৰক।</p>
-          </article>
-          <article class="takeaway-card">
-            <span class="tag tag-med" style="align-self: flex-start;">৩. স্মাৰ্ট সময় আবণ্টন</span>
-            <h3 class="chart-title">সাধাৰণ বিজ্ঞানত সীমিত কিন্তু নিখুঁত পঢ়া</h3>
-            <p style="margin: 0; font-size: 0.9rem; color: var(--on-surface-variant);">২০২৪ চনত বিজ্ঞানৰ প্ৰশ্ন 5.9%-লৈ হ্ৰাস পাইছে। জটিল বিজ্ঞানৰ সলনি ষষ্ঠ–দশম শ্ৰেণীৰ NCERT-ৰ ভিটামিন, ৰোগ, pH মান আৰু মৌলিক পদাৰ্থ বিজ্ঞানৰ তথ্যসমূহহে পঢ়ক।</p>
-          </article>
-        </div>
-      </section>
-
-      <footer style="border-top: 1px solid var(--outline-variant); padding-top: var(--space-md); color: var(--ink-subtle); font-size: 0.85rem;">
-        <div class="dossier-bar" style="border-bottom: none; margin-bottom: 0;">
-          <span>উৎসসমূহ: ADRE 2022 আৰু 2024 চৰকাৰী PYQ সংকলন (অষ্টম শ্ৰেণী, দশম শ্ৰেণী, দ্বাদশ শ্ৰেণী, স্নাতক — 8 খন কাকত / 472 টা প্ৰশ্ন)।</span>
-          <span class="dossier-meta" id="footer-status">স্থানীয়ভাৱে সংৰক্ষিত</span>
-        </div>
-      </footer>
-
-    </main>
-  </div>
-
-  <!-- FLOATING QUICK-ACCESS SOCIAL & SCROLL-TO-TOP WIDGET -->
-  <div class="adre-float-wrap" aria-label="Floating Action and Social Links">
-    <button
-      type="button"
-      class="adre-float-btn adre-float-up"
-      id="adreFloatUpBtn"
-      aria-label="ওপৰলৈ যাওক"
-      title="ওপৰলৈ যাওক"
-    >
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12 5l-7 7h4v7h6v-7h4l-7-7z"/>
-      </svg>
-    </button>
-
-    <a
-      class="adre-float-btn adre-float-ig adre-social-item"
-      href="https://www.instagram.com/adre_prep/"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Instagram"
-      title="Instagram"
-    >
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3Z"/>
-      </svg>
-    </a>
-
-    <a
-      class="adre-float-btn adre-float-wa adre-social-item"
-      href="https://whatsapp.com/channel/0029Vb9cyCxJ3juy4KtX0n0U"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="WhatsApp"
-      title="WhatsApp"
-    >
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.5 1.34 5.02L2 22l5.14-1.35A9.96 9.96 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm5.82 14.2c-.24.68-1.4 1.3-1.95 1.38-.5.08-1.14.11-1.84-.11-.42-.13-.97-.31-1.67-.61-2.94-1.27-4.86-4.23-5.01-4.43-.15-.2-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.24.59.83 2.04.9 2.19.08.15.13.32.03.52-.1.2-.15.32-.3.5-.15.18-.31.4-.45.54-.15.15-.3.31-.13.61.17.3.77 1.27 1.65 2.05 1.13 1.01 2.09 1.32 2.39 1.47.3.15.48.12.66-.07.18-.2.76-.89.96-1.19.2-.3.4-.25.68-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.34.08.12.08.7-.16 1.38Z"/>
-      </svg>
-    </a>
-
-    <a
-      class="adre-float-btn adre-float-tg adre-social-item"
-      href="https://t.me/s/ADREPr"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Telegram"
-      title="Telegram"
-    >
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l16.01-6.16c.75-.27 1.4.18 1.16 1.32l-2.72 12.81c-.19.91-.74 1.13-1.5.71l-4.14-3.05-2 1.92c-.22.22-.41.41-.83.41Z"/>
-      </svg>
-    </a>
-
-    <button
-      type="button"
-      class="adre-float-btn adre-float-close"
-      id="adreFloatToggleBtn"
-      aria-label="ছ’চিয়েল বুটাম লুকুৱাওক"
-      title="ছ’চিয়েল বুটাম লুকুৱাওক"
-    >
-      <svg id="adreFloatToggleIcon" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7A1 1 0 0 0 5.7 7.11L10.59 12 5.7 16.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4Z"/>
-      </svg>
-    </button>
-  </div>
+  <!-- COMMON FOOTER -->
+  <footer class="adre-site-footer">
+    <div class="adre-footer-inner">
+      <div><strong>ADRE PREP</strong> • Assam Direct Recruitment Platform</div>
+      <div class="adre-footer-links">
+        <a href="#index.html" data-adre-route="home">Home</a>
+        <a href="analyt.html" data-adre-route="analysis">Paper Analysis</a>
+        <a href="Test.html" data-adre-route="testSeries">Online Test Series</a>
+      </div>
+    </div>
+  </footer>
 
   <script>
-    // =========================================================================
-    // DATA LAYER (100% Grounded in the 8 Uploaded ADRE 2022 & 2024 PYQ Papers)
-    // =========================================================================
-    const PAPERS = [
-      {
-        id: `2022_Cl_8`,
-        name: `ADRE 2022 অষ্টম শ্ৰেণী`,
-        year: `2022`,
-        tier: `Cl_8`,
-        tierLabel: `অষ্টম শ্ৰেণী`,
-        officialTotal: 60,
-        itemized: 60,
-        note: `সৰ্বাধিক অসম ঐতিহ্যৰ ঘনত্ব (27/60 = 45.0% সন্মিলিত অসম GK), য’ত আহোম/কোচ ৰজা, অৰুণোদই, সত্ৰ, দলং আৰু বন্যপ্ৰাণী অভয়াৰণ্যসমূহ অন্তৰ্ভুক্ত আছে।`,
-        counts: {
-          assam_hist: 16,
-          assam_geo: 11,
-          geo_world: 6,
-          history: 6,
-          polity: 5,
-          science: 7,
-          sports: 3,
-          culture: 2,
-          economy: 1,
-          schemes: 2,
-          ca: 1,
-          ne_gk: 0
-        }
-      },
-      {
-        id: `2022_Cl_10`,
-        name: `ADRE 2022 দশম শ্ৰেণী`,
-        year: `2022`,
-        tier: `Cl_10`,
-        tierLabel: `দশম শ্ৰেণী`,
-        officialTotal: 60,
-        itemized: 60,
-        note: `বহল বিশ্ব ভূগোল আৰু ৰাজধানীৰ কাকত (13 Qs), যি অসমৰ সংযোগকাৰী স্থান (দিৰাক, নৰনাৰায়ণ সেতু), উত্তৰ-পূবৰ প্ৰতিষ্ঠান (NEPA, CIJWS, কেইবুল লামজাও) আৰু মৌলিক নাগৰিক বিজ্ঞানৰ সৈতে ভাৰসাম্যপূৰ্ণ।`,
-        counts: {
-          assam_hist: 8,
-          assam_geo: 7,
-          geo_world: 13,
-          history: 5,
-          polity: 5,
-          science: 5,
-          sports: 3,
-          culture: 4,
-          economy: 4,
-          schemes: 2,
-          ca: 1,
-          ne_gk: 3
-        }
-      },
-      {
-        id: `2022_Cl_12`,
-        name: `ADRE 2022 দ্বাদশ শ্ৰেণী`,
-        year: `2022`,
-        tier: `Cl_12`,
-        tierLabel: `দ্বাদশ শ্ৰেণী`,
-        officialTotal: 40,
-        itemized: 40,
-        note: `40-প্ৰশ্নৰ সংক্ষিপ্ত GK শাখা, য’ত অসম ভূগোল আৰু প্ৰশাসন (10 Qs, 25%), অৰ্থনীতি/বিত্ত (6 Qs) আৰু কেন্দ্ৰীয় চৰকাৰৰ আঁচনি (4 Qs: UDAN, BBBP, ইন্দ্ৰধনুষ, জল শক্তি)-ক অধিক গুৰুত্ব দিয়া হৈছে।`,
-        counts: {
-          assam_hist: 3,
-          assam_geo: 10,
-          geo_world: 3,
-          history: 4,
-          polity: 3,
-          science: 3,
-          sports: 2,
-          culture: 2,
-          economy: 6,
-          schemes: 4,
-          ca: 0,
-          ne_gk: 0
-        }
-      },
-      {
-        id: `2022_Grad`,
-        name: `ADRE 2022 স্নাতক`,
-        year: `2022`,
-        tier: `Grad`,
-        tierLabel: `স্নাতক`,
-        officialTotal: 50,
-        itemized: 50,
-        note: `ইতিহাস আৰু ৰাজনীতি-প্ৰধান কাকত (8 ভাৰতীয়/বিশ্ব ইতিহাস, 5 অসম ইতিহাস, 5 ৰাজনীতি) লগতে 4 টা বিশেষ উত্তৰ-পূব GK প্ৰশ্ন (ডিমাপুৰ, লাই হাৰাওবা, কাংলা দুৰ্গ, পাকিয়ং) আৰু 7 টা বিজ্ঞান/প্ৰযুক্তিৰ প্ৰশ্ন।`,
-        counts: {
-          assam_hist: 5,
-          assam_geo: 6,
-          geo_world: 7,
-          history: 8,
-          polity: 5,
-          science: 7,
-          sports: 3,
-          culture: 3,
-          economy: 0,
-          schemes: 0,
-          ca: 2,
-          ne_gk: 4
-        }
-      },
-      {
-        id: `2024_Cl_8`,
-        name: `ADRE 2024 অষ্টম শ্ৰেণী`,
-        year: `2024`,
-        tier: `Cl_8`,
-        tierLabel: `অষ্টম শ্ৰেণী`,
-        officialTotal: 65,
-        itemized: 65,
-        note: `65 টা GK প্ৰশ্নলৈ সম্প্ৰসাৰিত। অসম সাহিত্য আৰু লোক-সংস্কৃতি দ্ৰুতগতিত বৃদ্ধি পাইছে (14 Qs: দখনা, হুৰুম, জোনবিল মেলা, হীৰেন ভট্টাচাৰ্য, সৌৰভ কুমাৰ চলিহা) লগতে 12 টা বিশ্ব/ভাৰত ভূগোলৰ প্ৰশ্ন।`,
-        counts: {
-          assam_hist: 14,
-          assam_geo: 6,
-          geo_world: 12,
-          history: 9,
-          polity: 5,
-          science: 4,
-          sports: 7,
-          culture: 3,
-          economy: 4,
-          schemes: 0,
-          ca: 1,
-          ne_gk: 0
-        }
-      },
-      {
-        id: `2024_Cl_10`,
-        name: `ADRE 2024 দশম শ্ৰেণী`,
-        year: `2024`,
-        tier: `Cl_10`,
-        tierLabel: `দশম শ্ৰেণী`,
-        officialTotal: 65,
-        itemized: 64,
-        note: `ভাৰসাম্যপূৰ্ণ 65-স্থানৰ কাকত (উৎসত 64 টা ছপা; Q63 বাদ পৰিছে)। অসমৰ জনজাতীয়/মধ্যযুগীয় ঐতিহ্য (13 Qs: চৰাইদেউ মৈদাম, মূলা গাভৰু, গোভা ৰজা, চকলং) আৰু ভূগোল (12 Qs)-ত বিশেষ গুৰুত্ব।`,
-        counts: {
-          assam_hist: 13,
-          assam_geo: 5,
-          geo_world: 12,
-          history: 6,
-          polity: 5,
-          science: 6,
-          sports: 4,
-          culture: 6,
-          economy: 2,
-          schemes: 2,
-          ca: 3,
-          ne_gk: 0
-        }
-      },
-      {
-        id: `2024_Cl_12`,
-        name: `ADRE 2024 দ্বাদশ শ্ৰেণী`,
-        year: `2024`,
-        tier: `Cl_12`,
-        tierLabel: `দ্বাদশ শ্ৰেণী`,
-        officialTotal: 60,
-        itemized: 60,
-        note: `ভূগোল-প্ৰধান কাকত (15 টা ভাৰত/বিশ্ব ভূগোল প্ৰশ্ন = 25%: এণ্ডিজ, গ্ৰেট বেৰিয়াৰ ৰীফ, বৰাইল, বেৰিং প্ৰণালী, আফ্ৰিকাৰ ৩ ক্ৰান্তীয় ৰেখা, গিজাৰ) লগতে অসমৰ সমসাময়িক সাহিত্য আৰু 6 টা ৰাজনীতিৰ প্ৰশ্ন।`,
-        counts: {
-          assam_hist: 7,
-          assam_geo: 5,
-          geo_world: 15,
-          history: 6,
-          polity: 6,
-          science: 4,
-          sports: 5,
-          culture: 6,
-          economy: 2,
-          schemes: 3,
-          ca: 1,
-          ne_gk: 0
-        }
-      },
-      {
-        id: `2024_Grad`,
-        name: `ADRE 2024 স্নাতক`,
-        year: `2024`,
-        tier: `Grad`,
-        tierLabel: `স্নাতক`,
-        officialTotal: 72,
-        itemized: 66,
-        note: `72 টা GK/GS স্থান (উৎস উদ্ধৃতাংশ আৰু উত্তৰ তালিকাত 66 টা প্ৰমাণিত)। ক্ৰীড়া (14 Qs = 21.2%), ভাৰতীয়/বিশ্ব সাহিত্য আৰু সংস্কৃতি (11 Qs), আৰু বিশ্ব ভূগোল (13 Qs)-ৰ দিশে তীব্ৰ পৰিৱৰ্তন দেখা গৈছে, আনহাতে বিজ্ঞান 1 টা প্ৰশ্নলৈ হ্ৰাস পাইছে।`,
-        counts: {
-          assam_hist: 12,
-          assam_geo: 3,
-          geo_world: 13,
-          history: 5,
-          polity: 3,
-          science: 1,
-          sports: 14,
-          culture: 11,
-          economy: 3,
-          schemes: 0,
-          ca: 1,
-          ne_gk: 0
-        }
-      }
-    ];
-
-    const TOPICS = [
-      {
-        id: `geo_world`,
-        name: `ভূগোল (ভাৰত আৰু বিশ্ব)`,
-        shortName: `ভূগোল (ভাৰত/বিশ্ব)`,
-        priority: `High`,
-        strategy: `সামগ্ৰিকভাৱে #1 বিষয় (17.4%) আৰু 2024 চনতো #1 (20.4%)। বিশ্বৰ প্ৰণালী/খাল, পৰ্বতমালা, ভাৰতীয় নদী, ৰাজ্যৰ ৰাজধানী আৰু ভৌতিক ভূমিস্বৰূপসমূহ আয়ত্ত কৰক।`,
-        subtopics: [
-          `বিশ্বৰ প্ৰণালী, খাল আৰু মহাসাগৰ: ছুয়েজ খাল (লোহিত সাগৰ–ভূমধ্যসাগৰ), বেৰিং প্ৰণালী (ৰাছিয়া–আলাস্কা), ছুনামিৰ উপকূলীয় উৎপত্তি, পৃথিৱীৰ 70% জলভাগ`,
-          `পৰ্বতমালা আৰু শৃংগ: আৰাৱলী, বিন্ধ্য–সাতপুৰা, পীৰ পাঞ্জাল, বৰাইল পৰ্বতমালা, এণ্ডিজ, কাঞ্চনজংঘা, আনাইমুডি (অ-হিমালয়ান), ছিয়াচেন হিমবাহ`,
-          `ভাৰতীয় নদী আৰু হ্ৰদ: সিন্ধু (মানস সৰোবৰ), নৰ্মদা (অ-হিমালয়ান), কাবেৰী (দক্ষিণতম), ব্ৰহ্মপুত্ৰ–পদ্মা, চিল্কা হ্ৰদ (ওড়িশা), অশ্বখুৰা হ্ৰদ (Oxbow lakes)`,
-          `বিশ্বৰ ৰাজধানী, সীমা আৰু মৰুভূমি: লিমা, হাৰাৰে, বেংকক, বুয়েনছ আয়াৰ্ছ, ৱাশ্বিংটন ডি.চি.; থৰ, চাহাৰা, গোবি মৰুভূমি; ভাৰতৰ 7 খন স্থল সীমা, মেকমোহন আৰু ডুৰাণ্ড ৰেখা`,
-          `মহাদেশ, দ্বীপ আৰু ভৌতিক ধাৰণা: আফ্ৰিকা (বিষুৱ ৰেখা + দুয়োটা ক্ৰান্তীয় ৰেখা), গ্ৰীণলেণ্ড (ডেনমাৰ্ক), হাৱাই (আমেৰিকা যুক্তৰাষ্ট্ৰ), বেক্ট্ৰিয়ান উট, গিজাৰ, দ্ৰাঘিমাংশ, কয়লা আৰু বক্সাইট খনিজ`
-        ],
-        pyqs: [
-          { ref: `2024 দ্বাদশ শ্ৰেণী · Q48`, q: `বিষুৱ ৰেখা, মকৰ ক্ৰান্তি আৰু কৰ্কট ক্ৰান্তি কোনখন মহাদেশৰ মাজেৰে পাৰ হৈ গৈছে?`, a: `আফ্ৰিকা` },
-          { ref: `2024 দশম শ্ৰেণী · Q27`, q: `মেকমোহন ৰেখাই কোন দুখন দেশক পৃথক কৰিছে?`, a: `ভাৰত আৰু চীন` },
-          { ref: `2024 স্নাতক · Q34`, q: `নদীয়ে চুটি পথ ল’বলৈ গতিপথ সলনি কৰাৰ ফলত সৃষ্টি হোৱা ধনুভিৰীয়া জলাশয়টোক কি বুলি জনা যায়?`, a: `অশ্বখুৰা হ্ৰদ (Oxbow Lake)` }
-        ]
-      },
-      {
-        id: `assam_hist`,
-        name: `অসমৰ ইতিহাস, সংস্কৃতি আৰু সাহিত্য`,
-        shortName: `অসম ইতিহাস/সাহিত্য`,
-        priority: `High`,
-        strategy: `মূল ADRE পাৰ্থক্যকাৰী বিষয় (সামগ্ৰিকভাৱে 16.8%; 2024 চনত 18.0%-লৈ বৃদ্ধি)। আহোম/কোচ/চুতীয়া/ডিমাছা শাসক, সাহিত্যিক ছদ্মনাম, জ্ঞানপীঠ/পদ্ম বঁটা, লোক-সংস্কৃতি আৰু অসমীয়া চলচ্চিত্ৰত গুৰুত্ব দিয়ক।`,
-        subtopics: [
-          `প্ৰাচীন আৰু মধ্যযুগীয় ৰাজবংশ: বৰ্মন (দীৰ্ঘতম প্ৰাচীন ৰাজবংশ), আহোম ৰজাসকল (চুকাফা, চুহুংমুং, ৰুদ্ৰ সিংহ, পুৰন্দৰ সিংহ), শৰাইঘাট (ঔৰংজেৱ), মূলা গাভৰু (তুৰ্বকৰ বিৰুদ্ধে), সতী সাধনী (চুতীয়া), নৰনাৰায়ণ (মল্লদেৱ), মাইবং (ডিমাছা)`,
-          `ঔপনিৱেশিক প্ৰতিৰোধ আৰু স্বাধীনতা সংগ্ৰাম: মণিৰাম দেৱান (1857), কনকলতা বৰুৱা আৰু মুকুন্দ কাকতি (গহপুৰ, ভাৰত ত্যাগ আন্দোলন 1942), আনন্দৰাম বৰুৱা (প্ৰথম অসমীয়া ICS)`,
-          `অসমীয়া সাহিত্য আৰু ছদ্মনাম: অৰুণোদই (শিৱসাগৰ, নাথান ব্ৰাউন), বাঁহী, জোনাকী, মাধৱ কন্দলি (সপ্তকাণ্ড ৰামায়ণ), মাধৱদেৱ (কৰতল কমল), বীৰেন্দ্ৰ কুমাৰ ভট্টাচাৰ্য, নলিনীবালা দেৱী, হীৰেন ভট্টাচাৰ্য, মামণি ৰয়ছম গোস্বামী, নৱকান্ত বৰুৱা (এখুদ ককাইদেউ), সুৰেন্দ্ৰ নাথ মেধি (সৌৰভ কুমাৰ চলিহা), ৰঞ্জু হাজৰিকা, ৰংবং তেৰাং`,
-          `লোক-সংস্কৃতি, জনজাতি, সাজ-পাৰ আৰু বাদ্যযন্ত্ৰ: আলি আঃয়ে লৃগাং (মিচিং), টুচু পূজা (চাহ জনগোষ্ঠী), গোভা ৰজা (তিৱা), চকলং বিবাহ (আহোম), দখনা (বড়ো), জোনবিল মেলা (বিনিময় প্ৰথা), হুৰুম, অংকীয়া নাট, টকা আৰু গগনা (বাঁহৰ), থুৰীয়া (কাণৰ অলংকাৰ)`,
-          `অসমীয়া চলচ্চিত্ৰ, থিয়েটাৰ আৰু ঐতিহ্য ক্ষেত্ৰ: জয়মতী, আইদেউ সন্দিকৈ, হালধীয়া চৰায়ে বাওধান খায়, ড° বেজবৰুৱা, অগ্নিস্নান (অন্তৰীপ), ভিলেজ ৰকষ্টাৰ্ছ (ৰীমা দাস), আৱাহন আৰু বাণ থিয়েটাৰ, চৰাইদেউ মৈদাম (UNESCO), হাজো, আজান পীৰ দৰগাহ, দ-পৰ্বতীয়া`
-        ],
-        pyqs: [
-          { ref: `2024 দশম শ্ৰেণী · Q83`, q: `শেহতীয়াকৈ কোনটো আকৰ্ষণীয় স্থানক UNESCO-ৰ বিশ্ব ঐতিহ্য ক্ষেত্ৰৰ তালিকাত অন্তৰ্ভুক্ত কৰা হৈছে?`, a: `চৰাইদেউ মৈদাম` },
-          { ref: `2024 অষ্টম শ্ৰেণী · Q59`, q: `অসমীয়া সাহিত্যত কোনে সৌৰভ কুমাৰ চলিহা ছদ্মনামেৰে লিখিছিল?`, a: `সুৰেন্দ্ৰ নাথ মেধি` },
-          { ref: `2024 স্নাতক · Q12`, q: `শৰাইঘাটৰ যুদ্ধত পৰাজিত হোৱা মোগল সম্ৰাটজনৰ নাম লিখা।`, a: `ঔৰংজেৱ` }
-        ]
-      },
-      {
-        id: `assam_geo`,
-        name: `অসমৰ ভূগোল, ৰাজনীতি আৰু অৰ্থনীতি`,
-        shortName: `অসম ভূগোল/প্ৰশাসন`,
-        priority: `High`,
-        strategy: `সামগ্ৰিকভাৱে 11.4% অংশ (2022 চনত 16.2%, 2024 চনত 7.5%)। অসমৰ সীমা, ব্ৰহ্মপুত্ৰৰ উপনৈ, দলং, শোধনাগাৰ, অভয়াৰণ্য, ৰাজ্যিক প্ৰতীক আৰু অসমৰ ফ্লেগশ্বিপ আঁচনিসমূহ মুখস্থ কৰক।`,
-        subtopics: [
-          `সীমা, জিলা আৰু ত্ৰিসংগম: 7 খন সীমামূৰীয়া ভাৰতীয় ৰাজ্য (ছিকিম বাদ দি), ভূটান আৰু বাংলাদেশৰ সীমা, দিৰাক (অৰুণাচল), শ্ৰীৰামপুৰ (পশ্চিমবংগ), ভৈৰৱকুণ্ড ত্ৰিসংগম, তামুলপুৰ (জানুৱাৰী 2022-ত গঠিত), বৰাক উপত্যকা (হাইলাকান্দি)`,
-          `নদী, দলং আৰু বন্যপ্ৰাণী: ব্ৰহ্মপুত্ৰৰ দিশ, দক্ষিণ/উত্তৰ পাৰৰ উপনৈ (দিখৌ, কপিলী, কুশিয়াৰা), ভূপেন হাজৰিকা, শৰাইঘাট, নৰনাৰায়ণ সেতু; দীপৰ বিল (ৰামছাৰ), মানাহ (UNESCO), কাজিৰঙা (4 খন জিলা), পবিতৰা`,
-          `উদ্যোগ, প্ৰতিষ্ঠান আৰু প্ৰতীক: হোলোং (ৰাজ্যিক বৃক্ষ), ডিগবৈ (আটাইতকৈ পুৰণি শোধনাগাৰ), নুমলীগড় (গোলাঘাট), অসম জৈৱ শোধনাগাৰ (বাঁহ), টোকোলাই চাহ গৱেষণা কেন্দ্ৰ (যোৰহাট), গৌহাটী বেংক (1926), অসম চিকিৎসা মহাবিদ্যালয় (ডিব্ৰুগড়), গুৱাহাটী বিশ্ববিদ্যালয় (কৃষ্ণকান্ত সন্দিকৈ)`,
-          `অসম প্ৰশাসন আৰু আঁচনিসমূহ: মিছন বসুন্ধৰা (ভূমি অভিলেখ), গোপীনাথ বৰদলৈ আৰু বিষ্ণুৰাম মেধি, অসম বৈভৱ (ৰতন টাটা 2021, যাদৱ পায়েং/ৰঞ্জন গগৈ/তপন শইকীয়া চক্ৰ), অসমৰ কেবিনেট মন্ত্ৰীসকল`
-        ],
-        pyqs: [
-          { ref: `2022 দ্বাদশ শ্ৰেণী · Q27`, q: `অসমৰ একমাত্ৰ ৰামছাৰ ক্ষেত্ৰ জলাশয়টো হৈছে:`, a: `দীপৰ বিল` },
-          { ref: `2024 অষ্টম শ্ৰেণী · Q27`, q: `তলৰ কোনখন নদী দক্ষিণৰ পৰা উত্তৰলৈ বৈ গৈছে?`, a: `কপিলী` },
-          { ref: `2024 দ্বাদশ শ্ৰেণী · Q44`, q: `ভৈৰৱকুণ্ড তলৰ কোনকেইটাৰ ত্ৰিসংগম?`, a: `অসম, ভূটান, অৰুণাচল প্ৰদেশ` }
-        ]
-      },
-      {
-        id: `history`,
-        name: `ভাৰতীয় আৰু বিশ্ব ইতিহাস`,
-        shortName: `ইতিহাস`,
-        priority: `High`,
-        strategy: `দুয়োটা চক্ৰতে সুস্থিৰ 10.5% মূল অংশ (2022 চনত 11.0% → 2024 চনত 10.2%)। ভাৰতীয় জাতীয় আন্দোলন (1857–1947), মৌৰ্য/মোগল/বিজয়নগৰ ৰাজবংশ আৰু ঐতিহাসিক বিশ্বযুদ্ধ/অভিযাত্ৰীসকলক অগ্ৰাধিকাৰ দিয়ক।`,
-        subtopics: [
-          `প্ৰাচীন ভাৰত: সিন্ধু সভ্যতা (মহেঞ্জোদাৰো, একশৃংগী ষাঁড়), ঋগবেদ, জৈন ধৰ্ম (তীৰ্থংকৰসকল), মৌৰ্যসকল (চন্দ্ৰগুপ্ত, চাণক্যৰ অৰ্থশাস্ত্ৰ, অশোক আৰু কলিংগ যুদ্ধ), আৰ্যভট্ট, হৰ্ষবৰ্ধন আৰু হিউৱেন চাং`,
-          `মধ্যযুগীয় আৰু আদি আধুনিক ভাৰত: চোলসকলৰ দক্ষিণ-পূব এছিয়া প্ৰভাৱ, ৰেজিয়া চুলতানা, মহম্মদ বিন টোগলক (ইবন বটুটা), বিজয়নগৰ (হৰিহৰ আৰু বুক্কা), বাবৰ (প্ৰথম মোগল), শ্বেৰ শ্বাহ ছুৰী (GT ৰোড), পানীপথৰ দ্বিতীয় যুদ্ধ (1556), টিপু চুলতান`,
-          `আধুনিক স্বাধীনতা সংগ্ৰাম: 1911 দিল্লী ৰাজধানী স্থানান্তৰ, ৰাওলাট আইন আৰু জালিয়ানৱালাবাগ (1919), স্বৰাজ দল, দাণ্ডী যাত্ৰা (আইন অমান্য), ভাৰত ত্যাগ আন্দোলন (1942, আগষ্ট ক্ৰান্তি ময়দান, "কৰিম কিম্বা মৰিম"), চৰ্দাৰ পেটেল, বি.আৰ. আম্বেদকাৰ, 1971 বাংলাদেশ`,
-          `বিশ্ব ইতিহাস আৰু অভিযাত্ৰী: আলেকজেণ্ডাৰ (মেচিডোনিয়া), খ্ৰীষ্টোফাৰ কলম্বাছ (ইটালী), লিঅ’নাৰ্ডো দা ভিঞ্চি, নেপোলিয়ন (ৱাটাৰলুৰ যুদ্ধ), ৱাৰ্ছ অৱ দ্য ৰোজেছ (ইংলেণ্ড), দ্বিতীয় বিশ্বযুদ্ধৰ অক্ষ শক্তি (জাপান), চেকোশ্লোভাকিয়া, নেলছন মেণ্ডেলা, মাদাৰ টেৰেছা`
-        ],
-        pyqs: [
-          { ref: `2024 দশম শ্ৰেণী · Q88`, q: `হক্কা নামেৰেও জনাজাত হৰিহৰ আৰু তেওঁৰ ভাতৃ বুক্কা ৰায়ে কোনখন সাম্ৰাজ্য প্ৰতিষ্ঠা কৰিছিল?`, a: `বিজয়নগৰ সাম্ৰাজ্য` },
-          { ref: `2024 দ্বাদশ শ্ৰেণী · Q5`, q: `দ্বিতীয় বিশ্বযুদ্ধৰ সময়ত তলৰ কোনখন দেশ অক্ষ শক্তি গোটৰ অংশ আছিল?`, a: `জাপান` },
-          { ref: `2022 স্নাতক · Q15`, q: `কোন চনত ব্ৰিটিছে ভাৰতৰ ৰাজধানী কলিকতাৰ পৰা দিল্লীলৈ স্থানান্তৰ কৰিছিল?`, a: `1911` }
-        ]
-      },
-      {
-        id: `sports`,
-        name: `ক্ৰীড়া আৰু প্ৰতিযোগিতা`,
-        shortName: `ক্ৰীড়া`,
-        priority: `High`,
-        strategy: `আটাইতকৈ দ্ৰুতগতিত বৃদ্ধি পোৱা ADRE ক্ষেত্ৰ: 2022 চনৰ 5.2%-ৰ পৰা +6.5 pp জঁপিয়াই 2024 চনত 11.8% হৈছে, আৰু 2024 স্নাতক কাকতত 21.2% স্পৰ্শ কৰিছে। অলিম্পিক, IPL/ক্ৰিকেট, ফুটবল, অসমৰ পদক বিজয়ী আৰু ক্ৰীড়া-খেলুৱৈৰ তালিকা সামৰি লওক।`,
-        subtopics: [
-          `অলিম্পিক আৰু বহু-ক্ৰীড়া প্ৰতিযোগিতা: 5 টা আঙঠি আৰু ৰং (নীলা, হালধীয়া, ক’লা, সেউজীয়া, ৰঙা — কমলা/বেঙুনীয়া নাই), প্ৰথম আধুনিক অলিম্পিক (এথেন্স 1896), 2024 পেৰিছ অলিম্পিক, মাইকেল ফেল্পছ, টকিঅ’ 2020 ভাৰতীয় পদক আৰু টাইকোৱাণ্ডো বাদ পৰা`,
-          `অসম আৰু উত্তৰ-পূবৰ ক্ৰীড়া তাৰকা: লাভলীনা বৰগোহাঁই (বক্সিং), হিমা দাস (দৌৰ), ভোগেশ্বৰ বৰুৱা (এথলেটিকছ / অভিৰুচি ক্ৰীড়া দিৱস), টি. আও (ফুটবল), মনালিছা বৰুৱা মেহতা (টেবুল টেনিছ/লন), তানিয়া চৌধুৰী আৰু নয়নমণি শইকীয়া (লন বলছ), গিলবাৰ্টছন চাংমা`,
-          `ক্ৰিকেট আৰু IPL: 22-গজৰ পিটছ, ICC পুৰুষৰ এদিনীয়া বিশ্বকাপৰ ইতিহাস, এম.এছ. ধোনী (CSK), সুনীল গাভাস্কাৰ (Runs and Ruins), IPL দল আৰু স্থান (গুৱাহাটী RR-ৰ ঘৰুৱা খেলপথাৰ, পাটনা বাদ পৰিছে, গুজৰাট জায়েণ্টছ WPL)`,
-          `বিশ্ব ক্ৰীড়া, কাপ আৰু সঁজুলি: ডেভিছ কাপ, ফ্ৰেঞ্চ অপেন (নাডাল), সুব্ৰত কাপ, ডায়মণ্ড লীগ, মেজৰ ধ্যানচান্দ (ওড়িশা হকী পৃষ্ঠপোষক), সুশীল কুমাৰ, পি.টি. ঊষা, মেগনাছ কাৰ্লছন (দবা), ভলীবল (6), খো-খো (9), বক্সিং ৰিং`
-        ],
-        pyqs: [
-          { ref: `2024 স্নাতক · Q125`, q: `জয়পুৰৰ উপৰিও IPL 2023-ৰ সময়ত ৰাজস্থান ৰয়েলছৰ ঘৰুৱা খেলপথাৰ কোনখন আছিল?`, a: `গুৱাহাটী` },
-          { ref: `2024 দ্বাদশ শ্ৰেণী · Q29`, q: `অসমৰ তানিয়া চৌধুৰী আৰু নয়নমণি শইকীয়াই কোনবিধ খেলত ভাৰতক প্ৰতিনিধিত্ব কৰে?`, a: `লন বলছ (Lawn Bowls)` },
-          { ref: `2024 দশম শ্ৰেণী · Q86`, q: `ডেভিছ কাপ কোনবিধ খেলৰ বাবে খেলা হয়?`, a: `লন টেনিছ (Lawn Tennis)` }
-        ]
-      },
-      {
-        id: `polity`,
-        name: `ভাৰতীয় ৰাজনীতি আৰু সংবিধান`,
-        shortName: `ৰাজনীতি`,
-        priority: `Medium`,
-        strategy: `ধাৰাবাহিক 8.0% স্তম্ভ (2022 চনত 18 Qs, 2024 চনত 19 Qs)। প্ৰস্তাৱনাৰ মূল শব্দ, মৌলিক অধিকাৰ, অনুসূচী (ষষ্ঠ আৰু অষ্টম), অনুচ্ছেদ 15/17/21A/371 আৰু সংসদৰ গঠনত গুৰুত্ব দিয়ক।`,
-        subtopics: [
-          `প্ৰস্তাৱনা আৰু সাংবিধানিক বৈশিষ্ট্য: প্ৰস্তাৱনা ("ধৰ্মনিৰপেক্ষ, সমাজবাদী, গণতান্ত্ৰিক, স্বাধীনতা, ভাতৃত্ববোধ" — যুক্তৰাষ্ট্ৰীয় আৰু শালীনতা বাদ দি), ধাৰ কৰা বৈশিষ্ট্য (কানাডাৰ পৰা অৱশিষ্ট ক্ষমতা), সংসদীয় / প্ৰতিনিধিত্বমূলক গণতন্ত্ৰ`,
-          `মৌলিক অধিকাৰ আৰু মুখ্য অনুচ্ছেদ: সমতা/স্বাধীনতা/সাংবিধানিক প্ৰতিকাৰৰ অধিকাৰ (ডিজিটেল তথ্য বাদ দি), অনুচ্ছেদ 15 (বৈষম্যহীনতা), অনুচ্ছেদ 17 (অস্পৃশ্যতা), অনুচ্ছেদ 21(a) (শিক্ষাৰ অধিকাৰ), অনুচ্ছেদ 371 (উত্তৰ-পূবৰ বিশেষ মৰ্যাদা)`,
-          `অনুসূচী আৰু স্বায়ত্তশাসিত পৰিষদ: ষষ্ঠ অনুসূচী (অসম/উত্তৰ-পূবৰ পাহাৰীয়া অঞ্চল, NCHAC, BTC), অষ্টম অনুসূচী (বড়ো, চাঁওতালি, মৈথিলী অন্তৰ্ভুক্ত; কাৰ্বি তালিকাভুক্ত নহয়)`,
-          `সংসদ, কাৰ্যপালিকা আৰু ন্যায়পালিকা: লোকসভা বনাম ৰাজ্যসভা (উপ-ৰাষ্ট্ৰপতি অধ্যক্ষ, উত্তৰ প্ৰদেশৰ সৰ্বাধিক আসন), শূন্য ঘণ্টা (Zero Hour), ৰাষ্ট্ৰপতি (সৰ্বোচ্চ সেনাপতি, মুখ্য ন্যায়াধীশৰ দ্বাৰা শপত, ৰাজ্যপাল নিযুক্তি), মহাভিযোগ, সাংসদৰ বয়স/নাগৰিকত্বৰ চৰ্ত, ফাতিমা বিবি (1989)`,
-          `বিধিবদ্ধ নিকায় আৰু নিৰ্বাচন: নীতি আয়োগ (পৰিকল্পনা আয়োগৰ স্থানত, প্ৰধানমন্ত্ৰী অধ্যক্ষ), নিৰ্বাচন আয়োগ (ৰাষ্ট্ৰীয় দল = 4 খন ৰাজ্য, NOTA 2013, 1988 চনত ভোটদানৰ বয়স 21→18), লোকপাল, নাগৰিকত্বৰ পদ্ধতি`
-        ],
-        pyqs: [
-          { ref: `2024 দ্বাদশ শ্ৰেণী · Q19`, q: `সংসদত দিনটোৰ অধিৱেশনৰ যিটো ঘণ্টাত পূৰ্ব জাননী অবিহনে প্ৰশ্ন/বিষয় উত্থাপন কৰিব পাৰি তাক কি বোলা হয়?`, a: `শূন্য ঘণ্টা (Zero Hour)` },
-          { ref: `2024 স্নাতক · Q5`, q: `ভাৰতৰ সংবিধানত অৱশিষ্ট ক্ষমতাৰ ধাৰণাটো কোন দেশৰ সংবিধানৰ পৰা লোৱা হৈছে?`, a: `কানাডা` },
-          { ref: `2022 দশম শ্ৰেণী · Q56`, q: `তলৰ কোনটো শব্দ ভাৰতৰ সংবিধানৰ প্ৰস্তাৱনাত উল্লেখ নাই?`, a: `যুক্তৰাষ্ট্ৰীয় (Federal)` }
-        ]
-      },
-      {
-        id: `culture`,
-        name: `কলা, সংস্কৃতি, স্মৃতিসৌধ আৰু সাহিত্য`,
-        shortName: `কলা/সংস্কৃতি/সাহিত্য`,
-        priority: `Medium`,
-        strategy: `2024 চনত দ্বিতীয় দ্ৰুততম বৃদ্ধি পোৱা বিষয় (+5.0 pp: 5.2% → 10.2%), যি মূলতঃ 2024 স্নাতক কাকতৰ 11 টা প্ৰশ্নৰ বাবে হৈছে। শাস্ত্ৰীয়/লোকনৃত্য, আঞ্চলিক খাদ্য, ভাৰতৰ প্ৰধান স্মৃতিসৌধ আৰু বিখ্যাত গ্ৰন্থ/বঁটাসমূহ অধ্যয়ন কৰক।`,
-        subtopics: [
-          `ভাৰতীয় নৃত্য আৰু আঞ্চলিক উৎসৱ: সত্ৰীয়া (অসম), কথাকলি আৰু মোহিনীআট্টম (কেৰালা), ওডিছি (ওড়িশা), যক্ষগান (কৰ্ণাটক, তামিলনাডু নহয়), কালবেলিয়া (থৰ/ৰাজস্থান), ডাণ্ডিয়া ৰাস (গুজৰাট), ওনাম, কুল্লু দশেৰা`,
-          `স্মৃতিসৌধ, মন্দিৰ আৰু বিশ্ব ঐতিহ্য: ভিক্টোৰিয়া মেম’ৰিয়েল (কলকাতা), গোল গুম্বজ (বিজাপুৰ), চাৰমিনাৰ (হায়দৰাবাদ), পদ্মনাভস্বামী মন্দিৰ (থিৰুৱনন্তপুৰম), ষ্টেচু অৱ ইউনিটি (গুজৰাট), আংকৰ ৱাট (কম্বোডিয়া)`,
-          `আঞ্চলিক খাদ্য আৰু বস্ত্ৰ/শিল্প: দাল বাটি চুৰমা (ৰাজস্থান), ধোকলা আৰু ফাফড়া (গুজৰাট), কাঞ্চীপুৰম শাৰী (তামিলনাডু), কিৰা আৰু ঘো (ভূটানৰ ৰাষ্ট্ৰীয় সাজ), অৰিগামি (জাপান)`,
-          `ভাৰতীয় আৰু বিশ্ব সাহিত্য আৰু বঁটা: ঋগবেদ/আয়ুৰ্বেদ, মহাভাৰত (গীতা), ৰামচৰিতমানস (তুলসীদাস), গোদান (প্ৰেমচান্দ), মালগুডি ডেইজ (আৰ.কে. নাৰায়ণ), প্ৰাইড এণ্ড প্ৰিজুডিছ (জেন অষ্টিন), মধুশালা (হৰিবংশ ৰায় বচ্চন), ঠাকুৰ (গীতাঞ্জলি নোবেল), জ্ঞানপীঠ 2024, গ্ৰেমী আৰু কাঁ`
-        ],
-        pyqs: [
-          { ref: `2024 স্নাতক · Q19`, q: `কালবেলিয়া ভাৰতৰ কোনটো অঞ্চলৰ লোকনৃত্য?`, a: `থৰ মৰুভূমি অঞ্চল` },
-          { ref: `2024 দ্বাদশ শ্ৰেণী · Q27`, q: `কাঞ্চীপুৰম শাৰী কোনখন ৰাজ্যত উৎপাদন কৰা হয়?`, a: `তামিলনাডু` },
-          { ref: `2024 দশম শ্ৰেণী · Q68`, q: `অৰিগামি হৈছে কাগজ ভাঁজ কৰা কলা যিটোৰ উৎপত্তি হৈছিল:`, a: `জাপানত` }
-        ]
-      },
-      {
-        id: `science`,
-        name: `সাধাৰণ বিজ্ঞান আৰু দৈনন্দিন প্ৰযুক্তি`,
-        shortName: `বিজ্ঞান/প্ৰযুক্তি`,
-        priority: `Medium`,
-        strategy: `সামগ্ৰিকভাৱে 8.0% অংশ, কিন্তু 2024 চনত তীব্ৰভাৱে হ্ৰাস পাইছে (10.5% → 5.9%; 2024 স্নাতকত কেৱল 1 টা প্ৰশ্ন)। ষষ্ঠ–দশম শ্ৰেণীৰ NCERT-ৰ মৌলিক বিষয়ত সীমাবদ্ধ থাকক: ভিটামিন, ৰোগ, ৰাসায়নিক প্ৰতীক, pH আৰু মৌলিক পদাৰ্থ বিজ্ঞান।`,
-        subtopics: [
-          `মানৱ জীৱবিজ্ঞান আৰু পুষ্টি: ভিটামিন C (নেমু/আমলখি), ভিটামিন D (সূৰ্যৰ পোহৰ/হাড়), গৰল ৰোগ (আয়’ডিন), স্বাভাৱিক ৰক্তচাপ (80/120 mmHg), মাইট’কণ্ড্ৰিয়া (শক্তিৰ ভঁৰাল), লালটি (শ্বেতসাৰ পাচন), কুকুৰ দাঁত, লেক্ট’বেছিলাছ (গাখীৰ→দৈ), পেনিচিলিন (ফ্লেমিং)`,
-          `ৰসায়ন বিজ্ঞান আৰু পদাৰ্থ: মৌল বনাম যৌগ (কোৱাৰ্টজ), ৰাসায়নিক প্ৰতীক (ছ’ডিয়াম = Na, Sd নহয়; ৰূপ = Ag), pH স্কেল (5.0 = আম্লিক), তেজস্ক্ৰিয় প্লুটোনিয়াম, খাৰুৱা তেলৰ উপজাত সামগ্ৰী (পেট্ৰ’ল/বিটুমেন/কেৰাচিন বনাম টাৰ্পিনটাইন)`,
-          `পদাৰ্থ বিজ্ঞান আৰু জোখ-মাখ: নিউটনৰ ৩য় সূত্ৰ, পানীৰ সৰ্বাধিক ঘনত্ব (4°C), প্ৰথম শ্ৰেণীৰ লিভাৰ (কেঁচী), বেৰোমিটাৰ (বায়ুমণ্ডলীয় চাপ), কেৰেট (সোণ), পাৰমাণৱিক শক্তি কেন্দ্ৰ (কল্পক্কম, নাৰোৰা, তাৰাপুৰ)`,
-          `মহাকাশ, কম্পিউটাৰ আৰু প্ৰযুক্তি: আৰ্যভট্ট (প্ৰথম কৃত্ৰিম উপগ্ৰহ), মঙল গ্ৰহ (পৃথিৱী আৰু বৃহস্পতিৰ মাজত), ৰাকেশ শৰ্মা আৰু কল্পনা চাওলা, USB ফ্লেশ্ব ড্ৰাইভ, OS বনাম MS Office, ড্ৰোন (UAV)`
-        ],
-        pyqs: [
-          { ref: `2024 দ্বাদশ শ্ৰেণী · Q37`, q: `যদি কোনো তৰল পদাৰ্থৰ pH 5.0 হয়, তেন্তে তৰল পদাৰ্থটো:`, a: `আম্লিক প্ৰকৃতিৰ` },
-          { ref: `2024 দশম শ্ৰেণী · Q67`, q: `গাখীৰক দৈলৈ ৰূপান্তৰিত কৰাৰ বাবে তলৰ কোনটো দায়ী?`, a: `লেক্ট’বেছিলাছ (Lactobacillus)` },
-          { ref: `2022 দ্বাদশ শ্ৰেণী · Q7`, q: `পানীৰ ঘনত্ব সৰ্বাধিক হয়:`, a: `4°C উষ্ণতাত` }
-        ]
-      },
-      {
-        id: `economy`,
-        name: `অৰ্থনীতি, মুদ্ৰা আৰু ব্যৱসায়`,
-        shortName: `অৰ্থনীতি`,
-        priority: `Low`,
-        strategy: `সুস্থিৰ 4.7% অংশ (22 Qs)। উচ্চ-ফলপ্ৰসূ সূক্ষ্ম-বিষয়সমূহ অতি সোনকালে মুখস্থ কৰিব পাৰি: চুবুৰীয়া দেশৰ মুদ্ৰা, GST/মুদ্ৰাস্ফীতিৰ সংজ্ঞা আৰু প্ৰধান ভাৰতীয় কৰ্পৰেট/বজাৰৰ তথ্য।`,
-        subtopics: [
-          `বিশ্বৰ মুদ্ৰাসমূহ: UAE (দিৰহাম), জাপান (য়েন), বাংলাদেশ (টাকা), ভূটান (ঙুলট্ৰুম), ইণ্ডোনেছিয়া (ৰুপিয়াহ), ₹2,000 টকীয়া নোটৰ স্থিতি`,
-          `সমষ্টিগত অৰ্থনীতি আৰু কৰ ব্যৱস্থা: মুদ্ৰাস্ফীতি (দৰৰ নিৰন্তৰ বৃদ্ধি), সমাজবাদী বনাম পুঁজিবাদী অৰ্থনীতি, বিনিময় প্ৰথা, GST (প্ৰথমে ফ্ৰান্সত, ভাৰতত পৰোক্ষ কৰ), অৰ্থনৈতিক সমীক্ষা (বিত্ত মন্ত্ৰালয়)`,
-          `বজাৰ আৰু কৰ্পৰেটসমূহ: নেচনেল ষ্টক এক্সচেঞ্জ আৰু দালাল ষ্ট্ৰীট (মুম্বাই), TCS (₹10 লাখ কোটি মূল্যাংকন), ৰিলায়েঞ্চ (মুকেশ আম্বানি), বয়িং (বিমান), টয়’টা (জাপান), এয়াৰ এছিয়া (কুৱালালামপুৰ), L&T, ইষ্ট ৱেষ্ট এয়াৰলাইনছ`
-        ],
-        pyqs: [
-          { ref: `2024 স্নাতক · Q99`, q: `তলৰ কোনটো ভাৰতৰ পৰোক্ষ কৰৰ উদাহণ?`, a: `GST` },
-          { ref: `2024 অষ্টম শ্ৰেণী · Q16`, q: `তলৰ কোনখন দেশৰ মুদ্ৰা হৈছে 'ঙুলট্ৰুম'?`, a: `ভূটান` },
-          { ref: `2024 দ্বাদশ শ্ৰেণী · Q52`, q: `দৰ স্তৰৰ নিৰন্তৰ বৃদ্ধিক কি বুলি কোৱা হয়?`, a: `মুদ্ৰাস্ফীতি (Inflation)` }
-        ]
-      },
-      {
-        id: `schemes`,
-        name: `চৰকাৰী আঁচনি আৰু প্ৰতিৰক্ষা`,
-        shortName: `আঁচনি/প্ৰতিৰক্ষা`,
-        priority: `Low`,
-        strategy: `2.8% অংশ (13 Qs), যি মূলতঃ দশম আৰু দ্বাদশ শ্ৰেণীৰ কাকতত আহে। ফ্লেগশ্বিপ কেন্দ্ৰীয় আঁচনিৰ সম্পূৰ্ণ ৰূপ, সামৰিক পদবী আৰু বীৰত্বৰ বঁটাসমূহত গুৰুত্ব দিয়ক।`,
-        subtopics: [
-          `ফ্লেগশ্বিপ কেন্দ্ৰীয় আঁচনি আৰু সম্পূৰ্ণ ৰূপ: MPLAD (Local Area Development), UDAN (Ude Desh ka Aam Nagrik), বেটী বচাও বেটী পঢ়াও (3 টা মন্ত্ৰালয় — গ্ৰামোন্নয়ন বাদ দি), মিছন ইন্দ্ৰধনুষ (টীকাকৰণ), জল শক্তি অভিযান (2019), DAY-NRLM (Deendayal Antyodaya Yojana)`,
-          `প্ৰতিৰক্ষা, সুৰক্ষা আৰু নীতি: AFSPA (1958), পোখৰাণ পাৰমাণৱিক পৰীক্ষা (1974), ৰাষ্ট্ৰীয় যুদ্ধ স্মাৰক (নতুন দিল্লী), পৰম বীৰ চক্ৰ (যুদ্ধকালীন সৰ্বোচ্চ), সেনা পদবী (লেফটেনেণ্ট জেনেৰেল বনাম মেজৰ জেনেৰেল/ব্ৰিগেডিয়াৰ), CAPF (ICG বাদ দি), NHAI ফাষ্টেগ এম্বুলেঞ্চ ৰেহাই`
-        ],
-        pyqs: [
-          { ref: `2024 দ্বাদশ শ্ৰেণী · Q53`, q: `ৰাষ্ট্ৰীয় গ্ৰামীণ জীৱিকা মিছন (DAY-NRLM)-ত DAY-ৰ অৰ্থ কি?`, a: `Deendayal Antyodaya Yojana` },
-          { ref: `2024 দশম শ্ৰেণী · Q95`, q: `ভাৰতীয় সেনাৰ পদবীসমূহৰ ভিতৰত তলৰ কোনটো সৰ্বোচ্চ (ব্ৰিগেডিয়াৰ, লেফটেনেণ্ট জেনেৰেল, মেজৰ জেনেৰেল, লেফটেনেণ্ট কৰ্ণেল)?`, a: `লেফটেনেণ্ট জেনেৰেল (Lieutenant General)` },
-          { ref: `2022 দ্বাদশ শ্ৰেণী · Q30`, q: `ভাৰত চৰকাৰৰ এক পদক্ষেপ 'মিছন ইন্দ্ৰধনুষ' তলৰ কোনটোৰ সৈতে জড়িত:`, a: `টীকাকৰণ (Immunisation)` }
-        ]
-      },
-      {
-        id: `ca`,
-        name: `সাম্প্ৰতিক পৰিক্ৰমা আৰু আন্তঃৰাষ্ট্ৰীয় সংস্থা`,
-        shortName: `সাম্প্ৰতিক পৰিক্ৰমা`,
-        priority: `Low`,
-        strategy: `কেৱল 2.2% অংশ (10 Qs) — ADRE-এ ক্ষণস্থায়ী দৈনন্দিন বাতৰিতকৈ স্থিৰ সাধাৰণ জ্ঞান অধিক পৰীক্ষা কৰে। বিশ্বৰ ৰাষ্ট্ৰপ্ৰধান, ৰাষ্ট্ৰসংঘৰ সংস্থা, প্ৰধান সংঘাত আৰু কেন্দ্ৰীয় মন্ত্ৰীসকলৰ বিষয়ে পঢ়ক।`,
-        subtopics: [
-          `বিশ্ব নেতৃত্ব আৰু ভূ-ৰাজনীতি: আমেৰিকা যুক্তৰাষ্ট্ৰৰ ৰাষ্ট্ৰপতি (জানুৱাৰী 2022 আৰু 2024 অনুসৰি জ’ বাইডেন) আৰু ইউক্ৰেইনৰ ৰাষ্ট্ৰপতি (ভল’ডিমিৰ জেলেনস্কি), ৰাছিয়া–ইউক্ৰেইন যুদ্ধ, ডোকলাম ঘটনা (2017 চীন)`,
-          `আন্তঃৰাষ্ট্ৰীয় সংস্থা আৰু দিৱস: UNSC-ৰ স্থায়ী সদস্য (ভাৰত স্থায়ী সদস্য নহয়), আন্তঃৰাষ্ট্ৰীয় ন্যায়ালয় (দ্য হেগ), 8 মে’ (ৰেড ক্ৰছ আৰু ৰেড ক্ৰেচেণ্ট দিৱস)`,
-          `কেন্দ্ৰীয় কেবিনেট আৰু ৰাষ্ট্ৰীয় বঁটা: বৈদেশিক পৰিক্ৰমা মন্ত্ৰী (এছ. জয়শংকৰ), ৰেমন মেগছেছে 1994 (কিৰণ বেদী)`
-        ],
-        pyqs: [
-          { ref: `2024 দশম শ্ৰেণী · Q91`, q: `তলৰ কোনখন দেশ ৰাষ্ট্ৰসংঘৰ নিৰাপত্তা পৰিষদৰ স্থায়ী সদস্য নহয়?`, a: `ভাৰত` },
-          { ref: `2024 স্নাতক · Q88`, q: `1 জানুৱাৰী 2024 তাৰিখ অনুসৰি ইউক্ৰেইনৰ ৰাষ্ট্ৰপতি কোন?`, a: `ভল’ডিমিৰ জেলেনস্কি (Volodymyr Zelenskyy)` },
-          { ref: `2022 স্নাতক · Q11`, q: `আন্তঃৰাষ্ট্ৰীয় ন্যায়ালয়ৰ মুখ্য কাৰ্যালয় ক’ত অৱস্থিত?`, a: `দ্য হেগ (The Hague)` }
-        ]
-      },
-      {
-        id: `ne_gk`,
-        name: `উত্তৰ-পূব ভাৰতৰ GK (অসম বাদ দি)`,
-        shortName: `উত্তৰ-পূব GK`,
-        priority: `Low`,
-        strategy: `1.5% অংশ (7 Qs), সকলোবোৰ 2022 চনৰ দশম শ্ৰেণী আৰু স্নাতক কাকতত কেন্দ্ৰীভূত (2024 চনত 0 টা স্বতন্ত্ৰ প্ৰশ্ন)। উত্তৰ-পূবৰ ৰাজ্যিক ৰাজধানী, উৎসৱ, উদ্যান আৰু কেন্দ্ৰীয় একাডেমীসমূহৰ দ্ৰুত-সফলতা চেকলিষ্ট।`,
-        subtopics: [
-          `উত্তৰ-পূবৰ ঐতিহ্য, উদ্যান আৰু উৎসৱ: কাংলা দুৰ্গ (ইম্ফল), কেইবুল লামজাও ৰাষ্ট্ৰীয় উদ্যান আৰু চাংগাই হৰিণ (মণিপুৰ), লাই হাৰাওবা (মেইটেইসকল)`,
-          `উত্তৰ-পূবৰ প্ৰতিষ্ঠান আৰু আন্তঃগাঁথনি: উত্তৰ-পূব আৰক্ষী একাডেমী (মেঘালয়), কাউণ্টাৰ-ইনছাৰ্জেন্সি এণ্ড জংগল ৱাৰফেয়াৰ স্কুল (ভাইৰেংটে, মিজোৰাম), পাকিয়ং বিমানবন্দৰ (ছিকিম), ডিমাপুৰ বনাম উত্তৰ-পূবৰ ৰাজ্যিক ৰাজধানীসমূহ`
-        ],
-        pyqs: [
-          { ref: `2022 দশম শ্ৰেণী · Q41`, q: `চাংগাই নামৰ প্ৰাণীবিধ পোৱা যায়:`, a: `কেইবুল লামজাও ৰাষ্ট্ৰীয় উদ্যানত` },
-          { ref: `2022 স্নাতক · Q4`, q: `"লাই হাৰাওবা" উৎসৱটো তলৰ কোনটো জনগোষ্ঠীৰ সৈতে জড়িত?`, a: `মেইটেইসকল (Meiteis)` },
-          { ref: `2022 দশম শ্ৰেণী · Q39`, q: `উত্তৰ-পূব আৰক্ষী একাডেমী কোনখন ৰাজ্যত অৱস্থিত?`, a: `মেঘালয়` }
-        ]
-      }
-    ];
-
-    function getPriorityLabelAs(prio) {
-      if (prio === `High`) return `উচ্চ`;
-      if (prio === `Medium`) return `মধ্যম`;
-      return `নিম্ন`;
-    }
-
-    const ALL_PYQ_POOL = [];
-    TOPICS.forEach(function(t) {
-      t.pyqs.forEach(function(pq) {
-        ALL_PYQ_POOL.push({
-          topicId: t.id,
-          topicName: t.name,
-          ref: pq.ref,
-          q: pq.q,
-          a: pq.a
-        });
-      });
-    });
-
-    const LOCAL_STORAGE_KEY = `adre_dashboard_state_as_v1`;
-
-    // =========================================================================
-    // STATE MANAGEMENT
-    // =========================================================================
-    const appState = {
-      cycleFilter: `all`,
-      tierFilter: `all`,
-      selectedPaperId: `2024_Grad`,
-      papersViewMode: `table`,
-      trendFilter: `all`,
-      priorityFilter: `all`,
-      syllabusPrio: `all`,
-      syllabusSearch: ``,
-      expandedTopics: { geo_world: true, assam_hist: true },
-      topicStatus: {},
-      subtopicProgress: {},
-      revealedAnswers: {},
-      quizModeHideAll: false,
-      currentFlashcardIdx: -1
-    };
-
-    let paperStackedChartInstance = null;
-    let paretoChartInstance = null;
-    let trendChartInstance = null;
-
-    function getToken(name) {
-      return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-    }
-
-    function getTopicStatus(topicId) {
-      return appState.topicStatus[topicId] || `none`;
-    }
-
-    async function persistState() {
-      const payload = {
-        cycleFilter: appState.cycleFilter,
-        tierFilter: appState.tierFilter,
-        selectedPaperId: appState.selectedPaperId,
-        topicStatus: appState.topicStatus,
-        subtopicProgress: appState.subtopicProgress,
-        expandedTopics: appState.expandedTopics
-      };
-
-      try {
-        localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(payload));
-        const statusEl = document.getElementById(`footer-status`);
-        if (statusEl) statusEl.textContent = `স্থানীয়ভাৱে সংৰক্ষিত · ${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
-      } catch (e) {
-        // Ignore storage restrictions
-      }
-
-      if (window.notebookAppApi && typeof window.notebookAppApi.setAppState === `function`) {
-        try {
-          await window.notebookAppApi.setAppState(payload);
-        } catch (err) {
-          // Graceful fallback
-        }
-      }
-    }
-
-    // =========================================================================
-    // COMPUTED DATA HELPERS
-    // =========================================================================
-    function getFilteredPapers() {
-      return PAPERS.filter(function(p) {
-        const matchCycle = appState.cycleFilter === `all` || p.year === appState.cycleFilter;
-        const matchTier = appState.tierFilter === `all` || p.tier === appState.tierFilter;
-        return matchCycle && matchTier;
-      });
-    }
-
-    function getTopicStats(papersSubset) {
-      let totalItemized = 0;
-      papersSubset.forEach(function(p) { totalItemized += p.itemized; });
-
-      const rows = TOPICS.map(function(t) {
-        let count = 0;
-        papersSubset.forEach(function(p) {
-          count += (p.counts[t.id] || 0);
-        });
-
-        let full2022 = 0;
-        let full2024 = 0;
-        let tot2022 = 0;
-        let tot2024 = 0;
-        PAPERS.forEach(function(p) {
-          if (appState.tierFilter !== `all` && p.tier !== appState.tierFilter) return;
-          if (p.year === `2022`) {
-            full2022 += (p.counts[t.id] || 0);
-            tot2022 += p.itemized;
-          }
-          if (p.year === `2024`) {
-            full2024 += (p.counts[t.id] || 0);
-            tot2024 += p.itemized;
-          }
-        });
-
-        const pct2022 = tot2022 > 0 ? (full2022 / tot2022) * 100 : 0;
-        const pct2024 = tot2024 > 0 ? (full2024 / tot2024) * 100 : 0;
-        const deltaPp = pct2024 - pct2022;
-
-        let trendTag = `steady`;
-        if (deltaPp >= 1.5) trendTag = `surge`;
-        else if (deltaPp <= -1.5) trendTag = `drop`;
-
-        let subChecked = 0;
-        t.subtopics.forEach(function(_, idx) {
-          if (appState.subtopicProgress[`${t.id}_${idx}`]) subChecked++;
-        });
-
-        return {
-          topic: t,
-          count: count,
-          share: totalItemized > 0 ? (count / totalItemized) * 100 : 0,
-          full2022: full2022,
-          full2024: full2024,
-          pct2022: pct2022,
-          pct2024: pct2024,
-          deltaPp: deltaPp,
-          trendTag: trendTag,
-          subChecked: subChecked,
-          subTotal: t.subtopics.length
-        };
-      });
-
-      rows.sort(function(a, b) {
-        return b.count - a.count;
-      });
-
-      let running = 0;
-      rows.forEach(function(r, idx) {
-        running += r.share;
-        r.cumShare = running;
-        r.rank = idx + 1;
-      });
-
-      return { rows: rows, totalItemized: totalItemized };
-    }
-
-    // =========================================================================
-    // RENDER FUNCTIONS
-    // =========================================================================
-    function renderKpis(filteredPapers, stats) {
-      let officialSum = 0;
-      let assamSum = 0;
-      filteredPapers.forEach(function(p) {
-        officialSum += p.officialTotal;
-        assamSum += (p.counts.assam_hist || 0) + (p.counts.assam_geo || 0);
-      });
-
-      const elTotal = document.getElementById(`kpi-total-qs`);
-      const elTotalSub = document.getElementById(`kpi-total-sub`);
-      if (elTotal) elTotal.textContent = String(officialSum);
-      if (elTotalSub) {
-        const diff = officialSum - stats.totalItemized;
-        elTotalSub.textContent = diff > 0
-          ? `${filteredPapers.length} খন কাকতত ${stats.totalItemized} টা তালিকাভুক্ত (+${diff} টা বাদ পৰা স্থান)`
-          : `${filteredPapers.length} খন কাকতত ${stats.totalItemized} টা তালিকাভুক্ত (100% প্ৰমাণিত)`;
-      }
-
-      const assamPct = stats.totalItemized > 0 ? ((assamSum / stats.totalItemized) * 100).toFixed(1) : `0.0`;
-      const elAssam = document.getElementById(`kpi-assam-share`);
-      const elAssamSub = document.getElementById(`kpi-assam-sub`);
-      if (elAssam) elAssam.textContent = `${assamPct}%`;
-      if (elAssamSub) elAssamSub.textContent = `${assamSum} টা প্ৰশ্ন (অসম ইতিহাস/সাহিত্য + অসম ভূগোল/প্ৰশাসন)`;
-
-      let paretoCount = 0;
-      let paretoPct = 0;
-      for (let i = 0; i < stats.rows.length; i++) {
-        paretoCount++;
-        paretoPct = stats.rows[i].cumShare;
-        if (paretoPct >= 80) break;
-      }
-      const elPareto = document.getElementById(`kpi-pareto-topics`);
-      const elParetoSub = document.getElementById(`kpi-pareto-sub`);
-      if (elPareto) elPareto.textContent = `${paretoCount} / ${TOPICS.length}`;
-      if (elParetoSub) elParetoSub.textContent = `শীৰ্ষ ${paretoCount} টা বিষয়ে মুঠ নম্বৰৰ ${paretoPct.toFixed(1)}% প্ৰদান কৰে`;
-
-      let topSurge = null;
-      stats.rows.forEach(function(r) {
-        if (!topSurge || r.deltaPp > topSurge.deltaPp) topSurge = r;
-      });
-      const elSurge = document.getElementById(`kpi-top-surge`);
-      const elSurgeSub = document.getElementById(`kpi-surge-sub`);
-      if (topSurge && elSurge && elSurgeSub) {
-        elSurge.textContent = `${topSurge.topic.shortName} +${topSurge.deltaPp.toFixed(1)} pp`;
-        elSurgeSub.textContent = `2022 চনত ${topSurge.pct2022.toFixed(1)}% (${topSurge.full2022} Qs) → 2024 চনত ${topSurge.pct2024.toFixed(1)}% (${topSurge.full2024} Qs)`;
-      }
-    }
-
-    function setPapersViewMode(mode) {
-      appState.papersViewMode = mode;
-      const tblBtn = document.getElementById(`view-papers-table-btn`);
-      const crdBtn = document.getElementById(`view-papers-cards-btn`);
-      const tblWrap = document.getElementById(`papers-table-wrap`);
-      const crdWrap = document.getElementById(`papers-cards-wrap`);
-
-      if (tblBtn) tblBtn.setAttribute(`aria-pressed`, mode === `table` ? `true` : `false`);
-      if (crdBtn) crdBtn.setAttribute(`aria-pressed`, mode === `cards` ? `true` : `false`);
-      if (tblWrap) tblWrap.style.display = mode === `table` ? `block` : `none`;
-      if (crdWrap) crdWrap.style.display = mode === `cards` ? `flex` : `none`;
-    }
-
-    function renderPapersSection(filteredPapers) {
-      const tbody = document.getElementById(`papers-tbody`);
-      const tfoot = document.getElementById(`papers-tfoot`);
-      const cardsWrap = document.getElementById(`papers-cards-wrap`);
-      if (!tbody || !tfoot) return;
-
-      const exists = filteredPapers.some(function(p) { return p.id === appState.selectedPaperId; });
-      if (!exists && filteredPapers.length > 0) {
-        appState.selectedPaperId = filteredPapers[0].id;
-      }
-
-      let rowsHtml = ``;
-      let cardsHtml = ``;
-      let sumOff = 0, sumItem = 0, sumAssam = 0, sumGeo = 0, sumHist = 0, sumPol = 0, sumSports = 0, sumSci = 0;
-
-      filteredPapers.forEach(function(p) {
-        const assamTot = p.counts.assam_hist + p.counts.assam_geo;
-        sumOff += p.officialTotal;
-        sumItem += p.itemized;
-        sumAssam += assamTot;
-        sumGeo += p.counts.geo_world;
-        sumHist += p.counts.history;
-        sumPol += p.counts.polity;
-        sumSports += p.counts.sports;
-        sumSci += p.counts.science;
-
-        const isSel = p.id === appState.selectedPaperId ? `is-selected` : ``;
-        rowsHtml += `
-          <tr class="${isSel}" onclick="selectPaper('${p.id}')" tabindex="0" onkeydown="handleRowKey(event, '${p.id}')">
-            <td><strong>${p.name}</strong></td>
-            <td>${p.year}</td>
-            <td>${p.tierLabel}</td>
-            <td class="num">${p.officialTotal}</td>
-            <td class="num">${p.itemized}</td>
-            <td class="num">${assamTot}</td>
-            <td class="num">${p.counts.geo_world}</td>
-            <td class="num">${p.counts.history}</td>
-            <td class="num">${p.counts.polity}</td>
-            <td class="num">${p.counts.sports}</td>
-            <td class="num">${p.counts.science}</td>
-          </tr>
-        `;
-
-        cardsHtml += `
-          <div class="mobile-paper-card ${isSel}" onclick="selectPaper('${p.id}')">
-            <div style="display: flex; justify-content: space-between; align-items: center; gap: 0.5rem;">
-              <strong style="font-size: 0.98rem;">${p.name}</strong>
-              <span class="index-num">${p.itemized}/${p.officialTotal} Qs</span>
-            </div>
-            <div class="mobile-paper-stats">
-              <div><span style="color: var(--ink-subtle);">অসম GK:</span> <strong>${assamTot}</strong></div>
-              <div><span style="color: var(--ink-subtle);">ভূগোল:</span> <strong>${p.counts.geo_world}</strong></div>
-              <div><span style="color: var(--ink-subtle);">ইতিহাস:</span> <strong>${p.counts.history}</strong></div>
-              <div><span style="color: var(--ink-subtle);">ৰাজনীতি:</span> <strong>${p.counts.polity}</strong></div>
-              <div><span style="color: var(--ink-subtle);">ক্ৰীড়া:</span> <strong>${p.counts.sports}</strong></div>
-              <div><span style="color: var(--ink-subtle);">বিজ্ঞান:</span> <strong>${p.counts.science}</strong></div>
-            </div>
-          </div>
-        `;
-      });
-
-      tbody.innerHTML = rowsHtml;
-      if (cardsWrap) cardsWrap.innerHTML = cardsHtml;
-
-      tfoot.innerHTML = `
-        <tr>
-          <td>মুঠ (${filteredPapers.length} খন কাকত)</td>
-          <td>—</td>
-          <td>—</td>
-          <td class="num">${sumOff}</td>
-          <td class="num">${sumItem}</td>
-          <td class="num">${sumAssam}</td>
-          <td class="num">${sumGeo}</td>
-          <td class="num">${sumHist}</td>
-          <td class="num">${sumPol}</td>
-          <td class="num">${sumSports}</td>
-          <td class="num">${sumSci}</td>
-        </tr>
-      `;
-
-      renderPaperInspector();
-      renderPaperStackedChart(filteredPapers);
-    }
-
-    function renderPaperInspector() {
-      const paper = PAPERS.find(function(p) { return p.id === appState.selectedPaperId; }) || PAPERS[0];
-      const titleEl = document.getElementById(`insp-title`);
-      const metaEl = document.getElementById(`insp-meta`);
-      const barsEl = document.getElementById(`insp-bars`);
-      const noteEl = document.getElementById(`insp-note`);
-      if (!paper || !titleEl || !metaEl || !barsEl || !noteEl) return;
-
-      titleEl.textContent = paper.name;
-      metaEl.textContent = `${paper.officialTotal} টা চৰকাৰী Qs · ${paper.itemized} টা তালিকাভুক্ত · ${paper.year} চক্ৰ`;
-      noteEl.textContent = paper.note;
-
-      const items = TOPICS.map(function(t) {
-        return { name: t.name, count: paper.counts[t.id] || 0 };
-      }).filter(function(item) {
-        return item.count > 0;
-      }).sort(function(a, b) {
-        return b.count - a.count;
-      });
-
-      let html = ``;
-      items.slice(0, 7).forEach(function(item) {
-        const pct = ((item.count / paper.itemized) * 100).toFixed(1);
-        html += `
-          <div class="mini-bar-row">
-            <span style="font-size: 0.85rem; font-weight: 500;">${item.name}</span>
-            <span class="index-num">${item.count} (${pct}%)</span>
-            <div class="mini-bar-track">
-              <div class="mini-bar-fill" style="width: ${pct}%;"></div>
-            </div>
-          </div>
-        `;
-      });
-      barsEl.innerHTML = html;
-    }
-
-    function renderPaperStackedChart(filteredPapers) {
-      const canvas = document.getElementById(`paperStackedChart`);
-      if (!canvas || typeof Chart === `undefined`) return;
-
-      if (paperStackedChartInstance) {
-        paperStackedChartInstance.destroy();
-      }
-
-      const isNarrow = window.innerWidth < 480;
-      const labels = filteredPapers.map(function(p) { return `${p.year.slice(2)}' ${p.tierLabel}`; });
-      const dataAssam = filteredPapers.map(function(p) { return p.counts.assam_hist + p.counts.assam_geo; });
-      const dataGeo = filteredPapers.map(function(p) { return p.counts.geo_world; });
-      const dataHistPol = filteredPapers.map(function(p) { return p.counts.history + p.counts.polity; });
-      const dataSportsCult = filteredPapers.map(function(p) { return p.counts.sports + p.counts.culture; });
-      const dataSci = filteredPapers.map(function(p) { return p.counts.science; });
-      const dataOther = filteredPapers.map(function(p) { return p.counts.economy + p.counts.schemes + p.counts.ca + p.counts.ne_gk; });
-
-      paperStackedChartInstance = new Chart(canvas, {
-        type: `bar`,
-        data: {
-          labels: labels,
-          datasets: [
-            { label: `অসম GK (সকলো)`, data: dataAssam, backgroundColor: getToken(`--data-1`) },
-            { label: `ভূগোল (ভাৰত/বিশ্ব)`, data: dataGeo, backgroundColor: getToken(`--data-2`) },
-            { label: `ইতিহাস আৰু ৰাজনীতি`, data: dataHistPol, backgroundColor: getToken(`--data-3`) },
-            { label: `ক্ৰীড়া আৰু কলা/সংস্কৃতি`, data: dataSportsCult, backgroundColor: getToken(`--data-4`) },
-            { label: `বিজ্ঞান আৰু প্ৰযুক্তি`, data: dataSci, backgroundColor: getToken(`--data-5`) },
-            { label: `অৰ্থনীতি / আঁচনি / CA / উত্তৰ-পূব`, data: dataOther, backgroundColor: getToken(`--data-context`) }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              position: `bottom`,
-              labels: { boxWidth: 11, padding: 10, font: { family: getToken(`--font-label`), size: isNarrow ? 10 : 11 } }
-            }
-          },
-          scales: {
-            x: {
-              stacked: true,
-              grid: { display: false },
-              ticks: { font: { family: getToken(`--font-label`), size: isNarrow ? 9.5 : 11 } }
-            },
-            y: {
-              stacked: true,
-              title: { display: !isNarrow, text: `প্ৰশ্নৰ সংখ্যা`, font: { family: getToken(`--font-label`), size: 11 } },
-              grid: { color: getToken(`--outline-variant`) },
-              ticks: { font: { family: getToken(`--font-mono`), size: isNarrow ? 10 : 11 } }
-            }
-          }
+    (function applyConfiguredRoutes() {
+      document.querySelectorAll("[data-adre-route]").forEach(function (el) {
+        var key = el.getAttribute("data-adre-route");
+        if (window.ADRE_ROUTES && window.ADRE_ROUTES[key] && window.ADRE_ROUTES[key].indexOf("YOUR-SITE") === -1) {
+          el.setAttribute("href", window.ADRE_ROUTES[key]);
+          el.setAttribute("target", "_top");
         }
       });
-    }
-
-    function renderParetoChart(stats) {
-      const canvas = document.getElementById(`paretoChart`);
-      if (!canvas || typeof Chart === `undefined`) return;
-
-      if (paretoChartInstance) {
-        paretoChartInstance.destroy();
-      }
-
-      const isNarrow = window.innerWidth < 480;
-      const labels = stats.rows.map(function(r) { return r.topic.shortName; });
-      const counts = stats.rows.map(function(r) { return r.count; });
-      const cumPct = stats.rows.map(function(r) { return Number(r.cumShare.toFixed(1)); });
-
-      const barColors = stats.rows.map(function(r) {
-        return r.cumShare <= 82 ? getToken(`--data-1`) : getToken(`--data-context`);
-      });
-
-      paretoChartInstance = new Chart(canvas, {
-        type: `bar`,
-        data: {
-          labels: labels,
-          datasets: [
-            {
-              type: `line`,
-              label: `সঞ্চিত %`,
-              data: cumPct,
-              borderColor: getToken(`--data-2`),
-              backgroundColor: getToken(`--data-2`),
-              borderWidth: 2.5,
-              pointRadius: 4,
-              tension: 0.25,
-              yAxisID: `y1`
-            },
-            {
-              type: `bar`,
-              label: `প্ৰমাণিত প্ৰশ্ন`,
-              data: counts,
-              backgroundColor: barColors,
-              borderRadius: 4,
-              yAxisID: `y`
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              position: `bottom`,
-              labels: { boxWidth: 11, font: { family: getToken(`--font-label`), size: isNarrow ? 10 : 11 } }
-            }
-          },
-          scales: {
-            x: {
-              grid: { display: false },
-              ticks: { font: { family: getToken(`--font-label`), size: isNarrow ? 9 : 10.5 }, maxRotation: 45, minRotation: 30 }
-            },
-            y: {
-              beginAtZero: true,
-              position: `left`,
-              title: { display: !isNarrow, text: `প্ৰশ্নৰ সংখ্যা`, font: { family: getToken(`--font-label`), size: 11 } },
-              grid: { color: getToken(`--outline-variant`) },
-              ticks: { font: { family: getToken(`--font-mono`), size: isNarrow ? 10 : 11 } }
-            },
-            y1: {
-              beginAtZero: true,
-              max: 100,
-              position: `right`,
-              title: { display: !isNarrow, text: `সঞ্চিত %`, font: { family: getToken(`--font-label`), size: 11 } },
-              grid: { drawOnChartArea: false },
-              ticks: {
-                font: { family: getToken(`--font-mono`), size: isNarrow ? 10 : 11 },
-                callback: function(v) { return v + `%`; }
-              }
-            }
-          }
-        }
-      });
-    }
-
-    function renderTrendsSection(stats) {
-      const tbody = document.getElementById(`trends-tbody`);
-      if (!tbody) return;
-
-      const filteredRows = stats.rows.filter(function(r) {
-        if (appState.trendFilter === `all`) return true;
-        return r.trendTag === appState.trendFilter;
-      });
-
-      let html = ``;
-      filteredRows.forEach(function(r) {
-        const sign = r.deltaPp > 0 ? `+` : ``;
-        let badgeHtml = `<span class="tag tag-steady">স্থিৰ</span>`;
-        if (r.trendTag === `surge`) badgeHtml = `<span class="tag tag-surge">বৃদ্ধি পাইছে</span>`;
-        else if (r.trendTag === `drop`) badgeHtml = `<span class="tag tag-drop">হ্ৰাস পাইছে</span>`;
-
-        html += `
-          <tr onclick="jumpToTopic('${r.topic.id}')">
-            <td><strong>${r.topic.name}</strong></td>
-            <td class="num">${r.full2022} (${r.pct2022.toFixed(1)}%)</td>
-            <td class="num">${r.full2024} (${r.pct2024.toFixed(1)}%)</td>
-            <td class="num">${sign}${r.deltaPp.toFixed(1)} pp</td>
-            <td>${badgeHtml}</td>
-          </tr>
-        `;
-      });
-      tbody.innerHTML = html;
-
-      const canvas = document.getElementById(`trendChart`);
-      if (!canvas || typeof Chart === `undefined`) return;
-      if (trendChartInstance) trendChartInstance.destroy();
-
-      const isNarrow = window.innerWidth < 480;
-      const chartRows = filteredRows.length > 0 ? filteredRows : stats.rows;
-      trendChartInstance = new Chart(canvas, {
-        type: `bar`,
-        data: {
-          labels: chartRows.map(function(r) { return r.topic.shortName; }),
-          datasets: [
-            {
-              label: `2022 অংশ (%)`,
-              data: chartRows.map(function(r) { return Number(r.pct2022.toFixed(1)); }),
-              backgroundColor: getToken(`--data-1`),
-              borderRadius: 3
-            },
-            {
-              label: `2024 অংশ (%)`,
-              data: chartRows.map(function(r) { return Number(r.pct2024.toFixed(1)); }),
-              backgroundColor: getToken(`--data-2`),
-              borderRadius: 3
-            }
-          ]
-        },
-        options: {
-          indexAxis: `y`,
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: {
-              position: `bottom`,
-              labels: { boxWidth: 11, font: { family: getToken(`--font-label`), size: isNarrow ? 10 : 11 } }
-            }
-          },
-          scales: {
-            x: {
-              beginAtZero: true,
-              grid: { color: getToken(`--outline-variant`) },
-              ticks: {
-                font: { family: getToken(`--font-mono`), size: isNarrow ? 10 : 11 },
-                callback: function(v) { return v + `%`; }
-              }
-            },
-            y: {
-              grid: { display: false },
-              ticks: { font: { family: getToken(`--font-label`), size: isNarrow ? 9.5 : 11 } }
-            }
-          }
-        }
-      });
-    }
-
-    function renderPrioritySection(stats) {
-      const container = document.getElementById(`priority-cards-container`);
-      if (!container) return;
-
-      const filtered = stats.rows.filter(function(r) {
-        const st = getTopicStatus(r.topic.id);
-        if (appState.priorityFilter === `all`) return true;
-        if (appState.priorityFilter === `high_unmastered`) {
-          return r.topic.priority === `High` && st !== `mastered`;
-        }
-        return r.topic.priority === appState.priorityFilter;
-      });
-
-      let html = ``;
-      if (filtered.length === 0) {
-        html = `
-          <div class="empty-state" style="grid-column: 1 / -1;">
-            <h3 class="chart-title">সকলো উচ্চ-ফলপ্ৰসূ বিষয় আয়ত্ত কৰা হৈছে!</h3>
-            <p class="section-deck" style="margin: 0.4rem auto 1rem;">প্ৰতিটো উচ্চ-অগ্ৰাধিকাৰৰ বিষয় 'আয়ত্ত কৰা হৈছে' হিচাপে চিহ্নিত কৰা হৈছে। আপোনাৰ প্ৰস্তুতি 100%-ৰ দিশে আগবঢ়াবলৈ মধ্যম বা নিম্ন অগ্ৰাধিকাৰ স্তৰলৈ যাওক।</p>
-            <button type="button" class="btn btn-primary" onclick="setPriorityFilter('all')">সকলো 12 টা বিষয় দেখুৱাওক</button>
-          </div>
-        `;
-      } else {
-        filtered.forEach(function(r) {
-          const st = getTopicStatus(r.topic.id);
-          let cardClass = ``;
-          let btnClass = ``;
-          let btnLabel = `○ আৰম্ভ হোৱা নাই`;
-          if (st === `revision`) {
-            cardClass = `status-revision`;
-            btnClass = `is-revision`;
-            btnLabel = `↻ পুনৰীক্ষণৰ প্ৰয়োজন`;
-          } else if (st === `mastered`) {
-            cardClass = `status-mastered`;
-            btnClass = `is-mastered`;
-            btnLabel = `✓ আয়ত্ত কৰা হৈছে`;
-          }
-
-          let prioTagClass = `tag-low`;
-          if (r.topic.priority === `High`) prioTagClass = `tag-high`;
-          else if (r.topic.priority === `Medium`) prioTagClass = `tag-med`;
-
-          const sign = r.deltaPp > 0 ? `+` : ``;
-          const rankStr = r.rank < 10 ? `0${r.rank}` : String(r.rank);
-
-          html += `
-            <article class="priority-card ${cardClass}">
-              <div class="priority-top">
-                <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem;">
-                  <span class="index-num">#${rankStr}</span>
-                  <span class="tag ${prioTagClass}">${getPriorityLabelAs(r.topic.priority)}</span>
-                  <span class="index-num">${r.subChecked}/${r.subTotal} উপ-বিষয়</span>
-                </div>
-                <span class="tag ${r.trendTag === `surge` ? `tag-surge` : (r.trendTag === `drop` ? `tag-drop` : `tag-steady`)}">
-                  ${sign}${r.deltaPp.toFixed(1)} pp
-                </span>
-              </div>
-              <h3 class="priority-title">${r.topic.name}</h3>
-              <div class="priority-metrics">
-                <span><strong>${r.count}</strong> Qs (${r.share.toFixed(1)}%)</span>
-                <span>·</span>
-                <span>2022: ${r.full2022}</span>
-                <span>·</span>
-                <span>2024: ${r.full2024}</span>
-              </div>
-              <p style="margin: 0; font-size: 0.89rem; color: var(--on-surface-variant);">${r.topic.strategy}</p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: auto; padding-top: 0.35rem;">
-                <button type="button" class="status-cycle-btn ${btnClass}" onclick="cycleTopicStatus('${r.topic.id}')" title="সলনি কৰিবলৈ টিপক: আৰম্ভ হোৱা নাই → পুনৰীক্ষণৰ প্ৰয়োজন → আয়ত্ত কৰা হৈছে">
-                  ${btnLabel}
-                </button>
-                <button type="button" class="btn btn-secondary" onclick="jumpToTopic('${r.topic.id}')">
-                  পাঠ্যক্ৰম (${r.subChecked}/${r.subTotal})
-                </button>
-              </div>
-            </article>
-          `;
-        });
-      }
-      container.innerHTML = html;
-
-      // Weighted readiness across all 465 itemized questions + micro-subtopic progress
-      const fullStats = getTopicStats(PAPERS);
-      let masteredQs = 0;
-      let revisionQs = 0;
-      let masteredCount = 0;
-      let revisionCount = 0;
-      let totalSubChecked = 0;
-      let totalSubAll = 0;
-
-      fullStats.rows.forEach(function(r) {
-        const st = getTopicStatus(r.topic.id);
-        totalSubChecked += r.subChecked;
-        totalSubAll += r.subTotal;
-
-        if (st === `mastered`) {
-          masteredQs += r.count;
-          masteredCount++;
-        } else {
-          const subRatio = r.subTotal > 0 ? (r.subChecked / r.subTotal) : 0;
-          if (st === `revision`) {
-            revisionQs += r.count * Math.max(0.5, subRatio);
-            revisionCount++;
-          } else if (subRatio > 0) {
-            masteredQs += r.count * subRatio;
-          }
-        }
-      });
-
-      const masteredPct = fullStats.totalItemized > 0 ? (masteredQs / fullStats.totalItemized) * 100 : 0;
-      const revPct = fullStats.totalItemized > 0 ? (revisionQs / fullStats.totalItemized) * 100 : 0;
-
-      const fillEl = document.getElementById(`readiness-fill`);
-      const revFillEl = document.getElementById(`readiness-fill-rev`);
-      const barEl = document.getElementById(`readiness-progressbar`);
-      const pctEl = document.getElementById(`readiness-pct`);
-      const detEl = document.getElementById(`readiness-detail`);
-      const subStatEl = document.getElementById(`subtopic-overall-stat`);
-      const navBadgeEl = document.getElementById(`nav-readiness-badge`);
-
-      if (fillEl) fillEl.style.width = `${Math.min(100, masteredPct).toFixed(1)}%`;
-      if (revFillEl) revFillEl.style.width = `${Math.min(100 - masteredPct, revPct).toFixed(1)}%`;
-      if (barEl) barEl.setAttribute(`aria-valuenow`, String(Math.round(masteredPct)));
-      if (pctEl) pctEl.textContent = `${masteredPct.toFixed(1)}%`;
-      if (navBadgeEl) navBadgeEl.textContent = `প্ৰস্তুতি: ${masteredPct.toFixed(1)}%`;
-      if (detEl) detEl.textContent = `${masteredCount} / ${TOPICS.length} আয়ত্ত · ${revisionCount} পুনৰীক্ষণত`;
-      if (subStatEl) subStatEl.textContent = `${totalSubChecked} / ${totalSubAll} টা সূক্ষ্ম-উপবিষয় সম্পূৰ্ণ হৈছে`;
-    }
-
-    function renderSyllabusSection(stats) {
-      const container = document.getElementById(`syllabus-container`);
-      const countEl = document.getElementById(`syllabus-match-count`);
-      if (!container) return;
-
-      const query = appState.syllabusSearch.trim().toLowerCase();
-      const matched = stats.rows.filter(function(r) {
-        const st = getTopicStatus(r.topic.id);
-        if (appState.syllabusPrio === `high_unmastered`) {
-          if (r.topic.priority !== `High` || st === `mastered`) return false;
-        } else if (appState.syllabusPrio === `needs_revision`) {
-          if (st !== `revision`) return false;
-        } else if (appState.syllabusPrio !== `all` && r.topic.priority !== appState.syllabusPrio) {
-          return false;
-        }
-
-        if (!query) return true;
-        const haystack = (
-          r.topic.name + ` ` +
-          r.topic.strategy + ` ` +
-          r.topic.subtopics.join(` `) + ` ` +
-          r.topic.pyqs.map(function(p) { return p.q + ` ` + p.a + ` ` + p.ref; }).join(` `)
-        ).toLowerCase();
-        return haystack.indexOf(query) !== -1;
-      });
-
-      if (countEl) countEl.textContent = `${TOPICS.length} টা বিষয়ৰ ভিতৰত ${matched.length} টা দেখুওৱা হৈছে`;
-
-      if (matched.length === 0) {
-        container.innerHTML = `
-          <div class="empty-state">
-            <h3 class="chart-title">কোনো মিল থকা পাঠ্যক্ৰমৰ বিষয় পোৱা নগ’ল</h3>
-            <p class="section-deck" style="margin: 0.4rem auto 1rem;">আপোনাৰ বৰ্তমানৰ সন্ধান বা ফিল্টাৰৰ সৈতে কোনো উপ-বিষয় বা নমুনা প্ৰশ্ন মিল খোৱা নাই।</p>
-            <button type="button" class="btn btn-primary" onclick="clearSyllabusFilters()">সন্ধান আৰু ফিল্টাৰ মচি পেলাওক</button>
-          </div>
-        `;
-        return;
-      }
-
-      let html = ``;
-      matched.forEach(function(r) {
-        const isExpanded = Boolean(appState.expandedTopics[r.topic.id]) || Boolean(query);
-        const st = getTopicStatus(r.topic.id);
-        let prioTagClass = `tag-low`;
-        if (r.topic.priority === `High`) prioTagClass = `tag-high`;
-        else if (r.topic.priority === `Medium`) prioTagClass = `tag-med`;
-
-        let statusBadge = ``;
-        if (st === `mastered`) statusBadge = `<span class="tag tag-surge">✓ আয়ত্ত কৰা হৈছে</span>`;
-        else if (st === `revision`) statusBadge = `<span class="tag tag-gold">↻ পুনৰীক্ষণ</span>`;
-
-        let subHtml = ``;
-        r.topic.subtopics.forEach(function(stText, idx) {
-          const subKey = `${r.topic.id}_${idx}`;
-          const isChecked = Boolean(appState.subtopicProgress[subKey]);
-          subHtml += `
-            <li>
-              <label class="subtopic-check-item ${isChecked ? `is-done` : ``}">
-                <input type="checkbox" ${isChecked ? `checked` : ``} onchange="toggleSubtopic('${r.topic.id}', ${idx})">
-                <span class="subtopic-text">${stText}</span>
-              </label>
-            </li>
-          `;
-        });
-
-        let pyqHtml = ``;
-        r.topic.pyqs.forEach(function(pq, idx) {
-          const key = `${r.topic.id}_${idx}`;
-          const isRev = !appState.quizModeHideAll && Boolean(appState.revealedAnswers[key]);
-          pyqHtml += `
-            <div class="pyq-item">
-              <span class="pyq-paper-ref">${pq.ref}</span>
-              <div>${pq.q}</div>
-              <div style="margin-top: 0.45rem;">
-                <button type="button" class="btn btn-secondary" style="min-height: 38px; font-size: 0.8rem; padding: 0 0.7rem;" onclick="togglePyqAnswer('${key}')">
-                  ${isRev ? `উত্তৰ লুকুৱাওক` : `উত্তৰ চাওক`}
-                </button>
-              </div>
-              ${isRev ? `<div class="pyq-ans">উত্তৰ: ${pq.a}</div>` : ``}
-            </div>
-          `;
-        });
-
-        html += `
-          <article class="syllabus-card" id="topic-card-${r.topic.id}">
-            <button type="button" class="syllabus-header" aria-expanded="${isExpanded ? `true` : `false`}" onclick="toggleSyllabusTopic('${r.topic.id}')">
-              <div class="syllabus-title-row">
-                <span class="index-num">#${r.rank < 10 ? `0${r.rank}` : r.rank}</span>
-                <strong style="font-family: var(--font-headline); font-size: 1.05rem;">${r.topic.name}</strong>
-                <span class="tag ${prioTagClass}">${getPriorityLabelAs(r.topic.priority)}</span>
-                ${statusBadge}
-              </div>
-              <div class="syllabus-title-row">
-                <span class="index-num">${r.subChecked}/${r.subTotal} উপ-বিষয়</span>
-                <span class="dossier-meta">${r.count} Qs (${r.share.toFixed(1)}%)</span>
-                <span class="tag tag-steady">${isExpanded ? `সংকুচিত কৰক ▲` : `বহলাওক ▼`}</span>
-              </div>
-            </button>
-            <div class="syllabus-body" ${isExpanded ? `` : `hidden`}>
-              <div>
-                <h4 class="aside-title">প্ৰমাণিত ADRE সূক্ষ্ম-পাঠ্যক্ৰম চেকলিষ্ট</h4>
-                <ul class="subtopic-checklist">${subHtml}</ul>
-              </div>
-              <div>
-                <h4 class="aside-title">৮ খন কাকতৰ পৰা নমুনা প্ৰমাণিত PYQ</h4>
-                <div class="pyq-sample-list">${pyqHtml}</div>
-              </div>
-            </div>
-          </article>
-        `;
-      });
-      container.innerHTML = html;
-    }
-
-    function renderAll() {
-      const filteredPapers = getFilteredPapers();
-      const stats = getTopicStats(filteredPapers);
-      renderKpis(filteredPapers, stats);
-      renderPapersSection(filteredPapers);
-      renderParetoChart(stats);
-      renderTrendsSection(stats);
-      renderPrioritySection(stats);
-      renderSyllabusSection(stats);
-      if (window.lucide && typeof window.lucide.createIcons === `function`) {
-        window.lucide.createIcons();
-      }
-    }
-
-    // =========================================================================
-    // INTERACTIVE HANDLERS
-    // =========================================================================
-    function setCycleFilter(cycle) {
-      appState.cycleFilter = cycle;
-      [`all`, `2022`, `2024`].forEach(function(c) {
-        const btn = document.getElementById(`btn-year-${c}`);
-        if (btn) btn.setAttribute(`aria-pressed`, c === cycle ? `true` : `false`);
-      });
-      renderAll();
-      persistState();
-    }
-
-    function setTierFilter(tier) {
-      appState.tierFilter = tier;
-      renderAll();
-      persistState();
-    }
-
-    function selectPaper(paperId) {
-      appState.selectedPaperId = paperId;
-      renderPapersSection(getFilteredPapers());
-      persistState();
-    }
-
-    function handleRowKey(ev, paperId) {
-      if (ev.key === `Enter` || ev.key === ` `) {
-        ev.preventDefault();
-        selectPaper(paperId);
-      }
-    }
-
-    function setTrendFilter(filter) {
-      appState.trendFilter = filter;
-      [`all`, `surge`, `steady`, `drop`].forEach(function(f) {
-        const btn = document.getElementById(`trend-btn-${f}`);
-        if (btn) btn.setAttribute(`aria-pressed`, f === filter ? `true` : `false`);
-      });
-      renderTrendsSection(getTopicStats(getFilteredPapers()));
-    }
-
-    function setPriorityFilter(prio) {
-      appState.priorityFilter = prio;
-      [`all`, `high_unmastered`, `High`, `Medium`, `Low`].forEach(function(p) {
-        const btn = document.getElementById(`prio-btn-${p}`);
-        if (btn) btn.setAttribute(`aria-pressed`, p === prio ? `true` : `false`);
-      });
-      renderPrioritySection(getTopicStats(getFilteredPapers()));
-    }
-
-    function cycleTopicStatus(topicId) {
-      const current = getTopicStatus(topicId);
-      let next = `revision`;
-      if (current === `revision`) next = `mastered`;
-      else if (current === `mastered`) next = `none`;
-
-      appState.topicStatus[topicId] = next;
-
-      const topicObj = TOPICS.find(function(t) { return t.id === topicId; });
-      if (topicObj && next === `mastered`) {
-        topicObj.subtopics.forEach(function(_, idx) {
-          appState.subtopicProgress[`${topicId}_${idx}`] = true;
-        });
-      }
-
-      const stats = getTopicStats(getFilteredPapers());
-      renderPrioritySection(stats);
-      renderSyllabusSection(stats);
-      persistState();
-    }
-
-    function toggleSubtopic(topicId, subIdx) {
-      const key = `${topicId}_${subIdx}`;
-      appState.subtopicProgress[key] = !appState.subtopicProgress[key];
-
-      const topicObj = TOPICS.find(function(t) { return t.id === topicId; });
-      if (topicObj) {
-        let checkedCount = 0;
-        topicObj.subtopics.forEach(function(_, i) {
-          if (appState.subtopicProgress[`${topicId}_${i}`]) checkedCount++;
-        });
-        if (checkedCount === topicObj.subtopics.length) {
-          appState.topicStatus[topicId] = `mastered`;
-        } else if (checkedCount > 0 && getTopicStatus(topicId) === `none`) {
-          appState.topicStatus[topicId] = `revision`;
-        }
-      }
-
-      const stats = getTopicStats(getFilteredPapers());
-      renderPrioritySection(stats);
-      renderSyllabusSection(stats);
-      persistState();
-    }
-
-    function resetMasteryProgress(btn) {
-      if (!btn) return;
-      if (btn.dataset.armed !== `true`) {
-        btn.dataset.armed = `true`;
-        btn.textContent = `পুনৰ ছেট নিশ্চিত কৰিবনে?`;
-        return;
-      }
-      btn.dataset.armed = `false`;
-      btn.innerHTML = `<i data-lucide="rotate-ccw" aria-hidden="true" width="16" height="16"></i> অগ্ৰগতি পুনৰ ছেট কৰক`;
-      appState.topicStatus = {};
-      appState.subtopicProgress = {};
-      appState.revealedAnswers = {};
-      appState.quizModeHideAll = false;
-      renderAll();
-      persistState();
-    }
-
-    function setSyllabusSearch(val) {
-      appState.syllabusSearch = val;
-      renderSyllabusSection(getTopicStats(getFilteredPapers()));
-    }
-
-    function setSyllabusPrioSelect(val) {
-      appState.syllabusPrio = val;
-      renderSyllabusSection(getTopicStats(getFilteredPapers()));
-    }
-
-    function clearSyllabusFilters() {
-      appState.syllabusSearch = ``;
-      appState.syllabusPrio = `all`;
-      const searchEl = document.getElementById(`syllabus-search`);
-      const selEl = document.getElementById(`syllabus-prio-select`);
-      if (searchEl) searchEl.value = ``;
-      if (selEl) selEl.value = `all`;
-      renderSyllabusSection(getTopicStats(getFilteredPapers()));
-    }
-
-    function toggleSyllabusTopic(topicId) {
-      appState.expandedTopics[topicId] = !appState.expandedTopics[topicId];
-      renderSyllabusSection(getTopicStats(getFilteredPapers()));
-      persistState();
-    }
-
-    function toggleAllSyllabus(expand) {
-      TOPICS.forEach(function(t) {
-        appState.expandedTopics[t.id] = expand;
-      });
-      renderSyllabusSection(getTopicStats(getFilteredPapers()));
-      persistState();
-    }
-
-    function togglePyqAnswer(key) {
-      if (appState.quizModeHideAll) {
-        appState.quizModeHideAll = false;
-        const quizBtn = document.getElementById(`quiz-mode-toggle-btn`);
-        if (quizBtn) quizBtn.innerHTML = `<i data-lucide="eye-off" aria-hidden="true" width="16" height="16"></i> সকলো উত্তৰ লুকুৱাওক (কুইজ মোড)`;
-      }
-      appState.revealedAnswers[key] = !appState.revealedAnswers[key];
-      renderSyllabusSection(getTopicStats(getFilteredPapers()));
-      if (window.lucide && typeof window.lucide.createIcons === `function`) window.lucide.createIcons();
-    }
-
-    function toggleAllPyqAnswers() {
-      const btn = document.getElementById(`quiz-mode-toggle-btn`);
-      if (!appState.quizModeHideAll) {
-        appState.quizModeHideAll = true;
-        appState.revealedAnswers = {};
-        if (btn) btn.innerHTML = `<i data-lucide="eye" aria-hidden="true" width="16" height="16"></i> সকলো উত্তৰ দেখুৱাওক`;
-      } else {
-        appState.quizModeHideAll = false;
-        TOPICS.forEach(function(t) {
-          t.pyqs.forEach(function(_, idx) {
-            appState.revealedAnswers[`${t.id}_${idx}`] = true;
-          });
-        });
-        if (btn) btn.innerHTML = `<i data-lucide="eye-off" aria-hidden="true" width="16" height="16"></i> সকলো উত্তৰ লুকুৱাওক (কুইজ মোড)`;
-      }
-      renderSyllabusSection(getTopicStats(getFilteredPapers()));
-      if (window.lucide && typeof window.lucide.createIcons === `function`) window.lucide.createIcons();
-    }
-
-    function openRandomFlashcard() {
-      if (ALL_PYQ_POOL.length === 0) return;
-      let nextIdx = Math.floor(Math.random() * ALL_PYQ_POOL.length);
-      if (ALL_PYQ_POOL.length > 1 && nextIdx === appState.currentFlashcardIdx) {
-        nextIdx = (nextIdx + 1) % ALL_PYQ_POOL.length;
-      }
-      appState.currentFlashcardIdx = nextIdx;
-      const item = ALL_PYQ_POOL[nextIdx];
-
-      const drawer = document.getElementById(`flashcard-drawer`);
-      const refEl = document.getElementById(`fc-paper-ref`);
-      const topicEl = document.getElementById(`fc-topic-name`);
-      const qEl = document.getElementById(`fc-question`);
-      const aEl = document.getElementById(`fc-answer`);
-      const revBtn = document.getElementById(`fc-reveal-btn`);
-
-      if (drawer && refEl && topicEl && qEl && aEl && revBtn) {
-        refEl.textContent = item.ref;
-        topicEl.textContent = item.topicName;
-        qEl.textContent = item.q;
-        aEl.textContent = `উত্তৰ: ${item.a}`;
-        aEl.hidden = true;
-        revBtn.hidden = false;
-        drawer.hidden = false;
-      }
-    }
-
-    function jumpToFlashcard() {
-      openRandomFlashcard();
-      const sec = document.getElementById(`sec-syllabus`);
-      if (sec) sec.scrollIntoView({ behavior: `smooth`, block: `start` });
-    }
-
-    function revealFlashcardAnswer() {
-      const aEl = document.getElementById(`fc-answer`);
-      const revBtn = document.getElementById(`fc-reveal-btn`);
-      if (aEl) aEl.hidden = false;
-      if (revBtn) revBtn.hidden = true;
-    }
-
-    function closeFlashcard() {
-      const drawer = document.getElementById(`flashcard-drawer`);
-      if (drawer) drawer.hidden = true;
-    }
-
-    function jumpToTopic(topicId) {
-      appState.expandedTopics[topicId] = true;
-      appState.syllabusPrio = `all`;
-      const selEl = document.getElementById(`syllabus-prio-select`);
-      if (selEl) selEl.value = `all`;
-      renderSyllabusSection(getTopicStats(getFilteredPapers()));
-      const card = document.getElementById(`topic-card-${topicId}`);
-      if (card) card.scrollIntoView({ behavior: `smooth`, block: `start` });
-      persistState();
-    }
-
-    // Active section scrollspy (fixed undefined topBtn bug)
-    function setupScrollObservers() {
-      const sectionIds = [`sec-papers`, `sec-pareto`, `sec-trends`, `sec-priority`, `sec-syllabus`, `sec-takeaways`];
-      const navLinks = document.querySelectorAll(`.nav-pill[data-section]`);
-      const jumpStrip = document.getElementById(`sticky-jump-strip`);
-      let lastActiveId = ``;
-
-      window.addEventListener(`scroll`, function() {
-        let activeId = sectionIds[0];
-        for (let i = 0; i < sectionIds.length; i++) {
-          const el = document.getElementById(sectionIds[i]);
-          if (el) {
-            const rect = el.getBoundingClientRect();
-            if (rect.top <= 145) activeId = sectionIds[i];
-          }
-        }
-
-        if (activeId !== lastActiveId) {
-          lastActiveId = activeId;
-          navLinks.forEach(function(link) {
-            const isMatch = link.getAttribute(`data-section`) === activeId;
-            link.classList.toggle(`is-active`, isMatch);
-            if (isMatch && jumpStrip && window.innerWidth <= 900) {
-              const targetLeft = link.offsetLeft - (jumpStrip.clientWidth - link.clientWidth) / 2;
-              jumpStrip.scrollTo({ left: Math.max(0, targetLeft), behavior: `smooth` });
-            }
-          });
-        }
-      }, { passive: true });
-    }
-
-    function exportSyllabusCsv() {
-      const stats = getTopicStats(PAPERS);
-      const lines = [
-        `ক্ৰম,বিষয়,অগ্ৰাধিকাৰ,মুঠ_প্ৰশ্ন_465,অংশ_শতাংশ,2022_Qs,2024_Qs,অংশ_পৰিৱৰ্তন_pp,অধ্যয়ন_স্থিতি,সম্পূৰ্ণ_উপবিষয়,সূক্ষ্ম_পাঠ্যক্ৰম`
-      ];
-      stats.rows.forEach(function(r) {
-        const stRaw = getTopicStatus(r.topic.id);
-        let statusAs = `আৰম্ভ হোৱা নাই`;
-        if (stRaw === `revision`) statusAs = `পুনৰীক্ষণৰ প্ৰয়োজন`;
-        else if (stRaw === `mastered`) statusAs = `আয়ত্ত কৰা হৈছে`;
-
-        const cleanSyllabus = r.topic.subtopics.join(` | `).replace(/"/g, `""`);
-        lines.push(
-          `${r.rank},"${r.topic.name}",${getPriorityLabelAs(r.topic.priority)},${r.count},${r.share.toFixed(1)}%,${r.full2022},${r.full2024},${r.deltaPp.toFixed(1)},${statusAs},${r.subChecked}/${r.subTotal},"${cleanSyllabus}"`
-        );
-      });
-      const csvContent = `\uFEFF` + lines.join(`\n`);
-
-      if (window.notebookAppApi && typeof window.notebookAppApi.triggerFileDownload === `function`) {
-        window.notebookAppApi.triggerFileDownload({
-          content: csvContent,
-          contentType: `text/csv`,
-          encoding: `UTF-8`,
-          filename: `ADRE_2022_2024_GK_অধ্যয়ন_পাঠ্যক্ৰম.csv`
-        });
-      } else {
-        const blob = new Blob([csvContent], { type: `text/csv;charset=utf-8;` });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement(`a`);
-        a.href = url;
-        a.download = `ADRE_2022_2024_GK_অধ্যয়ন_পাঠ্যক্ৰম.csv`;
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-      }
-
-      const statusEl = document.getElementById(`footer-status`);
-      if (statusEl) statusEl.textContent = `CSV ৰপ্তানি কৰা হৈছে (${new Date().toLocaleTimeString()})`;
-    }
-
-    // =========================================================================
-    // INITIALIZATION
-    // =========================================================================
-    async function initDashboard() {
-      try {
-        const rawLocal = localStorage.getItem(LOCAL_STORAGE_KEY);
-        if (rawLocal) {
-          const parsed = JSON.parse(rawLocal);
-          if (parsed.cycleFilter) appState.cycleFilter = parsed.cycleFilter;
-          if (parsed.tierFilter) appState.tierFilter = parsed.tierFilter;
-          if (parsed.selectedPaperId) appState.selectedPaperId = parsed.selectedPaperId;
-          if (parsed.topicStatus) appState.topicStatus = parsed.topicStatus;
-          if (parsed.subtopicProgress) appState.subtopicProgress = parsed.subtopicProgress;
-          if (parsed.expandedTopics) appState.expandedTopics = parsed.expandedTopics;
-        }
-      } catch (e) {
-        // Ignore malformed localStorage
-      }
-
-      if (window.notebookAppApi && typeof window.notebookAppApi.getAppState === `function`) {
-        try {
-          const saved = await window.notebookAppApi.getAppState();
-          if (saved) {
-            if (saved.cycleFilter) appState.cycleFilter = saved.cycleFilter;
-            if (saved.tierFilter) appState.tierFilter = saved.tierFilter;
-            if (saved.selectedPaperId) appState.selectedPaperId = saved.selectedPaperId;
-            if (saved.topicStatus) appState.topicStatus = saved.topicStatus;
-            if (saved.subtopicProgress) appState.subtopicProgress = saved.subtopicProgress;
-            if (saved.expandedTopics) appState.expandedTopics = saved.expandedTopics;
-          }
-        } catch (err) {
-          // Proceed with local state
-        }
-      }
-
-      [`all`, `2022`, `2024`].forEach(function(c) {
-        const btn = document.getElementById(`btn-year-${c}`);
-        if (btn) btn.setAttribute(`aria-pressed`, c === appState.cycleFilter ? `true` : `false`);
-      });
-      const tierEl = document.getElementById(`tier-filter`);
-      if (tierEl) tierEl.value = appState.tierFilter;
-
-      setupScrollObservers();
-      renderAll();
-
-      if (window.notebookAppApi && typeof window.notebookAppApi.notifyAppReady === `function`) {
-        window.notebookAppApi.notifyAppReady();
-      }
-    }
-
-    document.addEventListener(`DOMContentLoaded`, function() {
-      initDashboard();
-    });
-
-    // Floating Social & Scroll-to-Top Widget
-    (function () {
-      const upBtn = document.getElementById("adreFloatUpBtn");
-      const toggleBtn = document.getElementById("adreFloatToggleBtn");
-      const toggleIcon = document.getElementById("adreFloatToggleIcon");
-      const socialItems = document.querySelectorAll(".adre-social-item");
-      let socialsHidden = false;
-
-      function getScrollTop() {
-        return (
-          window.scrollY ||
-          window.pageYOffset ||
-          document.documentElement.scrollTop ||
-          document.body.scrollTop ||
-          0
-        );
-      }
-
-      function updateVisibility() {
-        if (!upBtn) return;
-        if (getScrollTop() > 220) {
-          upBtn.classList.add("is-visible");
-        } else {
-          upBtn.classList.remove("is-visible");
-        }
-      }
-
-      function scrollToPageTop(e) {
-        e.preventDefault();
-        try {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        } catch (_) {
-          window.scrollTo(0, 0);
-        }
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
-      }
-
-      function toggleSocials(e) {
-        e.preventDefault();
-        socialsHidden = !socialsHidden;
-
-        socialItems.forEach(function (item) {
-          item.classList.toggle("is-hidden", socialsHidden);
-        });
-
-        if (socialsHidden) {
-          toggleBtn.setAttribute("aria-label", "ছ’চিয়েল বুটাম দেখুৱাওক");
-          toggleBtn.setAttribute("title", "ছ’চিয়েল বুটাম দেখুৱাওক");
-          toggleIcon.innerHTML = '<path d="M12 4a8 8 0 0 0-8 8v2.59l-1.7 1.7A1 1 0 0 0 3 18h18a1 1 0 0 0 .7-1.71L20 14.59V12a8 8 0 0 0-8-8zm0 16a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 20z"/>';
-        } else {
-          toggleBtn.setAttribute("aria-label", "ছ’চিয়েল বুটাম লুকুৱাওক");
-          toggleBtn.setAttribute("title", "ছ’চিয়েল বুটাম লুকুৱাওক");
-          toggleIcon.innerHTML = '<path d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7A1 1 0 0 0 5.7 7.11L10.59 12 5.7 16.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4Z"/>';
-        }
-      }
-
-      if (upBtn) {
-        upBtn.addEventListener("click", scrollToPageTop);
-        upBtn.addEventListener("touchend", scrollToPageTop, { passive: false });
-        window.addEventListener("scroll", updateVisibility, { passive: true });
-        document.addEventListener("scroll", updateVisibility, { passive: true });
-        updateVisibility();
-      }
-
-      if (toggleBtn) {
-        toggleBtn.addEventListener("click", toggleSocials);
-        toggleBtn.addEventListener("touchend", toggleSocials, { passive: false });
-      }
     })();
+
+    const SEARCH_ITEMS = [
+      { type: "Test Paper", title: "ADRE 2022 — Class 8 (60 Qs)", meta: "Online Test Series • Bilingual (Eng + অসমীয়া)", route: "testSeries" },
+      { type: "Test Paper", title: "ADRE 2022 — Class 10 (60 Qs)", meta: "Online Test Series • Bilingual (Eng + অসমীয়া)", route: "testSeries" },
+      { type: "Test Paper", title: "ADRE 2022 — Class 12 (40 Qs)", meta: "Online Test Series • Bilingual (Eng + অসমীয়া)", route: "testSeries" },
+      { type: "Test Paper", title: "ADRE 2022 — Graduate (50 Qs)", meta: "Online Test Series • Bilingual (Eng + অসমীয়া)", route: "testSeries" },
+      { type: "Test Paper", title: "ADRE 2024 — Class 8 (65 Qs)", meta: "Online Test Series • Bilingual (Eng + অসমীয়া)", route: "testSeries" },
+      { type: "Test Paper", title: "ADRE 2024 — Class 10 (64 Qs)", meta: "Online Test Series • Bilingual (Eng + অসমীয়া)", route: "testSeries" },
+      { type: "Test Paper", title: "ADRE 2024 — Class 12 (60 Qs)", meta: "Online Test Series • Bilingual (Eng + অসমীয়া)", route: "testSeries" },
+      { type: "Test Paper", title: "ADRE 2024 — Graduate (57 Qs)", meta: "Online Test Series • Bilingual (Eng + অসমীয়া)", route: "testSeries" },
+      { type: "Topic Analysis", title: "Geography (India & World) — 17.4% Share", meta: "Paper Analysis • #1 High-Yield Topic", route: "analysis" },
+      { type: "Topic Analysis", title: "Assam History, Culture & Literature — 16.8% Share", meta: "Paper Analysis • Ahom, Koch, Literature, UNESCO", route: "analysis" },
+      { type: "Topic Analysis", title: "Assam Geography, Polity & Economy — 11.4% Share", meta: "Paper Analysis • Rivers, Parks, Bridges, Schemes", route: "analysis" },
+      { type: "Topic Analysis", title: "Indian & World History — 10.5% Share", meta: "Paper Analysis • Freedom Struggle & Dynasties", route: "analysis" },
+      { type: "Topic Analysis", title: "Sports & Tournaments — +6.5 pp Surge in 2024", meta: "Paper Analysis • Olympics, IPL, Assam Athletes", route: "analysis" },
+      { type: "Topic Analysis", title: "Indian Polity & Constitution — 8.0% Share", meta: "Paper Analysis • Preamble, Schedules, Articles", route: "analysis" }
+    ];
+
+    function quickSearch(term) {
+      var input = document.getElementById("homeSearchInput");
+      if (input) {
+        input.value = term;
+        runHomeSearch();
+      }
+    }
+
+    function runHomeSearch() {
+      var input = document.getElementById("homeSearchInput");
+      var container = document.getElementById("homeSearchResults");
+      if (!input || !container) return;
+      var q = input.value.trim().toLowerCase();
+      if (!q) {
+        container.innerHTML = "";
+        return;
+      }
+      var matches = SEARCH_ITEMS.filter(function (item) {
+        return (item.title + " " + item.meta + " " + item.type).toLowerCase().includes(q);
+      });
+      if (matches.length === 0) {
+        container.innerHTML = '<div class="search-result-item" style="grid-column:1/-1;"><span class="search-result-title">No matching topics or papers</span><span class="search-result-meta">Try Assam, Geography, Sports, 2024, or Graduate.</span></div>';
+        return;
+      }
+      container.innerHTML = matches.slice(0, 6).map(function (item) {
+        var href = (window.ADRE_ROUTES && window.ADRE_ROUTES[item.route] && window.ADRE_ROUTES[item.route].indexOf("YOUR-SITE") === -1)
+          ? window.ADRE_ROUTES[item.route]
+          : "#modules-heading";
+        var targetAttr = href.startsWith("http") ? ' target="_top"' : "";
+        return '<a href="' + href + '"' + targetAttr + ' class="search-result-item">' +
+          '<span class="search-result-type">' + item.type + '</span>' +
+          '<span class="search-result-title">' + item.title + '</span>' +
+          '<span class="search-result-meta">' + item.meta + '</span>' +
+          '</a>';
+      }).join("");
+    }
+
+    document.getElementById("homeSearchInput").addEventListener("input", runHomeSearch);
   </script>
 </body>
 </html>
